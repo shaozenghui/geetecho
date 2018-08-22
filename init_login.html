@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>服务协议</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/init_login.css">
+</head>
+<body>
+	<div class="header">
+		<div class="fl">
+			<div class="logo">
+				<a  target="_blank">寄意科技</a>
+			</div>
+		</div>
+	</div>
+	<p class="cont_tit">寄意科技(家庭财务系统)服务条款</p>
+	<p class="small">请阅读并确认您认同本协议</p>
+	<div class="container clearfix">
+		<div class="wrapper clearfix">
+			<div class="content">
+				<div>
+				    
+					<div>
+						<p>一、约定</p>
+						<p>1.本合约是寄意科技（家庭财务系统）用户（包括使用的个人和其代表的企业）与寄意科技（家庭财务系统）运营企业寄意信息科技（上海）有限公司的法律契约，用户登录寄意科技（家庭财务系统）即代表接受本条款的约束，并自注册成功之时即成为本合约一方、受该使用条款约束。</p>
+						<p>2.下文中的“寄意”代指寄意科技（家庭财务系统）</p>
+					</div>
+					<div>
+						<p>二、合法使用</p>
+						<div>
+							<p>1. 寄意服务限于提供给用户用作正常和合法的业务。</p>
+							<p>1.1 用户不得利用寄意服务制作、上传、发布、传播如下法律、法规和政策禁止的内容：</p>
+							<p>反对宪法所确定的基本原则的；</p>
+							<p>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+							<p>损害国家荣誉和利益的；</p>
+							<p>煽动民族仇恨、民族歧视，破坏民族团结的；</p>
+							<p>破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
+							<p>散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
+							<p>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
+							<p>侮辱或者诽谤他人，侵害他人合法权益的；</p>
+							<p>含有法律、法规和政策禁止的其他内容的信息。</p>
+						</div>
+						<div>
+							<p>1.2 用户不得利用寄意服务进行如下行为:</p>
+							<p>含有任何性或性暗示或其他低俗类信息的；</p>
+							<p>发送骚扰、垃圾广告或信息的；</p>
+							<p>涉及他人隐私、个人信息或资料的；</p>
+							<p>侵害他人名誉权、肖像权、知识产权、商业秘密等合法权利的；</p>
+							<p>含有其他干扰寄意正常运营和侵犯其他用户或其他第三方合法权益内容的信息；</p>
+							<p>利用寄意账户从事任何违法犯罪活动的；</p>
+							<p>对寄意产品进行了任何形式的对其他第三方的再授权使用、销售或转让；</p>
+							<p>为设计开发竞争产品对寄意产品进行任何形式的反向工程，或抄袭模仿寄意的设计；</p>
+							<p>其他违反法律法规规定、侵犯其他用户合法权益、干扰寄意产品正常运营或寄意公司未明示授权的行为。</p>
+						</div>
+						<div>
+							<p>1.3 如果用户使用寄意产品从事上述1.1条及1.2条的行为，寄意有权随时停止服务、并要求用户赔偿由此造成的损失。 </p>
+						</div>
+						<p>2. 寄意使用用户所拥有的电子邮件地址、用户名等作为用户权证的唯一识别信息。当合同期过后，未付费用户将不再享有寄意的服务， 寄意有权随时删除该用户的所有用户数据。</p>
+					</div>
+					<div>
+						<p>三、数据和程序归属权</p>
+						<p>1. 用户在寄意平台创建的独创性数据归属用户所有，用户有权对其所创建的数据进行任何形式的处置，包括从平台中复制、导出和删除。</p>
+						<p>2. 寄意的应用程序、源代码、LOGO、界面设计、应用程序编程接口（API）所关联的所有知识产权均归属寄意信息科技(上海)有限公司。</p>
+						<p >3. 依照明确的服务约定，寄意在用户未继续付费且未继续使用达到6个月后，寄意有权将用户数据从平台上删除，而无需向用户承担任何赔偿责任。该数据包括但不限于用户账户信息、用户使用过程中创建的独创性使用数据。删除的数据将无法从平台上导出或恢复。 </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<button id='save_step'>拒绝</button>
+		<input type="button" id="next_step" value="同意" disabled="">
+	</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script >
+	$('#save_step').click(function(){
+		window.location = "login.html";
+	});
+	$('#next_step').click(function(){
+		window.location = "up_password.html";
+	});
+	$('.content>div').scroll(function(event) {
+        var str = $(this).scrollTop();
+        if(str > '350'){
+        	$('#next_step').removeAttr('disabled').css({cursor:'pointer',background:'#6bcf6b'}).addClass('input');
+        }
+	});
+	console.log();
+</script>

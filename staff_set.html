@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>员工设置</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href='css/iconfont.css'>
+	<link rel="stylesheet" href="css/index.css">
+	<link href="css/s_bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/staff_set.css">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back" width='140px'>客户列表</a>
+	</div>
+	<div class="container clearfix">
+		<div class="wrapper clearfix">
+			<div class="con_title clearfix">
+				<span calss='fl'>员工设置</span>
+				<span calss='fl' id='add_member'><i class='icon-icon02 iconfont img'></i>添加员工</span>
+				<div class="search fr">
+					<input type="text" placeholder='姓名搜索'>
+					<div class="line"></div>
+					<div id="status" class="search_sel_class">所有员工</div>
+					<ul id='search_sel_class_list'>
+						<li style="border-top-left-radius:4px;border-top-right-radius:4px;background:#3da8f5;color:#fff">所有员工</li>
+						<li>管理员</li>
+						<li>经纪人</li>
+						<li style="border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">内勤</li>
+					</ul>
+				</div>
+			</div>
+			<p  style="height:40px;line-height:40px;color:#303030;font-size:16px">
+				可用账户数：<span style="margin-right:20px">1111</span>
+				已用账户数：<span style="margin-right:20px">1111</span>
+				到期时间：<span>2018-5-9</span>
+			</p>
+			<div class="content">
+				<div>
+					<table cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th>账号</th>
+								<th>员工</th>
+								<th>创建时间</th>
+								<th>账号状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>test@test.com1</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com2</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com3</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com8</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com9</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com8</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+							<tr>
+								<td>test@test.com9</td>
+								<td>张三</td>
+								<td>2017-10-24</td>
+								<td>启用</td>
+								<td class="edit"><span>编辑</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 编辑员工模态框 -->
+	<div id="edit_modal">
+		<div class="edit_modal_con">
+			<div class="edit_modal_title">
+				<span>编辑员工</span><i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="edit_modal_body">
+				<div class="form">
+					<div>
+						<label for="">账号</label>
+						<input type="text" disabled="" style="cursor: not-allowed" value="test@test.com">
+					</div>
+					<div>
+						<label for="">密码</label>
+						<input type="text">
+					</div>
+					<div>
+						<label for="">姓名</label>
+						<input type="text">
+					</div>
+					<div>
+						<label for="">状态</label>
+						<select name="" id="state">
+							<option value="">请选择</option>
+							<option value="">启用</option>
+							<option value="">禁用</option>
+						</select>
+					</div>
+					<div>
+						<label for="">权限</label>
+						<select name="" id="">
+							<option value="">请选择</option>
+							<option value="">管理员</option>
+						</select>
+					</div>
+					<p class="error">账号不能为空</p>
+				</div> 
+			</div>
+			<div class="edit_modal_footer">
+				<button>保存</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/staff_set.js"></script>
+<script>
+	$('#search_sel_class_list li').click(function(){
+		var str = $(this).html()
+		$('#status').html(str).css({color:'#202020'});
+		$(this).parent().slideUp(200);
+	})
+</script>

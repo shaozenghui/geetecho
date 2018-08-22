@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>家庭成员</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/member.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back">客户列表</a>
+		<div class="h_list">
+			<a href="Member.html" style="background-image: url(img/MemberFamily/1-2.png);color:#fff"><span>1</span>家庭成员</a>
+			<a href="expenditure.html"><span>2</span>支出</a>
+			<a href="income.html"><span>3</span>收入</a>
+			<a href="assets_liabilities.html"><span>4</span>资产负债</a>
+			<a href="short_expenditure.html"><span>5</span>短期支出</a>
+			<a href="existing_guarantee.html"><span>6</span>社会保障</a>
+			<a href="existing_policy.html"><span>7</span>商业保险</a>
+			<div class="transparent"></div>
+		</div>
+	</div>
+	<div class="container clearfix">
+		<div class="wrapper clearfix">
+			<p class="con_title">家庭成员<span class='img' id='add_member'><i class='iconfont icon-icon02'></i>添加成员</span></p>
+			<div class="con_list clearfix" id='con_list'>
+				<div class="con_form">
+					<div class="con_from_con">
+						<div class="con_ipt">
+							<label for="">姓名</label>
+							<input type="text" value=""  placeholder='请输入你的姓名' >
+						</div>
+						<div class="con_ipt">
+							<label for="">生日</label>
+							<input placeholder="请选择你的生日(身份证)" readonly  onClick="laydate({ format: 'YYYY-MM-DD'})">
+						</div>
+						<div class="con_ipt">
+							<label for="">性别</label>
+							<select name="" id="" >
+								<option value="1">请选择</option>
+								<option value="1">男</option>
+								<option value="2">女</option>
+							</select>
+						</div>
+						<div class="con_ipt">
+							<label for="">关系</label>
+							<input type="text"  disabled  value="本人" class="oneself">
+						</div>
+						<div class="con_ipt">
+							<label for="">单位性质</label>
+							<select name="" id="">
+								<option value="1">请选择</option>
+								<option value="1">企业</option>
+								<option value="1">企业</option>
+							</select>
+						</div>
+						<div class="con_ipt">
+							<label for="">所在城市</label>
+							<select name="" id="">
+								<option value="1">请选择</option>
+								<option value="1">上海</option>
+								<option value="1">北京</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="con_form con_form2">
+					<div class="con_form_del">
+						<span><i class='iconfont icon-lajixiang'></i>删除成员</span>
+					</div>
+					<div class="con_from_con">
+						<div class="con_ipt">
+							<label for="">姓名</label>
+							<input type="text" value="" placeholder='请输入你的姓名'>
+						</div>
+						<div class="con_ipt">
+							<label for="">生日</label>
+							<input placeholder="请选择你的生日(身份证)"  onClick="laydate({ format: 'YYYY-MM-DD'})">
+						</div>
+						<div class="con_ipt">
+							<label for="">性别</label>
+							<select name="" id="">
+								<option value="1">请选择</option>
+								<option value="1">男</option>
+								<option value="1">女</option>
+								
+							</select>
+						</div>
+						<div class="con_ipt">
+							<label for="">关系</label>
+							<select name="" id="">
+								<option value="1">请选择</option>
+								<option value="1">本人</option>
+							</select>
+						</div>
+						<div class="con_ipt">
+							<label for="">单位性质</label>
+							<select name="" id="">
+								<option value="1">请选择</option>
+								<option value="1">企业</option>
+							</select>
+						</div>
+						<div class="con_ipt">
+							<label for="">所在城市</label>
+							<select name="" id="">
+								<option value="1">请选择</option>
+								<option value="1">上海</option>
+								<option value="1">北京</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 删除模态框 -->
+	<div id="prompt_modal">
+		<div class="prompt_modal_con">
+			<div class="prompt_modal_title">
+				提示<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="prompt_modal_body">
+				删除的客户信息无法找回,确认是否删除
+			</div>
+			<div class="prompt_modal_footer">
+				<button>确认</button>
+			</div>
+		</div>
+	</div>
+	<!-- 推送信息 -->
+	<div id="push"></div>
+	<!-- 底部 -->
+	<div class="footer">
+		<button id='save_step'>保存</button>
+		<button id="next_step">下一步</button>
+	</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/member.js"></script>
+<script src="js/laydate.js"></script>

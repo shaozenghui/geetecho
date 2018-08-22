@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>收入</title>
+	<link rel="stylesheet" href="css/s_bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-table.css">
+	<link rel="stylesheet" href="css/bootstrap-editable.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/expenditure.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back" width='140px'>客户列表</a>
+		<div class="h_list">
+			<a href="Member.html"><span>1</span>家庭成员</a>
+			<a href="expenditure.html"><span>2</span>支出</a>
+			<a href="income.html" style="background-image: url(img/MemberFamily/2-2.png);color:#fff"><span>3</span>收入</a>
+			<a href="assets_liabilities.html" ><span>4</span>资产负债</a>
+			<a href="short_expenditure.html"><span>5</span>短期收入</a>
+			<a href="existing_guarantee.html"><span>6</span>社会保障</a>
+			<a href="existing_policy.html"><span>7</span>商业保险</a>
+		</div>
+	</div>
+	<div class="container clearfix">
+		<div class=" clearfix">
+			<div class="con_list">
+				<ul class="con_list_">
+					<li>
+						<div class="con_list_tit">
+							<div class="con_list_tab">
+								<div class="con_list_tab_active">工资收入</div>
+								<div>资产收入</div>
+							</div>
+							<div class="con_list_jd">
+								<span><i class="iconfont icon-shanchu" ></i></span>
+								<span><i class="iconfont icon-icon02"></i></span>
+							</div>
+						</div>
+						<div class="con_list_con">
+							<div class="con_list_con_list">
+								<div class="con_list_con_list_item">
+									<div>
+										<ul>
+											<li>工资收入</li>
+											<li>工资收入</li>
+											<li>工资收入</li>
+											<li>工资收入</li>
+										</ul>
+									</div>
+									
+								</div>
+								<div class="con_list_con_list_item">
+									<div>
+										<ul>
+											<li>资产收入</li>
+											<li>资产收入</li>
+											<li>资产收入</li>
+											<li>资产收入</li>
+										
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="con_list_add_tit">
+							<p><i class="iconfont icon-fanhuijiantou"></i><span>返回</span></p>
+						</div>
+						<div class="con_list_add_con">
+							<div>
+			                    <label for="">项目</label>
+                                 <input type="text" disabled  id="con_list_add_con_project">
+			                </div>
+			                <div>
+			                    <label for="">周期</label>
+			                    <select  >
+                                    <option value="1">月</option>
+                                    <option value="1">年</option>
+                                </select>
+			                </div>
+			                <div>
+			                    <label for="">成员</label>
+			                    <select >
+                                    <option value="1">成员一</option>
+                                    <option value="1">成员二</option>
+                                </select>
+			                </div>
+			                <div>
+			                    <label for="">金额</label>
+			                    <input type="text" placeholder="收入金额">
+			                </div>
+			                <div>
+			                    <label for="">备注</label>
+			                    <input type="text"  placeholder="请填写备注">
+			                </div>
+			                <div>
+			                	<button class="add">添加</button>
+			                </div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		    <div id="s_table">
+		    	<p class="con_tab_title">月度收入：<span>1,000元</span>&nbsp; 年度收入：<span>1,000元</span>&nbsp; 总收入：<span>13,000元</span><span class="detail">详情<i class="iconfont icon-zhcc_xiangxiajiantou"></i></span><span class='con_tab_del'><i class='iconfont icon-lajixiang'></i>删除项目</span></p>
+		    	<table id='table1'> </table>  
+		    </div>
+		</div>
+	</div>
+	<!--月度收入详情  -->
+	<div id="adjustment2_modal">
+		<div class="adjustment2_modal_con">
+			<div class="adjustment2_modal_body">
+				<div class="adjustment2_form">
+					<table>
+			    		<thead>
+			    			<tr>
+			    				<th>成员</th>
+			    				<th>月度收入</th>
+			    				<th>年度收入</th>
+			    				<th>合计收入</th>
+			    			</tr>
+			    		</thead>
+			    		<tbody>
+			    			<tr>
+			    				<td>张三</td>
+			    				<td>1111</td>
+			    				<td>111</td>
+			    				<td>111</td>
+			    			</tr>
+			    			<tr>
+			    				<td>张三</td>
+			    				<td>1111</td>
+			    				<td>111</td>
+			    				<td>111</td>
+			    			</tr>
+			    			<tr>
+			    				<td>张三</td>
+			    				<td>1111</td>
+			    				<td>111</td>
+			    				<td>111</td>
+			    			</tr>
+			    		</tbody>
+			    	</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加自定义项目 -->
+	<div id="custom_modal">
+		<div class="custom_modal_con">
+			<div class="custom_modal_title">
+				添加项目<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="custom_modal_body">
+				<div class="custom_from">
+					<p>
+						<label for="">选择分类</label>
+						<select name="" id="select_o" >
+							<option value="">请选择</option>
+							<option value="">工资收入</option>
+							<option value="">资产收入</option>
+						</select>
+					</p>
+					<p>
+						<label for="">项目名称</label>
+						<input type="text">
+					</p>
+				</div>
+				<p class="error_prompt">*项目名称只能是汉字   </p>
+			</div>
+			<div class="custom_modal_footer">
+				<button id="creat">确认</button>
+			</div>
+		</div>
+	</div>
+	<!-- 删除自定义项目 -->
+	<div id="custom_modal2">
+		<div class="custom_modal2_con">
+			<div class="custom_modal2_title">
+				<i class="fl iconfont icon-fanhuijiantou"></i>删除项目<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="custom_modal2_body">
+				<div class="custom_from">
+					<p>
+						<label for="">选择分类</label>
+						<select name=""  id="del_select_o">
+							<option value="">请选择</option>
+							<option value="">工资收入</option>
+							<option value="">资产收入</option>
+						</select>
+					</p>
+					<p>
+						<label for="">项目名称</label>
+						<select name=""  id="del_select_t">
+							<option value="">请选择</option>
+							<option value="">项目一</option>
+							<option value="">项目二</option>
+						</select>
+					</p>
+				</div>
+				<div>
+					删除当前项目会清空该项下的所有数据确认继续吗？
+				</div>
+			</div>
+			<div class="custom_modal2_footer">
+				<button id="creat2">确认</button>
+				<button id="creat2_">确认</button>
+			</div>
+		</div>
+	</div>
+	<!-- 删除项目 -->
+	<div id="prompt_modal">
+		<div class="prompt_modal_con">
+			<div class="prompt_modal_title">
+				提示<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="prompt_modal_body">
+				您选择删除31项内容.删除的内容无法恢复,请谨慎操作
+			</div>
+			<div class="prompt_modal_footer">
+				<button>确认</button>
+			</div>
+		</div>
+	</div>
+	<!-- 推送信息 -->
+	<div id="push"></div>
+	<div class="s_footer">
+		<div class="cont">
+			<div id='next_step'>保存</div>
+			<div >下一步</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/bootstrap-table-zh-CN.js"></script>
+<script src="js/bootstrap-editable.min.js"></script>
+<script src="js/bootstrap-table-editable.min.js"></script>
+<script src="js/expenditure.js"></script>
+<script>
+		var H = $('#s_table').height();
+		var $table= $('#table1').bootstrapTable({   
+			// url: '/Interface/GetData',         //请求后台的URL（*）
+	         method: 'get',                      //请求方式（*）
+	         striped: true,                      //是否显示行间隔色                       
+	         sortOrder: "asc",                   //排序方式
+	         height: H-50,                        
+		   	 columns: [  
+		        {'checkbox':true},
+		        { field: 'project', title: '项目',editable:false,},  
+		        { field: 'settlement_cycle', title: '结算周期', sortable: true},
+		        { field: 'member', title: '成员' ,sortable: true}, 
+		        { field: 'money', title: '金额' ,"editable":true,sortable: true},  
+		        { field: 'remarks', title: '备注' ,"editable":true, },  
+		    ],  
+			 data:[ 
+				{ 
+				"member":"A",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100001",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"Q",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100002",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"W",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"A",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100001",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"Q",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100002",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"W",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"A",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100001",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"Q",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100002",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"W",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"E",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"10000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"R",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"T",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"Y",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"U",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"I",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"A",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+				{ 
+				"member":"A",
+				"project":"伙食费", 
+				"settlement_cycle":"月", 
+				"money":"100000",
+				"remarks":"这是备注"
+				}, 
+			]  
+		});
+</script>

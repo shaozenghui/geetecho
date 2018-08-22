@@ -1,0 +1,54 @@
+.header {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    background: #fff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    padding: 11px 0px;
+    position: relative;
+}
+.logo a {
+    font-size: 24px;
+    color: #101010;
+    margin-left: 60px;
+}
+
+/* footer开始 */
+.footer{
+	width: 100%;
+	height: 40px;
+	padding: 10px 50%;
+	position: fixed;
+	left: -120px;
+	bottom: 0px;
+	display: flex;
+	background: #fff;
+	box-shadow: 0px -2px 2px rgba(0,0,0,0.2);
+}
+.footer button{
+	width: 100px;
+	height: 40px;
+	background: #6bcf6b;
+	border: 0 none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+}
+.footer button:hover{
+	background: #6bcf83;
+}
+.footer button:active{
+	background: #49c365;
+}
+#save_step:hover{
+	background: #f15252;
+}
+#save_step:active{
+	background: #e24747;
+}
+#save_step{
+	margin-right: 30px;
+	background: #f65757;
+}
+/* footer结束 */

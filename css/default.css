@@ -1,0 +1,207 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+body{
+	background: #f6f6f6;
+}
+a{
+	text-decoration: none;
+}
+a,span,img{
+	display: inline-block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+img{
+	border: 0 none;
+}
+body,html,h1,h2,h3,h4,h5,h6,ul,ol,input,form,div,a,span,label,button,table,tr,th,td,select,option{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family:"微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.wrapper{
+	width: 1246px;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+input,select{
+	outline: none;
+}
+button{
+	border: 0 none;
+	outline: none;
+}
+select {  
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/  
+  border: solid 1px #000;  
+  
+  /*很关键：将默认的select选择框样式清除*/  
+  appearance:none;  
+  -moz-appearance:none;  
+  -webkit-appearance:none;  
+  
+  /*在选择框的最右侧中间显示小箭头图片*/  
+  background: url("../img/pull-down-display.png") no-repeat scroll right center transparent;  
+  background-position: 232px center;
+  
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/  
+  padding-right: 14px;  
+}  
+  
+  
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/  
+select::-ms-expand { display: none; }  
+
+
+/* 去掉input type属性为number 的箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance:none !important;
+}
+input[type='number']{
+	-moz-appearance:textfield;
+}
+.input_focus{
+	border: 1px solid #3da8f5 !important;
+	box-shadow: 0px 0px 5px #3da8f5;
+}
+/* 错误信息提示类 */
+.input_focus_error{
+	border: 1px solid  #a94442 !important;
+	box-shadow: 0px 0px 5px #a94442;
+}
+/* 点击a链接切换背景图片的class */
+
+.first_con{
+	background-image: url(../img/MemberFamily/1-2.png);
+	color: #fff;
+}
+.middle_con{
+	background-image: url(../img/MemberFamily/2-2.png);
+	color: #fff;
+}
+.last_con{
+	background-image: url(../img/MemberFamily/3-2.png);
+	color: #fff;
+}
+/* 模态框 */
+#prompt_modal{
+	width: 100%;
+	height: 100%;
+	background: rgba(56,56,56,0.7);
+	position: fixed;
+	top:0;
+	left: 0;
+	display: none;
+	z-index: 200;
+}
+#prompt_modal .prompt_modal_con{
+	width: 390px;
+	height: 240px;
+	position: absolute;
+	background:#fff;
+	border-radius: 5px;
+	left:50%;
+	top: 40%;
+	margin-left: -215px;
+	margin-top: -120px;
+	padding: 0 20px;
+	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+#prompt_modal .prompt_modal_title{
+	width: 100%;
+	height:60px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 60px;
+	color: #101010;
+	position: relative;
+	font-weight: bold;
+}
+#prompt_modal .prompt_modal_title .img{
+	position: absolute;
+	top:2px;
+	right: 7px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	font-size: 28px;
+	color: #999;
+}
+#prompt_modal .prompt_modal_title .img:hover{
+	color: #3da8f5;
+}
+#prompt_modal .prompt_modal_body{
+	height: 118px;
+	width: 100%;
+	border-top: 1px solid  #cacaca;
+	border-bottom: 1px solid  #cacaca;
+	line-height: 124px;
+	text-align: center;
+	font-size: 14px;
+	color: #202020;
+}
+#prompt_modal .prompt_modal_footer{
+	width: 100%;
+	height: 60px;
+	position: relative;
+}
+#prompt_modal .prompt_modal_footer button{
+	width: 100px;
+	height: 40px;
+	border-radius: 4px;
+	background:#3da8f5;
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -50px;
+	cursor: pointer;
+}
+#prompt_modal .prompt_modal_footer button:hover{
+	background:#3d98f5;
+}
+#prompt_modal .prompt_modal_footer button:active{
+	background:#3d7ef5;
+}
+/* 推送信息 */
+
+#push{
+	width: 260px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: #3da8f5;
+	color: #fff;
+	font-size: 16px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	display: none;
+	position: fixed;
+	bottom: 250px;
+	right: 0;
+	z-index: 100;
+}
+.not_allowed{
+	cursor: not-allowed;
+}

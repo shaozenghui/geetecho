@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>账号设置</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/account_set.css">
+	<style>
+		.upload{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back" width='140px'>客户列表</a>
+	</div>
+	<div class="container clearfix">
+		<div class="content">
+			<div class="con_tit">
+				<span>账号设置</span>
+				<ul>
+					<li class="li_active">个人信息</li>
+					<li>密码修改</li>
+				</ul>
+			</div>
+			<ul>
+				<li>
+					<div class="head_pro">
+						<img src="img/touxiang.jpg"  height="90" width="90" alt="" class="touxiang">
+						<input type="file" class="upload">
+						<div class="change_tou">更换头像</div>
+					</div>
+					<div class="form">
+						<div>
+							<label for="">账号</label>
+							<input type="text" disabled="" style="cursor:not-allowed" value="test@test.com">
+						</div>
+						<div>
+							<label for="">姓名</label>
+							<input type="text">
+						</div>
+						<p class="error">姓名不能为空</p>
+						<button>保存</button>
+					</div>
+				</li>
+				<li>
+					<div class="form">
+						<div>
+							<label for="">原密码</label>
+							<input type="text">
+						</div>
+						<div>
+							<label for="">新密码</label>
+							<input type="text">
+						</div>
+						<div>
+							<label for="">确认密码</label>
+							<input type="text">
+						</div>
+						<p class="error">姓名不能为空</p>
+						<button>保存</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+	$('.container input').focus(function(){
+		$(this).addClass('input_focus');
+	})
+	$('.container input').blur(function(){
+		$(this).removeClass('input_focus');
+	})
+	$('.footer button').click(function(){
+		window.location = "select_insurance.html";
+	})
+	// 更换头像
+	$('.change_tou').click(function(event) {
+		$('.upload').click();
+		$('.upload').change(function(event) {
+			var str = window.URL.createObjectURL(this.files.item(0));
+			$('.touxiang').attr('src',str);
+		});
+	});
+
+	$('.con_tit ul li').click(function(event) {
+		$(this).addClass('li_active');
+		$('.con_tit ul li').not($(this)).removeClass('li_active');
+		$('.content>ul li').hide().eq($(this).index()).show();
+	});
+
+</script>

@@ -1,0 +1,512 @@
+body{
+	background: #f6f6f6 !important;
+}
+/*头部开始 */
+.header{
+	height: 60px;
+	width: 100%;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	background: #fff;
+	padding: 0px !important;
+}
+.h_back{
+	width: 93px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 47px;
+	font-size: 18px;
+	color: #202020;
+	float: left;
+	border-right: 1px solid #cacaca;
+	background-image: url(../img/MemberFamily/back.png) ;
+	background-repeat: no-repeat;
+	background-position: 20px center;
+}
+.btn-group, .btn-group-vertical{
+	position: static !important;
+}
+.con_title span {
+    font-size: 22px;
+    color: #202020;
+}
+.bootstrap-select > .btn{
+	height: 40px !important;
+}
+#add_member{
+    cursor: pointer;
+    top: 1px;
+    color: #909090;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 20px;
+    top: -2px;
+}
+#add_member i{
+	margin-right: 8px;
+	font-size: 20px !important;
+}
+#add_member:hover{
+	color: #3da8f5;
+}
+.content{
+	width: 1246px;
+	position: absolute;
+	top: 120px;
+	bottom: 0px;
+/* 	height: 500px; */
+	border-radius: 4px;
+	background: #fff;
+	border: 1px solid #cacaca;
+	margin-top: 20px;
+	padding: 20px 10px;
+	padding-top: 60px;
+	padding-right: 6px;
+
+
+}
+.content div{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.content div::-webkit-scrollbar{
+  background:#fff;
+  width: 6px;
+}
+ 
+.content div::-webkit-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 3px;
+}
+.content div::-moz-scrollbar{
+  background:#fff;
+  width: 6px;
+}
+ 
+.content div::-moz-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 3px;
+}
+.content div::-ms-scrollbar{
+  background:#fff;
+  width: 6px;
+}
+.content div::-ms-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 3px;
+}
+.dropdown-main::-webkit-scrollbar{
+  background:#fff;
+  width: 6px;
+}
+ 
+.dropdown-main::-webkit-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 3px;
+}
+.content table thead{
+	position: fixed;
+	top: 160px;
+	left: 50%;
+	background: #fff;
+	margin-left: -609px;
+	width: 1221px;
+	border: 1px solid #cacaca;
+	border-bottom: none;
+	border-right: none;
+}
+.content table{
+	width: 1220px;
+	/* height: 100%; */
+
+}
+.content table thead th {
+	height: 40px;
+	line-height: 40px;
+	border-right: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
+	font-size: 18px;
+    color: #303030;
+	font-weight: bold;
+    text-align: left;
+    padding-left: 20px;
+    width: 305px;
+}  
+.content table td{
+	height: 35px;
+	line-height: 35px;
+	border-right: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
+	font-size: 14px;
+    color: #303030;
+    width: 20%;
+    text-align: left;
+    padding-left: 20px;
+}
+.content table td i{
+	margin-right: 10px;
+}
+.content table tbody tr:nth-child(odd){
+	background: #f0f0f0;
+}
+.content table tbody tr:nth-child(even):hover{
+	background: #f9f9f9;
+}
+.content table tbody tr td:nth-child(5){
+	color: #3da8f5;
+}
+.content table tbody tr td:nth-child(5) span{
+	cursor: pointer;
+}
+.content table tbody {
+	margin-top: 40px;
+	width: 1220px;
+	border-left: 1px solid #cacaca;
+	border-top: 1px solid #cacaca;
+}
+/* 编辑模态框 */
+#edit_modal{
+	width: 100%;
+	height: 100%;
+	background: rgba(56,56,56,0.7);
+	position: fixed;
+	top:0;
+	left: 0;
+	display: none;
+	z-index: 200;
+}
+#edit_modal .edit_modal_con{
+	width: 430px;
+	overflow: hidden;
+	position: absolute;
+	background:#fff;
+	border-radius: 5px;
+	left:50%;
+	top: 40%;
+	margin-left: -215px;
+	margin-top: -200px;
+	padding: 0px 20px;
+	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+#edit_modal .edit_modal_title{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 20px;
+	color: #101010;
+	position: relative;
+
+}
+#edit_modal .edit_modal_title span{
+	font-weight: bold;
+}
+#edit_modal .edit_modal_title .img{
+	position: absolute;
+	top:2px;
+	right: 7px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	font-size: 28px;
+	color: #999;
+}
+#edit_modal .edit_modal_title .img:hover{
+	color: #3da8f5;
+}
+#edit_modal .edit_modal_body{
+	overflow: hidden;
+	width: 400px;
+	border-top: 1px solid  #cacaca;
+	border-bottom: 1px solid  #cacaca;
+	text-align: center;
+	font-size: 14px;
+	padding:18px 18px; 
+	padding-bottom: 0px;
+}
+#edit_modal .edit_modal_body .form{
+	width: 100%;
+}
+.edit_modal_body .form>div{
+	width: 100%	;
+	/* height: 40px; */
+	/* line-height: 40px; */
+	float: left;
+	margin-bottom: 15px;
+}
+.bootstrap-select.btn-group .dropdown-menu{
+	height: 180px !important;
+}
+.bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+    width: 239px !important;
+    float: right !important;
+}
+
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
+	position: absolute;
+    top: 31px !important;
+    left: 0px !important;
+    z-index: 100 !important;
+    overflow: hidden;
+}
+#edit_modal .edit_modal_body .form div:nth-child(5){
+	margin-bottom: 0px !important;
+}
+#edit_modal .edit_modal_body .form label{
+	float: left;
+	line-height: 40px;
+	font-size: 16px;
+	color: #202020;
+	font-weight: bold;
+}
+#edit_modal .edit_modal_body .form .input{
+	float: right;
+	line-height: 40px;
+	width: 305px;
+	height: 40px;
+	padding-left: 14px;
+	border-radius: 4px;
+	border: 1px solid #cacaca;
+	line-height: 38px;
+}
+#edit_modal .edit_modal_body .form>div{
+	text-align: left;
+}
+.dropdown-mul-2{
+	position: absolute;
+	top:0px;
+	bottom: 0px;
+}
+#dropdown-mul-2{
+	position:absolute;
+	top: 40%;
+	width: 364px;
+	left: 50%;
+	margin-left: -177px;
+	z-index: 110;
+}
+.dropdown-display{
+	padding: 9px 20px 8px 12px !important;
+}
+.dropdown-clear-all{
+	right: 15px !important;
+	top: 7px !important;
+	color: #cacaca !important;
+}
+.dropdown-display .placeholder:first-child{
+	line-height: 38px !important;
+	color: #cacaca !important;
+	margin-left: 4px;
+}
+#dropdown-mul-2 label{
+	float: left;
+    line-height: 40px;
+    font-size: 16px;
+    color: #202020;
+	font-weight: bold;
+}
+#edit_modal .edit_modal_body .form select{
+	float: right;
+	line-height: 40px;
+	width: 321px;
+	height: 40px;
+	padding-left: 14px;
+	border-radius: 4px;
+	border: 1px solid #cacaca;
+	line-height: 38px;
+
+	background-position: 278px center;
+}
+.dropdown-display-label input{
+	height: 27px;
+	margin-left: 14px;
+}
+.dropdown-main{
+	height: 150px;
+	overflow-y:scroll;
+	margin-top: 4px !important;
+	border-top: 1px solid #cacaca !important;
+	position: static !important;
+}
+#edit_modal .edit_modal_body .form select option{
+	color: #202020;
+}
+#edit_modal .edit_modal_footer{
+	width: 100%;
+	height: 60px;
+	position: relative;
+}
+#edit_modal .edit_modal_footer button{
+	width: 100px;
+	height: 40px;
+	border-radius: 4px;
+	background:#3da8f5;
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -50px;
+	cursor: pointer;
+}
+#edit_modal .edit_modal_footer button:hover{
+	background:#3d98f5;
+}
+#edit_modal .edit_modal_footer button:active{
+	background:#3d7ef5;
+}
+.error{
+	width: 300px !important;
+	height: 14px !important;
+	line-height: 14px !important;
+	float: left;
+	text-align: left;
+	margin-top: 6px;
+	margin-left:46px;
+	color: red;
+	font-size: 14px !important;
+	margin-bottom: 10px;
+}
+
+#box ul{
+	border-radius: 4px;
+	padding: 6px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 
+}
+#box ul li{
+	width: 100px;	
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 4px;
+	float: left;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	border: 1px solid #dedede;
+}
+#box ul li i{
+	float: right;
+	margin-right: 6px;
+	font-size: 12px !important;
+	cursor: pointer;
+}
+#edit_modal .edit_modal_body .form .input {
+    width: 237px;
+}
+.bootstrap-select-searchbox input{
+	width: 222px !important;
+}
+.error {
+    margin-left: 125px;
+}
+.content table tbody tr td:nth-child(5) span:last-child {
+    margin-left: 20px;
+}
+#edit_modal .edit_modal_body .form select{
+	width: 238px !important;
+	background-position: 210px center !important;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default{
+    background-color: #fff !important;
+    outline: none;
+}
+/* 删除模态框 */
+#del_modal{
+	width: 100%;
+	height: 100%;
+	background: rgba(56,56,56,0.7);
+	position: fixed;
+	top:0;
+	left: 0;
+	display: none;
+	z-index: 200;
+}
+#del_modal .del_modal_con{
+	width: 410px;
+	height: 240px;
+	position: absolute;
+	background:#fff;
+	border-radius: 5px;
+	left:50%;
+	top: 40%;
+	margin-left: -215px;
+	margin-top: -120px;
+	padding: 0px 20px;
+	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+#del_modal .del_modal_title{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 20px;
+	color: #101010;
+	position: relative;
+	font-weight: bold;
+}
+#del_modal .del_modal_title .img{
+	position: absolute;
+	top:2px;
+	right: 7px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	font-size: 28px;
+	color: #999;
+}
+#del_modal .del_modal_title .img:hover{
+	color: #3da8f5;
+}
+#del_modal .del_modal_body{
+	height: 118px;
+	width: 100%;
+	border-top: 1px solid  #cacaca;
+	border-bottom: 1px solid  #cacaca;
+	line-height: 118px;
+	text-align: center;
+	font-size: 14px;
+}
+#del_modal .del_modal_footer{
+	width: 100%;
+	height: 60px;
+	position: relative;
+}
+#del_modal .del_modal_footer button{
+	width: 100px;
+	height: 40px;
+	border-radius: 4px;
+	background:#3da8f5;
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -50px;
+	cursor: pointer;
+}
+#del_modal .del_modal_footer button:hover{
+	background:#3d98f5;
+}
+#del_modal .del_modal_footer button:active{
+	background:#3d7ef5;
+}
+.icon-icon02{
+	font-size: 16px;
+}
+.color_1{
+	box-shadow: 0px 0px 5px #3da8f5;
+	border: 1px solid #3da8f5 !important;
+}
+.content table thead tr th:nth-child(3){
+	padding-left: 0px;
+	padding-right: 20px;
+	text-align: right;
+}
+.content table tbody tr td:nth-child(3) {
+    padding-left: 0px;
+	padding-right: 20px;
+	text-align: right;
+}

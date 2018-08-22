@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>团队管理</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href='css/iconfont.css'>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/team_management.css">
+	<link rel="stylesheet" href="css/s_bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.dropdown.css">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back" style="width:140px">客户列表</a>
+	</div>
+	<div class="container clearfix">
+		<div class="wrapper clearfix">
+			<div class="con_title clearfix">
+				<span calss='fl'>团队管理</span>
+				<span calss='fl' id='add_member'><i class='icon-icon02 iconfont img'></i>添加团队</span>
+				<div class="search fr" >
+					<input style="width:192px" type="text" placeholder='团队搜索'>
+				</div>
+			</div>
+			<div class="content">
+				<div>
+					<table cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th>团队名称</th>
+								<th>团队负责人</th>
+								<th>成员人数</th>
+								<th>创建时间</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Team1</td>
+								<td>张三</td>
+								<td>12</td>
+								<td>2017-10-24</td>
+								<td ><span class="edit">编辑</span><span class='del'>删除</span></td>
+							</tr>
+							<tr>
+								<td>Team1</td>
+								<td>张三</td>
+								<td>12</td>
+								<td>2017-10-24</td>
+								<td ><span class="edit">编辑</span><span class='del'>删除</span></td>
+							</tr>
+							<tr>
+								<td>Team1</td>
+								<td>张三</td>
+								<td>12</td>
+								<td>2017-10-24</td>
+								<td ><span class="edit">编辑</span><span class='del'>删除</span></td>
+							</tr>
+							<tr>
+								<td>Team1</td>
+								<td>张三</td>
+								<td>12</td>
+								<td>2017-10-24</td>
+								<td ><span class="edit">编辑</span><span class='del'>删除</span></td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 添加团队模态框 -->
+	<div id="edit_modal">
+		<div id="dropdown-mul-2">
+			<label for="">成员</label>
+			<div class="dropdown-mul-2" style="width:238px;float:right;" id="s_dropdown-mul-2">
+		        <select style="display:none" name="" id="mul-2" multiple placeholder="请选择">
+		          <option value="1">1</option>
+		          <option value="2">2</option>
+		          <option value="3">3</option>
+		          <option value="4">4</option>
+		          <option value="5">5</option>
+		          <option value="6">6</option>
+		          <option value="7">7</option>
+		          <option value="8">8</option>
+		          <option value="9">9</option>
+		          <option value="1c">1c</option>
+		          <option value="2c">2c</option>
+		          <option value="3c">3c</option>
+		          <option value="4c">4c</option>
+		          <option value="5c">5c</option>
+		          <option value="6c">6c</option>
+		          <option value="7c">7c</option>
+		          <option value="8c">8c</option>
+		          <option value="9c">9c</option>
+		        </select>
+	      	</div>
+		</div>
+		<div class="edit_modal_con">
+			<div class="edit_modal_title">
+				<span>添加团队</span><i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="edit_modal_body">
+				<div class="form">
+					<div>
+						<label for="">团队名称</label>
+						<input type="text" class="input" disabled="" style="cursor: not-allowed" value="test@test.com">
+					</div>
+					<div style="margin-bottom:54px">
+						<label for="">团队负责人</label>
+						<select name="" id="">
+							<option value="">请选择</option>
+							<option value="">成员一</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+							<option value="">成员二</option>
+						</select>
+					</div>
+					<p class="error">团队名称不能为空</p>
+				</div> 
+			</div>
+			<div class="edit_modal_footer">
+				<button>保存</button>
+			</div>
+		</div>
+	</div>
+	<!-- 删除模态框 -->
+	<div id="del_modal">
+		<div class="del_modal_con">
+			<div class="del_modal_title">
+				提示<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="del_modal_body">
+				<p>请注意,删除的团队信息无法找回,请谨慎操作</p>
+			</div>
+			<div class="del_modal_footer">
+				<button>确认</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/mock.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropdown.js"></script>
+<script src="js/index.js"></script>
+<script src="js/team_management.js"></script>
+<script>
+  var Random = Mock.Random;
+  $('.dropdown-mul-2').dropdown({
+    searchable: true,
+    // multipleMode: 'label',
+  });
+</script>

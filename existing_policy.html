@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>现有保障</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/existing_policy.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<script src="js/existing_policy.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back" width='140px'>客户列表</a>
+		<div class="h_list">
+			<a href="Member.html"><span>1</span>家庭成员</a>
+			<a href="expenditure.html"><span>2</span>支出</a>
+			<a href="income.html"><span>3</span>收入</a>
+			<a href="assets_liabilities.html"  ><span>4</span>资产负债</a>
+			<a href="short_expenditure.html" ><span>5</span>短期支出</a>
+			<a href="existing_guarantee.html" ><span>6</span>社会保障</a>
+			<a href="existing_policy.html" style="background-image: url(img/MemberFamily/3-2.png);color:#fff"><span>7</span>商业保险</a>
+		</div>
+	</div>
+	<div class="container clearfix">
+		<div class="wrapper clearfix" id="contnet">
+			<p class="con_title">现有保单 <span class="add_policy">添加保单<i class="iconfont icon-zhcc_xiangxiajiantou"></i></span></p>
+			<div class="add_policy_list">
+				<p>个人保单</p>
+				<p>团体保单</p>
+			</div>
+			<ul class="cont_f_list clearfix">
+				<li>
+					<p><span>张三</span><span  class="del"><i class="iconfont icon-lajixiang"></i>删除保单</span></p>
+					<div class="cont_f_list_con">
+						<ul>
+							<li>
+								<div class="text">
+									<p>人寿险</p>
+									<div class="text_cont">
+										<p>身故或全残：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>意外险</p>
+									<div class="text_cont">
+										<p>身故或全残：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>重疾险</p>
+									<div class="text_cont">
+										<p>重疾险：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>医疗险</p>
+									<div class="text_cont">
+										<p>意外医疗：50000 /年</p>
+										<p>住院：50000 /次</p>
+										<p>意外医疗：50000 /年</p>
+										<p>住院：50000 /次</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<p><span>张三</span><span  class="del"><i class="iconfont icon-lajixiang"></i>删除保单</span></p>
+					<div class="cont_f_list_con">
+						<ul>
+							<li>
+								<div class="text">
+									<p>人寿险</p>
+									<div class="text_cont">
+										<p>身故或全残：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>意外险</p>
+									<div class="text_cont">
+										<p>身故或全残：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>重疾险</p>
+									<div class="text_cont">
+										<p>重疾险：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>医疗险</p>
+									<div class="text_cont">
+										<p>意外医疗：50000 /年</p>
+										<p>住院：50000 /次</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<p><span>张三</span><span  class="del"><i class="iconfont icon-lajixiang"></i>删除保单</span></p>
+					<div class="cont_f_list_con">
+						<ul>
+							<li>
+								<div class="text">
+									<p>人寿险</p>
+									<div class="text_cont">
+										<p>身故或全残：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>意外险</p>
+									<div class="text_cont">
+										<p>身故或全残：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>重疾险</p>
+									<div class="text_cont">
+										<p>重疾险：50000</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="text">
+									<p>医疗险</p>
+									<div class="text_cont">
+										<p>意外医疗：50000 /年</p>
+										<p>住院：50000 /次</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 推送信息 -->
+	<div id="push"></div>
+	<!-- 分析规划书 -->
+	<div class="plan_book">
+		<p>分析书生成中</p>
+		<div class="bar">
+			<div></div>
+		</div>
+	</div>
+	<!-- 下载进度条 -->
+	<div class="plan_book2">
+		<p style="color:#3da8f5"></p>
+		<div class="bar2">
+			<div></div>
+		</div>
+	</div>
+	<!-- 生成计划书提示信息模态框 -->
+	<div id="plan_modal1">
+		<div class="plan_modal1_con">
+			<div class="plan_modal1_title">
+				提示<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="plan_modal1_body">
+				<p>你好,客户的分析规划书已生成成功,
+				是否返回首页？</p>
+			</div>
+			<div class="plan_modal1_footer">
+				<a href="index.html">确认</a>
+			</div>
+		</div>
+	</div>
+	<!-- 选择模态框 -->
+	<div id="prompt_modal">
+		<div class="prompt_modal_con">
+			<div class="prompt_modal_title">
+				选择导出数据格式<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="prompt_modal_body">
+				<button>word格式</button>
+				<button>JPG格式</button>
+			</div>
+		</div>
+	</div>
+	<!-- JPG格式页面模态框 -->
+	<div id="select_pro_modal">
+		<div class="select_pro_modal">
+			<i class="img iconfont icon-guanbi"></i>
+			<div class="select_pro_modal_titile">
+				<div></div>
+			</div>
+			<div class="select_pro_modal_con">
+				<div class="cont2">
+					<div>
+						<div class="s_header">
+							<p>资料收集</p>
+						</div>
+						<div class="s_container">
+							<ul class="five_list">
+								<li>
+									<div class="title">
+										<div class="s_wrapper">
+											<span>张三</span>
+											<span>生日&nbsp;&nbsp;1993-04-05</span>
+											<span>所在城市&nbsp;&nbsp;上海</span>
+										</div>
+										<div class="five_list_bar"></div>
+									</div>
+									<div class="cont">
+										<div class="s_wrapper">
+											<div class="pie">
+												<div class="title">
+													<span>现有保单</span>
+												</div> 
+												<div class="text_pie">
+													<ul>
+														<li>
+															<p><span>人寿险</span><span>1,000</span></p>
+															<div class="text_pie_list">
+																<div><span>身故全残</span><span>1,000</span></div>
+																<div><span>身故全残</span><span>1,000</span></div>
+																<div><span>身故全残</span><span>1,000</span></div>
+															</div>
+														</li>
+														<li>
+															<p><span>意外险</span><span>1,000</span></p>
+															<div class="text_pie_list">
+																<div><span>身故全残</span><span>1,000</span></div>
+																<div><span>身故全残</span><span>1,000</span></div>
+																
+															</div>
+														</li>
+														<li>
+															<p><span>重疾险</span><span>1,000</span></p>
+															<div class="text_pie_list">
+																<div><span>身故全残</span><span>1,000</span></div>
+																<div><span>身故全残</span><span>1,000</span></div>
+																<div><span>身故全残</span><span>1,000</span></div>
+															</div>
+														</li>
+														<li>
+															<p><span>医疗险</span><span>1,000</span></p>
+															<div class="text_pie_list">
+																<div><span>身故全残</span><span>1,000</span></div>
+																<div><span>身故全残</span><span>1,000</span></div>
+																
+															</div>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+											<div class="bar">
+												<div class="title">
+													<span>社会保障</span>
+													<ul >
+														<li>
+															
+															<span>个人缴纳5,200</span>
+															<span ></span>
+														</li>
+														<li>
+															
+															<span>企业缴纳5,200</span>
+															<span ></span>
+														</li>
+														
+													</ul>
+												</div>
+												<div class="con_bar_">
+													<div class="text">
+														<ul>
+															<li>养老</li>
+															<li>医疗</li>
+															<li>失业</li>
+															<li>工伤</li>
+															<li>生育</li>
+															<li>公积金</li>
+														</ul>
+													</div>
+													<div class="bar_">
+														<ul>
+															<li>
+																<div class="bar_item">
+																	<div style="width:100px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:120px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(12%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:210px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:320px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(12%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:120px"></div>
+																	<span>1,492</span>
+																	<span>(21%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:320px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:140px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:34px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(17%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:200px"></div>
+																	<span>1,492</span>
+																	<span>(37%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:130px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(23%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:120px"></div>
+																	<span>1,492</span>
+																	<span>(21%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:320px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="title">
+										<div class="s_wrapper">
+											<span>李四</span>
+											<span>生日&nbsp;&nbsp;1934-04-05</span>
+											<span>所在城市&nbsp;&nbsp;北京</span>
+										</div>
+										<div class="five_list_bar"></div>
+									</div>
+									<div class="cont">
+										<div class="s_wrapper">
+											<div class="pie">
+												<img src="img/no_info.png"  alt="">
+											</div>
+											<div class="bar">
+												<div class="title">
+													<span>社会保障</span>
+													<ul >
+														<li>
+															
+															<span>个人缴纳5,200</span>
+															<span ></span>
+														</li>
+														<li>
+															
+															<span>企业缴纳5,200</span>
+															<span ></span>
+														</li>
+														
+													</ul>
+												</div>
+												<div class="con_bar_">
+													<div class="text">
+														<ul>
+															<li>养老</li>
+															<li>医疗</li>
+															<li>失业</li>
+															<li>工伤</li>
+															<li>生育</li>
+															<li>公积金</li>
+														</ul>
+													</div>
+													<div class="bar_">
+														<ul>
+															<li>
+																<div class="bar_item">
+																	<div style="width:100px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:120px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(12%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:210px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:320px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(12%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:120px"></div>
+																	<span>1,492</span>
+																	<span>(21%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:320px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:140px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:34px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(17%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:200px"></div>
+																	<span>1,492</span>
+																	<span>(37%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:130px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(23%)</span>
+																</div>
+															</li>
+															<li>
+																<div class="bar_item">
+																	<div style="width:210px"></div>
+																	<span>1,492</span>
+																	<span>(7%)</span>
+																</div>
+																<div class="bar_item">
+																	<div style="width:320px"></div>
+																	
+																	<span>1,492</span>
+																	<span>(12%)</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="title">
+										<div class="s_wrapper">
+											<span>孩子</span>
+											<span>生日&nbsp;&nbsp;1934-04-05</span>
+											<span>所在城市&nbsp;&nbsp;北京</span>
+										</div>
+										<div class="five_list_bar"></div>
+									</div>
+									<div class="cont">
+										<div class="s_wrapper">
+											<div class="pie">
+												<div class="title">
+													<span>现有保单</span>
+												</div>
+												<div class="text_pie">
+													<ul>
+														<li>
+															<p>人寿险&nbsp;1,000</p>
+															<div class="text_pie_list">
+																<div>身故全残&nbsp;1,000</div>
+															</div>
+														</li>
+														<li>
+															<p>意外险&nbsp;1,000</p>
+															<div class="text_pie_list">
+																<div>身故全残&nbsp;1,000</div>
+															</div>
+														</li>
+														<li>
+															<p>重疾险&nbsp;1,000</p>
+															<div class="text_pie_list">
+																<div>身故全残&nbsp;1,000</div>
+															</div>
+														</li>
+														<li>
+															<p>医疗险&nbsp;1,000</p>
+															<div class="text_pie_list">
+																<div>身故全残&nbsp;1,000</div>
+																<div>身故全残&nbsp;1,000</div>
+																<div>身故全残&nbsp;1,000</div>
+																<div>身故全残&nbsp;1,000</div>
+																<div>身故全残&nbsp;1,000</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="bar">
+												<img src="img/child_no_info.png.jpg"  alt="">
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="dataClass">
+								<li>
+									<div class="s_wrapper">
+										<div class="title">
+											<span>支出</span>
+											<span>总支出：370,936元</span>
+											<ul >
+												<li>
+													<span class="s_con"></span>
+													<span>成员1</span>
+												</li>
+												<li>
+													<span class="s_con2"></span>
+													<span>成员2</span>
+												</li>
+												<li>
+													<span class="con3"></span>
+													<span>成员3</span>
+												</li>
+											</ul>
+										</div>
+										<div class="content">
+											<div class="content_item">
+												<div class="monthlyTotal">
+													<span>月度支出</span>
+													<span>30,078</span>
+												</div>
+												<div id="expenditure1" style="width:579px;height:300px"></div>  
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>购物</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>健身</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>美容美发</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>日用品</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>旅游</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="content_item">
+												<div class="monthlyTotal">
+													<span>年度支出</span>
+													<span>10,000</span>
+												</div>
+												<div id="expenditure2" style="width:579px;height:300px"></div>  
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>购物</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>健身</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>美容美发</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>日用品</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>旅游</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="s_wrapper">
+										<div class="title">
+											<span>收入</span>
+											<span>总收入：370,936元</span>
+											<ul >
+												<li>
+													<span class="s_con"></span>
+													<span>成员1</span>
+												</li>
+												<li>
+													<span class="s_con2"></span>
+													<span>成员2</span>
+												</li>
+												<li>
+													<span class="con3"></span>
+													<span>成员3</span>
+												</li>
+											</ul>
+										</div>
+										<div class="content">
+											<div class="content_item">
+												<div class="monthlyTotal">
+													<span>月度收入</span>
+													<span>30,078</span>
+												</div>
+												<div id="income1" style="width:579px;height:300px"></div>  
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>购物</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>健身</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="content_item">
+												<div class="monthlyTotal">
+													<span>年度收入</span>
+													<span>30,078</span>
+												</div>
+												<div id="income2" style="width:579px;height:300px"></div>  
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="s_wrapper">
+										<div class="title" >
+											<span>资产负债</span>
+											
+											<ul >
+												<li>
+													<span class="s_con"></span>
+													<span>成员1</span>
+												</li>
+												<li>
+													<span class="s_con2"></span>
+													<span>成员2</span>
+												</li>
+												<li>
+													<span class="con3"></span>
+													<span>成员3</span>
+												</li>
+											</ul>
+										</div>
+										<div class="content">
+											<div class="content_item">
+												<p class="subtitle" style="margin-bottom:38px;margin-top:16px;"><span>流动资产</span><span>30,000元</span>	</p>
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>购物</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>健身</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+												<p class="subtitle" style="margin-bottom:38px;margin-top:16px;"><span>固定资产</span><span>30,000元</span>	</p>
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													
+												</ul>
+											</div>
+											<div class="content_item">
+												<p class="subtitle" style="margin-bottom:38px;margin-top:16px;"><span>实业资产</span><span>30,000元</span>	</p>
+												<ul>
+													<li>
+														<span>实业</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+												<p class="subtitle" style="margin-bottom:38px;margin-top:16px;"><span>负债</span><span>30,000元</span>	</p>
+												<ul>
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="s_wrapper">
+										<div class="title" style="margin-bottom:38px;margin-top:16px;">
+											<span>短期支出</span>
+											<span>总支出：370,936元</span>
+											<ul >
+												<li>
+													<span class="s_con"></span>
+													<span>成员1</span>
+												</li>
+												<li>
+													<span class="s_con2"></span>
+													<span>成员2</span>
+												</li>
+												<li>
+													<span class="con3"></span>
+													<span>成员3</span>
+												</li>
+											</ul>
+										</div>
+										<div class="content">
+											<div class="content_item" style="width:100%;border:0">
+												<ul class="short_list">
+													<li>
+														<span>通讯费</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>零用</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>车贷</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>赡养父母</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>购物</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+													<li>
+														<span>健身</span>
+														<div class="data">
+															<div class="data_item">
+																<div></div>
+																<span>80</span>
+															</div>
+															<div class="data_item">
+																<div></div>
+																<span>100</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="select_pro_modal_footer">
+				<div >下载</div>
+			</div>
+		</div>
+	</div>
+	<!-- 导出数据和生成规划书 -->
+	<div class="d_s_add">
+		<i class='iconfont icon-jiantou--copy img'></i>
+		<span>
+		   <img src="img/guanbi.png" height="16" width="16" alt="" class="guanbi">
+		   <img src="img/caidan.png" height="16" width="16" alt="" class="caidan">
+		</span>
+		<ul>
+			<li class="creat_plan_book">生成规划书</li>
+			<li class='derived_data'>导出数据</li>
+		</ul>
+	</div> 
+	<!-- 添加保单 -->
+	<div id="add_item_modal">
+		<div class="add_item_modal_con">
+			<div class="add_item_modal_title"><i class="fl iconfont icon-fanhuijiantou fanhui"  ></i><span>添加保单</span><i class="img iconfont icon-guanbi"></i>
+			</div>  
+			<div class="add_item_modal_body">
+				<div class="add_item_form add_item_form1">
+				    <div>
+						<label for="">成员</label>
+						<select name=""  >
+							<option value="" >请选择</option>
+							<option value="">成员一</option>
+							<option value="">成员二</option>
+						</select>
+					</div>
+					<div class="add_item_modal_name">
+						<label for="">产品名称</label>
+						<input type="text">
+					</div>
+					<div>
+						<label for="">险种类型</label>
+						<select name=""  id="xian_l">
+							<option value="">请选择</option>
+							<option value="">人寿险</option>
+							<option value="">意外险</option>
+							<option value="">医疗险</option>
+							<option value="">重疾险</option>
+						</select>
+					</div>
+					<div>
+						<label for="">险种</label>
+						<select name=""  id="xian_l">
+							<option value="">请选择</option>
+							<option value="">险种一</option>
+							<option value="">险种二</option>
+						</select>
+					</div>
+					<div>
+						<label for="">类型</label>
+						<select name=""  id="xian_l">
+							<option value="">请选择</option>
+							<option value="">给付</option>
+							<option value="">补偿</option>
+						</select>
+					</div>
+				</div>
+				<div class="add_item_form add_item_form2">
+					<div>
+						<label for="">住院险</label>
+						<input type="text">
+					</div>
+					<div>
+						<label for="">周期</label>
+						<select name=""  id="xian_l">
+							<option value="">请选择</option>
+							<option value="">每次</option>
+							<option value="">每天</option>
+							<option value="">每年</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="add_item_modal_footer">
+				<button class="btn1">下一步</button>
+				<button class="btn2">保存</button>
+			</div>
+		</div>
+	</div>
+	<!-- 删除保单 -->
+	<div id="del_item_modal">
+			<div class="del_item_modal_con">
+				<div class="del_item_modal_title"><i class="fl iconfont icon-fanhuijiantou fanhui"  ></i>删除保单<i class="img iconfont icon-guanbi"></i>
+				</div>  
+				<div class="del_item_modal_body">
+					<div class="del_item_form del_item_form1">
+					    <div class="del_item_form_list">
+				    	    <div class="del_item_form_list_item">
+				    			<p>个人保险</p>
+				    			<ul>
+				    				<li>
+				    					<span><input type="checkbox"class="input_check" id="check1"><label for="check1"></label></span>
+				    					<span class="text">宏康大白1</span>
+				    				</li>
+				    				<li>
+				    					<span><input type="checkbox"class="input_check" id="check2"><label for="check2"></label></span>
+				    					<span class="text">宏康大白2</span>
+				    				</li>
+				    				<li>
+				    					<span><input type="checkbox"class="input_check" id="check3"><label for="check3"></label></span>
+				    					<span class="text">宏康大白3</span>
+				    				</li>
+				    			</ul>
+				    		</div>
+				    		<div class="del_item_form_list_item">
+				    			<p>团体保险</p>
+				    			<ul>
+				    				<li>
+				    					<span><input type="checkbox"class="input_check" id="check4"><label for="check4"></label></span>
+				    					<span class="text">宏康大白4</span>
+				    				</li>
+				    				<li>
+				    					<span><input type="checkbox"class="input_check" id="check5"><label for="check5"></label></span>
+				    					<span class="text">宏康大白5</span>
+				    				</li>
+				    				<li>
+				    					<span><input type="checkbox"class="input_check" id="check6"><label for="check6"></label></span>
+				    					<span class="text">宏康大白6</span>
+				    				</li>
+				    			</ul>
+				    		</div>
+					    </div>
+					</div>
+					<div class="del_item_form del_item_form2">
+						<p>
+							确认删除选中的保单？<br>
+							删除后数据无法恢复，请谨慎操作
+						</p>
+					</div>
+				</div>
+				<div class="del_item_modal_footer">
+					<button class="btn1">下一步</button>
+					<button class="btn2">确认</button>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

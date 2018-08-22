@@ -1,0 +1,238 @@
+
+/* 头部开始 */
+.header{
+	height: 60px;
+	width: 100%;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	background: #fff;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+}
+.h_back{
+	width: 92px;
+	height: 60px;
+	line-height: 60px;
+	padding-left: 47px;
+	font-size: 18px;
+	color: #202020;
+	float: left;
+	border-right: 1px solid #cacaca;
+	background-image: url(../img/MemberFamily/back.png) ;
+	background-repeat: no-repeat;
+	background-position: 20px center;
+}
+.h_list{
+	margin: 0px auto;
+	width: 1026px;
+	height: 40px;
+	padding-top: 10px;
+		position: relative;
+}
+.h_list a{
+	color: #3da8f5;
+	font-size: 16px;
+	width: 136px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-image: url(../img/MemberFamily/2.png);
+	background-size: 100% 100%;
+	background-position:0px 0px ;
+	background-repeat: no-repeat;
+	margin-right: -14px;
+	cursor: pointer;
+}
+.h_list a:first-child{
+	background-image: url(../img/MemberFamily/1-1.png);
+}
+.h_list a:nth-child(7){
+	background-image: url(../img/MemberFamily/3-1.png);
+}
+.h_list span{
+	margin-right:20px; 
+}
+.transparent{
+	width: 840px;
+	height: 100%;
+	background: transparent;
+	z-index: 11;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+
+
+/* 头部结束*/
+
+/* contaimer标题 开始*/
+#con_list{
+	margin-bottom: 50px;
+}
+.con_title{
+	width: 100%;
+	margin: 30px 0 20px 0;
+	font-size: 22px;
+	height: 20px;
+	line-height: 20px;
+	color: #202020;
+
+}
+.con_title .img{
+	cursor: pointer;
+	top: 1px;
+	color: #909090;
+	font-size: 16px;
+	line-height: 16px;
+	padding-left: 17px;
+	top: -2px;
+}
+.con_title .img:hover{
+
+	color: #3da8f5;
+}
+
+/* contaimer标题 结束*/
+
+/* 表单开始 */
+::placeholder{
+	color: #909090;
+}
+.con_form{
+	width: 388px;
+	height: 410px;
+	background: #fff;
+	float: left;
+	position: relative;
+	margin-right: 38px;
+	margin-bottom: 38px;
+	color: #303030;
+	border-radius: 4px;
+}
+
+.con_form2 input{
+	color: #303030;
+}
+.con_form_del{
+	position: absolute;
+	right: 17px;
+	top: 21px;
+	font-size: 16px;
+	color: #909090;
+	cursor: pointer;
+}
+.con_form_del .del{
+	position: relative;
+	top: 2px;
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/MemberFamily/del-1.png);
+	background-repeat: no-repeat;
+
+}
+.con_form_del:hover .del{
+	background-image: url(../img/MemberFamily/del-2.png);
+}
+.con_form_del:hover{
+	color:#3da8f5;
+}
+.con_from_con{
+	width: 350px;
+	height: 330px;
+	position: absolute;
+	bottom:40px;
+	left: 20px;
+
+}
+.con_ipt{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 15px;
+}
+
+.con_ipt label{
+	font-size: 16px;
+	font-weight: bold;
+}
+.con_ipt input,.con_ipt select{
+	width: 230px;
+	height: 38px;
+	line-height: 38px;
+	padding:0px  14px;
+	border: 0 none;
+	font-size: 14px;
+	border: 1px solid #cacaca;
+	border-radius: 4px;
+	float: right;
+	cursor: pointer;
+}
+.con_ipt input{
+	color: #303030;
+}
+.con_ipt select{
+	width: 260px;
+}
+.con_ipt select option{
+	color: #303030;
+}
+::-webkit-datetime-edit { padding: 1px; }
+::-webkit-datetime-edit-text { padding: 0 .3em; }
+::-webkit-inner-spin-button { visibility: hidden; }
+
+/* 表单结束 */
+
+/* footer开始 */
+.footer{
+	width: 100%;
+	height: 40px;
+	padding: 10px 50%;
+	position: fixed;
+	left: -120px;
+	bottom: 0px;
+	display: flex;
+	background: #fff;
+	box-shadow: 0px -2px 2px rgba(0,0,0,0.2);
+}
+.footer button{
+	width: 100px;
+	height: 40px;
+	line-height:40px;
+	background: #6bcf6b;
+	border: 0 none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+}
+.footer button:hover{
+	background: #6bcf83;
+}
+.footer button:active{
+	background: #49c365;
+}
+#save_step:hover{
+	background: #3d98f5;
+}
+#save_step:active{
+	background: #3d7ef5;
+}
+#save_step{
+	margin-right: 30px;
+	background: #3da8f5;
+}
+/* footer结束 */
+
+
+.oneself:hover{
+	cursor:not-allowed
+}
+.icon-icon02{
+	font-size: 20px !important;
+	margin-right: 6px;
+}
+.icon-lajixiang{
+	margin-right: 8px;
+}

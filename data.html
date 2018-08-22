@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据</title>
+	<link rel="stylesheet" href='css/iconfont.css'>
+	<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/data.css">
+    <link href="css/s_bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+	<div class="header">
+		<a href="index.html" class="h_back" style="width:140px">客户列表</a>
+	</div>
+	<div class="container clearfix">
+		<div class="wrapper clearfix">
+			<div class="con_title clearfix fl" style="width:100%">
+				<span calss='fl'>数据统计</span>
+				<div class="search fr" >
+					<input type="text" placeholder="请选择日期" id="test1" style="width:200px">
+					<div class="line"></div>
+					<div id="status" class="search_sel_class" style="width:130px">所有人员</div>
+					<ul id='search_sel_class_list'>
+						<li style="border-top-left-radius:4px;border-top-right-radius:4px;background:#3da8f5;color:#fff">所有客户</li>
+						<li>资料收集中</li>
+						<li style="border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">分析规划中</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div>
+					<table cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th>成员</th>
+								<th>新增客户</th>
+								<th>分析规划</th>
+								<th>销售完成</th>
+								<th>活跃度</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>test@test.com1</td>
+								<td>10</td>
+								<td>4</td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>test@test.com1</td>
+								<td>10</td>
+								<td>4</td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>test@test.com1</td>
+								<td>10</td>
+								<td>4</td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>test@test.com1</td>
+								<td>10</td>
+								<td>4</td>
+								<td>1</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 编辑员工模态框 -->
+	<div id="edit_modal">
+		<div class="edit_modal_con">
+			<div class="edit_modal_title">
+				<span>编辑员工</span><i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="edit_modal_body">
+				<div class="form">
+					<div>
+						<label for="">账号</label>
+						<input type="text" disabled="" style="cursor: not-allowed" value="test@test.com">
+					</div>
+					<div>
+						<label for="">密码</label>
+						<input type="text">
+					</div>
+					<div>
+						<label for="">姓名</label>
+						<input type="text">
+					</div>
+					<div>
+						<label for="">状态</label>
+						<select name="" id="state">
+							<option value="">请选择</option>
+							<option value="">启用</option>
+							<option value="">禁用</option>
+						</select>
+					</div>
+					<div>
+						<label for="">权限</label>
+						<select name="" id="">
+							<option value="">请选择</option>
+							<option value="">管理员</option>
+						</select>
+					</div>
+					<p class="error">账号不能为空</p>
+				</div> 
+			</div>
+			<div class="edit_modal_footer">
+				<button>保存</button>
+			</div>
+		</div>
+	</div>
+	<!-- 导出数据和生成规划书 -->
+	<div class="d_s_add">
+		<i class='iconfont icon-jiantou--copy img'></i>
+		<span>
+			<img src="img/guanbi.png" height="16" width="16" alt="" class="guanbi">
+		   	<img src="img/caidan.png" height="16" width="16" alt="" class="caidan">
+		</span>
+		<ul>
+			<li class='derived_data'>导出数据</li>
+		</ul>
+	</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/laydate2.js"></script>
+<script src="js/data.js"></script>
+<script src="js/staff_set.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
