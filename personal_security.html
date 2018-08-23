@@ -14,12 +14,40 @@
 </head>
 <body>
 	<div class="header">
-		<a href="index.html" class="h_back" width='140px'>客户列表</a>
-		<div class="h_list">
-			<a href="balances.html"><span>1</span>收支平衡表</a>
-			<a href="personal_security.html" style="background-image: url(img/MemberFamily/2-2.png);color:#fff"><span>2</span>人身保障</a>
-			<a href="medical_security.html"><span>3</span>医疗保障</a>
-			<a href="analysis_summary.html"><span>6</span>分析总结</a>
+		<div class="fl" >
+			<div class="logo">
+				<a  target="_blank" href="index.html">寄意科技</a>
+			</div>
+		</div>
+		<div class="head_list_tab">
+			<a href="Member.html" >资料收集</a>
+			<a href="balances.html" style="background: #3da8f5;color: #fff">分析规划</a>
+		</div>
+		<div class="fr">
+			<div class="course" title="教程">
+				教程
+			</div>
+			<a href="data.html" class="data" title='数据'>
+				数据
+			</a>
+			<span  class="user">
+			</span>
+		</div>
+		<ul class="user_list" sty>
+			<li ><a href="account_set.html" style="border-top-left-radius: 4px;border-top-right-radius: 4px;">账号设置</a></li>
+			<li><a href="staff_set.html">员工设置</a></li>
+			<li><a href="insurance.html">保险管理</a></li>
+			<li><a href="team_management.html">团队管理</a></li>
+			<li><a href="login.html" style="border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">登出</a></li>
+		</ul>
+		<div class="top_arrow"><img src="img/triangle.png" height="7" width="17"  alt=""></div>
+	</div>
+	<div class="header_second">
+		<div class="h_list_second">
+			<a href="balances.html" >收支平衡表</a>
+			<a href="personal_security.html" class="active_head_tab">人身保障</a>
+			<a href="medical_security.html">医疗保障</a>
+			<a href="analysis_summary.html">分析总结</a>
 		</div>
 	</div>
 	<div class="container clearfix">
@@ -903,6 +931,7 @@
 <script src="js/personal_security.js"></script>
 <script src="js/common2.js"></script>
 <script src="js/justTools.js"></script>
+	<script src="js/header_common.js"></script>
 <link rel="stylesheet" href="css/just-tip.css">
 <script>	
 	

@@ -13,19 +13,48 @@
 </head>
 <body>
 	<div class="header">
-		<a href="index.html" class="h_back" width='140px'>客户列表</a>
-		<div class="h_list">
-			<a href="Member.html"><span>1</span>家庭成员</a>
-			<a href="expenditure.html"><span>2</span>支出</a>
-			<a href="income.html"><span>3</span>收入</a>
-			<a href="assets_liabilities.html"  ><span>4</span>资产负债</a>
-			<a href="existing_guarantee.html" style="background-image: url(img/MemberFamily/2-2.png);color:#fff"><span>5</span>短期支出</a>
-			<a href="existing_guarantee.html"><span>6</span>社会保障</a>
-			<a href="existing_policy.html"><span>7</span>商业保险</a>
+		<div class="fl" >
+			<div class="logo">
+				<a  target="_blank" href="index.html">寄意科技</a>
+			</div>
+		</div>
+		<div class="head_list_tab">
+			<a href="Member.html" style="background: #3da8f5;color: #fff">资料收集</a>
+			<a href="balances.html">分析规划</a>
+		</div>
+		<div class="fr">
+			<div class="course" title="教程">
+				教程
+			</div>
+			<a href="data.html" class="data" title='数据'>
+				数据
+			</a>
+			<span  class="user">
+			</span>
+		</div>
+		<ul class="user_list" sty>
+			<li ><a href="account_set.html" style="border-top-left-radius: 4px;border-top-right-radius: 4px;">账号设置</a></li>
+			<li><a href="staff_set.html">员工设置</a></li>
+			<li><a href="insurance.html">保险管理</a></li>
+			<li><a href="team_management.html">团队管理</a></li>
+			<li><a href="login.html" style="border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">登出</a></li>
+		</ul>
+		<div class="top_arrow"><img src="img/triangle.png" height="7" width="17"  alt=""></div>
+	</div>
+	<div class="header_second">
+		<div class="h_list_second">
+			<a href="Member.html" >家庭成员</a>
+			<a href="expenditure.html" >支出</a>
+			<a href="income.html" >收入</a>
+			<a href="assets_liabilities.html" >资产负债</a>
+			<a href="short_expenditure.html" class="active_head_tab">短期支出</a>
+			<a href="existing_guarantee.html">社会保障</a>
+			<a href="existing_policy.html">商业保险</a>
+			<div class="transparent"></div>
 		</div>
 	</div>
-	<div class="container clearfix">
-		<div class=" clearfix">
+	<div class="clearfix">
+		<div class="wrapper clearfix">
 			<div class="con_list">
 				<ul class="con_list_">
 					<li>
@@ -101,7 +130,75 @@
 			</div>
 		    <div id="s_table">
 		    	<p class="con_tab_title">月度收入：<span>1,000元</span>&nbsp; 年度收入：<span>1,000元</span>&nbsp; 总收入：<span>13,000元</span><span class='con_tab_del'><i class='iconfont icon-lajixiang'></i>删除项目</span></p>
-		    	<table id='table1'> </table>  
+		    	<table id='table1' data-toggle="table" data-striped="true">
+	                <thead>
+	                <tr>
+	                    <th data-checkbox="true"></th>
+	                    <th data-sortable="true" id="aaaa">项目</th>
+	                    <th data-sortable="true">成员</th>
+	                    <th data-editable="true" data-sortable="true">金额 </th>
+	                    <th data-editable="true">备注</th>
+	                    <th data-visible="false">ID</th>
+	                    
+	                </tr>
+	                </thead>
+	                <tbody id="data-info">
+	                    <tr>
+	                        <td data-checkbox="true"></td>
+	                        <td title="1">伙食费</td>
+	                        <td>A</td>
+	                        <td class="editableClass">1000</td>
+	                        <td class="commentClass">备注一</td>
+	                        <td>1</td>
+	                    </tr>
+	                    <tr>
+	                        <td data-checkbox="true"></td>
+	                        <td title="1">伙食费</td>
+	                        <td>B</td>
+	                        <td class="editableClass">1000</td>
+	                        <td class="commentClass">备注一</td>
+	                        <td>1</td>
+	                    </tr>
+	                </tbody>
+	            </table>
+	            <div id="screen">
+	            	<div>
+	            		<div class="check_box box checkbox_all">
+					        <div id="checkbox1">
+					            <p><span class="check_span"><input type="checkbox" id="checkAll" /></span> 全选</p>
+					            <div>
+					            	<p><span class="check_span"><input type="checkbox" value="伙食费" /></span> 伙食费</p> 
+						            <p><span class="check_span"><input type="checkbox" value="交通费" /></span> 交通费</p> 
+						            <p><span class="check_span"><input type="checkbox" value="电费" /></span> 电费</p> 
+						            <p><span class="check_span"><input type="checkbox" value="保险费" /></span> 保险费</p> 
+						            <p><span class="check_span"><input type="checkbox" value="交通费" /></span> 交通费</p>
+						            <p><span class="check_span"><input type="checkbox" value="交通费" /></span> 网费</p>
+						            
+					            </div> 
+					        </div>
+					    </div>
+				        <div class="check_box_button">
+				    	    <button class="sure">确认</button>
+				    	    <button class="cancel">取消</button>
+				    	</div>
+	            	</div>
+	            	<div>
+				    	<div class="check_box box checkbox_all">
+					        <div id="checkbox2">
+					            <p><span class="check_span"><input type="checkbox" id="checkAll" /></span> 全选</p>
+					            <div>
+					            	<p><span class="check_span"><input type="checkbox" value="张三" /></span> 张三</p> 
+						            <p><span class="check_span"><input type="checkbox" value="李四" /></span>李四</p> 
+						            <p><span class="check_span"><input type="checkbox" value="王五" /></span>王五</p> 
+					            </div> 
+					        </div>
+					    </div>
+				        <div class="check_box_button">
+				    	    <button class="sure">确认</button>
+				    	    <button class="cancel">取消</button>
+				    	</div>
+	            	</div>
+	            </div>    
 		    </div>
 		</div>
 	</div>
@@ -198,125 +295,63 @@
 <script src="js/bootstrap-table-zh-CN.js"></script>
 <script src="js/bootstrap-editable.min.js"></script>
 <script src="js/bootstrap-table-editable.min.js"></script>
-<script src="js/expenditure.js"></script>
+<script src="js/data_collection_common.js"></script>
+<script src="js/header_common.js"></script>
+<script src="js/checkbox.js"></script>
 <script>
-		var H = $('#s_table').height();
-		var $table= $('#table1').bootstrapTable({   
-			// url: '/Interface/GetData',         //请求后台的URL（*）
-	         method: 'get',                      //请求方式（*）
-	         striped: true,                      //是否显示行间隔色                       
-	         sortOrder: "asc",                   //排序方式
-	         height: H-50,                        
-		   	 columns: [  
-		        {'checkbox':true},
-		         { field: 'project', title: '项目',editable:false,},  
-		        { field: 'member', title: '成员' ,sortable: true}, 
-		        { field: 'money', title: '金额' ,"editable":true,sortable: true},  
-		        { field: 'remarks', title: '备注' ,"editable":true, },  
-		    ],  
-			 data:[ 
-				{ 
-				"member":"A",
-				"project":"伙食费", 
-				"money":"100001",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"Q",
-				"project":"伙食费", 
-				"money":"100002",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"W",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"A",
-				"project":"伙食费", 
-				"money":"100001",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"Q",
-				"project":"伙食费", 
-				"money":"100002",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"W",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"A",
-				"project":"伙食费", 
-				"money":"100001",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"Q",
-				"project":"伙食费", 
-				"money":"100002",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"W",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"E",
-				"project":"伙食费", 
-				"money":"10000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"R",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"T",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"Y",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"U",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"I",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"A",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-				{ 
-				"member":"A",
-				"project":"伙食费", 
-				"money":"100000",
-				"remarks":"这是备注"
-				}, 
-			]  
-		});
+	var H = $('#s_table').height();
+    $('#table1').bootstrapTable({
+      height: H-50,
+          columns: [
+            {'checkbox':true,field:'state'},
+            { field: 'type'},
+            { field: 'member'},
+            { field: 'amount',class:'editableClass'},
+            { field: 'comments',class:'commentClass'},
+            {field:'id',visible:false},
+        ],
+    });
+    $('#s_table thead tr th:nth-child(2)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
+    $('#s_table thead tr th:nth-child(3)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
+    $("#checkbox1").selectCheck();
+    $("#checkbox2").selectCheck();
+    $('.sure').eq(0).click(function(){
+          var arr1 = [];
+          $('#checkbox1 input:checkbox:checked').each(function(){
+          		arr1.push($(this).val())
+          })  
+          var arr1_ = arr1.filter(function(x){
+          	return x != "on"
+          })
+          console.log(arr1_)
+    });
+    $('.sure').eq(1).click(function(){
+    	  var arr2 = [];
+          $('#checkbox2 input:checkbox:checked').each(function(){
+          		console.log($(this).val())
+          		arr2.push($(this).val())
+          })  
+          var arr2_ = arr2.filter(function(x){
+          	return x != "on"
+          })
+          console.log(arr2_)
+    });
+    // 点击筛选确定按钮
+    $('.cancel').each(function(index){
+    	$(this).click(function(){
+    		$(this).parent().parent().hide();
+    		$('#s_table thead tr th .screen').eq(index).removeClass("screen_active_con");
+    	})
+    })
+    // 点击筛选图标
+    $('#s_table thead tr th .screen').each(function(index){
+    	 $(this).click(function(){
+	    	$(this).toggleClass("screen_active_con");
+	    	$('#s_table thead tr th .screen').not($(this)).removeClass("screen_active_con");
+	    	
+	    	$('#screen>div').eq(index).fadeToggle();
+	    	$('#screen>div').not($('#screen>div').eq(index)).hide();
+
+	    })
+    })
 </script>

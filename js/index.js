@@ -73,27 +73,14 @@ function conlist(){
 	// 卡片hover
 	$('.con_list li').mouseenter(function(event) {
 		$(this).stop(true,true).stop(true,true).animate({top:-4});
+		$(this).children(".car_sel_class").show();
+		$(this).children(".box").show();
 	});
 	$('.con_list li').mouseleave(function(event) {
 		$(this).stop(true,true).stop(true,true).animate({top:0});
+		$(this).children(".car_sel_class").hide();
+		$(this).children(".box").hide();
 	});
-	//卡片下拉表
-	$('.con_list  li .sel').click(function(){
-		var str = $(this).parents('li').index()-1;
-		$(this).parents('li').children('.car_sel_class').slideToggle(200);
-		// $('#con_list li .car_sel_class').eq(str).slideToggle(200);
-	})	
-	$('.con_list li').each(function(index, el) {
-		$(this).mouseleave(function(event) {
-			$(this).find('.car_sel_class').slideUp(200);
-		});
-	});
-	$('.car_sel_class a').each(function(index, el) {
-		$(this).click(function(){
-			$(this).parent().slideUp(200);
-		})
-	});
-
 	// 删除模态框
 	$('.con_list .del').click(function(){
 		var this_ = $(this);
@@ -137,37 +124,11 @@ function conlist(){
 		$('html,body').animate({scrollTop:0})
 	})
 
-	// 选中模板
-	var checkbox_style ;
-    $('#tj_modal ul li').each(function(index, el) {
-	   	 $(this).click(function(){
-	   	 	$('#tj_modal .chechbox_modal').not($(this)).hide();
-	   	 	$(this).children('.chechbox_modal').show();
-	 
-	   	 })
-    });
-
-	 // 推荐模态框
-
-	 	$('#tj_modal .tj_modal_title .img').click(function(){
-	 		$('#tj_modal').fadeOut(200);
-	 		$('#tj_modal .tj_modal_con').stop(true,true).animate({top:'40%'},400);
-	 		$('body').css({overflowY:'visible'})
-	 	})
-
-	 	$('#create').click(function(){
-	 		$('#tj_modal').fadeOut(200);
-	 		$('#tj_modal .tj_modal_con').stop(true,true).animate({top:'40%'},400);
-	 		$('body').css({overflowY:'visible'})
-	 	})
-
 	 	
 	 	// 创建客户
 	 	
 	 	$('.con_list .add').click(function(){
-	 		$('#tj_modal').fadeIn(200);
-	 		$('#tj_modal .tj_modal_con').fadeIn(100).stop(true,true).animate({top:'50%'},400);
-	 		$('body').css({overflowY:'hidden'});
+	 		
 	 	})
 
 	 	//内勤点击禁止创建提示信息

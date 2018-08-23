@@ -41,7 +41,7 @@ body,html,h1,h2,h3,h4,h5,h6,ul,ol,input,form,div,a,span,label,button,table,tr,th
 .wrapper{
 	width: 1246px;
 	margin: 0 auto;
-	margin-top: 80px;
+	margin-top: 115px;
 }
 input,select{
 	outline: none;
@@ -83,6 +83,148 @@ input[type='number']{
 .input_focus{
 	border: 1px solid #3da8f5 !important;
 	box-shadow: 0px 0px 5px #3da8f5;
+}
+/* 头部开始  */
+
+.header{
+	width: 100%;
+	height: 51px;
+	line-height: 51px;
+	background: #fff;
+	border-bottom: 1px solid #cacaca;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+}
+
+.logo a{
+	font-size: 24px;
+	color: #101010;
+	margin-left: 60px;
+}
+.user{
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+	border-radius: 14px;
+	background: #3da8f5;
+	margin-right: 60px;
+	cursor: pointer;
+	float: left;
+	background-image: url(../img/touxiang.jpg);
+	background-size: 28px 28px;
+	margin-top: 11px
+}
+.course{
+	position: absolute;
+	top: 0;
+	right: 307px;
+	line-height: 24px;	
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	width: 70px;
+	height: 34px;
+	background-image: url(../img/course.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.data{
+	position: absolute;
+	top: 0;
+	right: 207px;
+	line-height: 24px;	
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	width: 70px;
+	height: 34px;
+	background-image: url(../img/data.png);
+	background-repeat: no-repeat;
+}
+.user_list{
+	position: absolute;
+	right: 50px;
+	top: 54px;
+	z-index: 2;
+	width: 130px;
+	/* height: 200px; */
+	background: #fff;
+	border-radius:4px;
+	display: none;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+
+}
+ .top_arrow{
+	position: absolute;
+	right:65px;
+	top: 34px;
+	z-index: 2;
+	display: none !important;
+}
+.user_list a{
+	width: 110px;
+	height: 42px;
+	line-height: 42px;
+	padding-left: 20px;
+	color: #101010;
+
+}
+.user_list a:hover{
+	background: #3da8f5;
+	color: #fff;
+}
+.head_list_tab{
+	width: 228px;
+	height: 100%;
+	float: left;
+	margin-left: 47px;
+}
+.head_list_tab a{
+	width: 114px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #cacaca;
+	background: #fff;
+	float: left;
+	font-size: 16px;
+}
+/* 头部结束 */
+/*二级tab——header*/
+.header_second{
+	width: 100%;
+	height: 44px;
+	border-bottom: 1px solid #cacaca;
+	background: #fff;
+	position: fixed;
+    z-index: 88;
+    top: 51px;
+}
+.h_list_second{
+	width: 1000px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.h_list_second a{
+	padding: 0px 20px;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+	float: left;
+	color: #101010;
+	font-size: 14px;
+	border-bottom: 2px solid #fff;
+}
+.h_list_second a:hover{
+	color: #3da8f5;
+	border-bottom: 2px solid #3da8f5;
+}
+.active_head_tab{
+	color: #3da8f5 !important;
+	border-bottom: 2px solid #3da8f5 !important;
 }
 /* 错误信息提示类 */
 .input_focus_error{
@@ -205,3 +347,4 @@ input[type='number']{
 .not_allowed{
 	cursor: not-allowed;
 }
+

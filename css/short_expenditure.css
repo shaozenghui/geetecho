@@ -39,11 +39,9 @@
     width: 546px !important;
 }
 #s_table td:nth-child(2){
-	width: 104px !important;
+	width: 160px !important;
 }
- #s_table thead tr th:nth-child(2) .th-inner{
-	width: 104px !important;
- }
+
 #s_table td{
 	padding-bottom: 0px  !important;
 	height: 25px !important;

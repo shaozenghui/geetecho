@@ -1,52 +1,13 @@
-/*头部开始 */
-.header{
-	height: 60px;
-	width: 100%;
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-	background: #fff;
-
+.header {
+    height: 50px;
+    line-height: 50px;
 }
-.h_back{
-	width: 140px;
-	height: 60px;
-	line-height: 60px;
-	padding-left: 47px;
-	font-size: 18px;
-	color: #202020;
-	float: left;
-	border-right: 1px solid #dedede;
-	background-image: url(../img/MemberFamily/back.png) ;
-	background-repeat: no-repeat;
-	background-position: 20px center;
+.header_second {
+    height: 44px;
 }
-
-.h_list{
-	margin: 0px auto;
-	width: 647px;
-	height: 40px;
-	padding-top: 10px;
-}
-.h_list a{
-	color: #3da8f5;
-	font-size: 16px;
-	width: 137px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	background-image: url(../img/MemberFamily/2.png);
-	background-size: 100% 100%;
-	background-position:0px 0px ;
-	background-repeat: no-repeat;
-	margin-right: -14px;
-}
-.h_list a:first-child{
-	background-image: url(../img/MemberFamily/1-1.png);
-}
-.h_list a:last-child{
-	background-image: url(../img/MemberFamily/3-1.png);
-}
-.h_list span{
-	margin-right:20px; 
+.h_list_second a {
+    height: 42px;
+    line-height: 42px;
 }
 /* 内容 */
 #contnet{
@@ -56,6 +17,7 @@
 	margin: 20px 0px;
 	font-size: 20px;
 	color: #202020;
+	margin-top: 0px;
 }
 .cont_f_list li{
 	width: 339px;
@@ -461,7 +423,7 @@
 .wrapper{
 	width: 1160px;
 	margin: 0 auto;
-
+	margin-top: 115px;
 }
 .s_container>div{
 	border-top: 1px solid #cacaca;
