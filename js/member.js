@@ -75,12 +75,16 @@ $(document).ready(function($) {
 	})
 	//点击保存提示信息
 	$('#save_step').click(function(){
-		$('#push').html('信息已保存').fadeIn(1000,function(){
+		$('#push span').html('信息已保存')
+		$('#push').fadeIn(1000,function(){
+			
 		 	 setTimeout(function(){
  		 	 	 $('#push').fadeOut(1000);
  		 	 },3000)
 		 });
 		$('.transparent').hide();
 	})
-
+	$('#push i').click(function(){
+		$(this).parent().hide();
+	})
 });

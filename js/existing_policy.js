@@ -195,13 +195,17 @@ $(document).ready(function($) {
 	    		$(".add_item_form1").show();
 	    	});
 	    	// 保存提示信息
-    		$('#push').html('信息已保存').fadeIn(1000,function(){
+	    	$('#push span').html('信息已保存')
+    		$('#push').fadeIn(1000,function(){
     		 	setTimeout(function(){
     		 	 	 $('#push').fadeOut(5000);
     		 	 },5000)
     		 });
 
 	    })
+	    $('#push i').click(function(){
+			$(this).parent().hide();
+		})
 
 	    // 删除项目
     	$(".cont_f_list li>p .del").click(function(){

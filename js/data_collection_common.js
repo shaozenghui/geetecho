@@ -164,7 +164,8 @@ $(document).ready(function($) {
  	 		 	 },3000)
 			 // });
 			// 3.项目添加信息不完善提示信息
-			$('#push').html('请完善信息').fadeIn(1000,function(){
+			$('#push span').html('请完善信息')
+			$('#push').fadeIn(1000,function(){
 			 	 setTimeout(function(){
 			 	 	 $('#push').fadeOut(1000);
 			 	 },3000)
@@ -172,7 +173,8 @@ $(document).ready(function($) {
 		})
 	// 保存提示信息
 	$('#next_step').click(function(){
-		$('#push').html('信息已保存').fadeIn(1000,function(){
+		$('#push span').html('信息已保存')
+		$('#push').fadeIn(1000,function(){
 		 	 setTimeout(function(){
 		 	 	 $('#push').fadeOut(1000);
 		 	 },3000)
@@ -245,10 +247,14 @@ $(document).ready(function($) {
 	  $('.con_list_>li .con_list_add_con .add').click(function(){
 	  		$('.con_list_>li').eq(1).fadeOut(300);
 	  		$('.con_list_>li').eq(0).fadeIn(300);
-	  		$('#push').html('项目添加成功').fadeIn(1000,function(){
+	  		$('#push span').html('项目添加成功');
+	  		$('#push').fadeIn(1000,function(){
 	  		 	 setTimeout(function(){
 	  		 	 	 $('#push').fadeOut(1000);
 	  		 	 },3000)
 	  		 });
 	  })
+	  $('#push i').click(function(){
+		$(this).parent().hide();
+	})
 });
