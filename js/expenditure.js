@@ -40,9 +40,16 @@ $(document).ready(function($) {
 	var arr = [];
 
 	// 筛选
-    $("#checkbox1").selectCheck();
-    $("#checkbox3").selectCheck();
-    $("#checkbox2").selectCheck();
+    $("#checkbox1").selectCheck({
+       allId:"checkAll1",
+    });
+    $("#checkbox2").selectCheck({
+       allId:"checkAll2",
+    });
+    $("#checkbox3").selectCheck({
+       allId:"checkAll3",
+    });
+    // 点击筛选确定按钮
     $('.sure').eq(0).click(function(){
           var arr1 = [];
           $('#checkbox1 input:checkbox:checked').each(function(){
@@ -64,7 +71,7 @@ $(document).ready(function($) {
           })
           console.log(arr2_)
     });
- 	$('.sure').eq(2).click(function(){
+  	$('.sure').eq(2).click(function(){
           var arr3 = [];
           $('#checkbox3 input:checkbox:checked').each(function(){
           		arr3.push($(this).val())      
@@ -74,10 +81,12 @@ $(document).ready(function($) {
           })
           console.log(arr3_)
     });
-    // 点击筛选确定按钮
+    // 点击取消
     $('.cancel').each(function(index){
     	$(this).click(function(){
     		$(this).parent().parent().hide();
+        $(this).parent().parent().find('span').removeClass("check_span--checked");
+        $(this).parent().parent().find('input:checkbox').removeAttr("checked");
     		$('#s_table thead tr th .screen').eq(index).removeClass("screen_active_con");
     	})
     })

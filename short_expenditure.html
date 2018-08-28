@@ -165,7 +165,7 @@
 	            	<div>
 	            		<div class="check_box box checkbox_all">
 					        <div id="checkbox1">
-					            <p><span class="check_span"><input type="checkbox" id="checkAll" /></span> 全选</p>
+					            <p><span class="check_span"><input type="checkbox" id="checkAll1" /></span> 全选</p>
 					            <div>
 					            	<p><span class="check_span"><input type="checkbox" value="伙食费" /></span> 伙食费</p> 
 						            <p><span class="check_span"><input type="checkbox" value="交通费" /></span> 交通费</p> 
@@ -185,7 +185,7 @@
 	            	<div>
 				    	<div class="check_box box checkbox_all">
 					        <div id="checkbox2">
-					            <p><span class="check_span"><input type="checkbox" id="checkAll" /></span> 全选</p>
+					            <p><span class="check_span"><input type="checkbox" id="checkAll2" /></span> 全选</p>
 					            <div>
 					            	<p><span class="check_span"><input type="checkbox" value="张三" /></span> 张三</p> 
 						            <p><span class="check_span"><input type="checkbox" value="李四" /></span>李四</p> 
@@ -313,8 +313,12 @@
     });
     $('#s_table thead tr th:nth-child(2)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
     $('#s_table thead tr th:nth-child(3)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
-    $("#checkbox1").selectCheck();
-    $("#checkbox2").selectCheck();
+    $("#checkbox1").selectCheck({
+       allId:"checkAll1",
+    });
+    $("#checkbox2").selectCheck({
+       allId:"checkAll2",
+    });
     $('.sure').eq(0).click(function(){
           var arr1 = [];
           $('#checkbox1 input:checkbox:checked').each(function(){
@@ -340,6 +344,8 @@
     $('.cancel').each(function(index){
     	$(this).click(function(){
     		$(this).parent().parent().hide();
+    		$(this).parent().parent().find('span').removeClass("check_span--checked");
+        	$(this).parent().parent().find('input:checkbox').removeAttr("checked");
     		$('#s_table thead tr th .screen').eq(index).removeClass("screen_active_con");
     	})
     })
