@@ -377,7 +377,8 @@
     })
     // 点击筛选图标
     $('#s_table thead tr th .screen').each(function(index){
-    	 $(this).click(function(){
+    	 $(this).click(function(e){
+    	 	e.stopPropagation();
 	    	$(this).toggleClass("screen_active_con");
 	    	$('#s_table thead tr th .screen').not($(this)).removeClass("screen_active_con");
 	    	
@@ -385,5 +386,14 @@
 	    	$('#screen>div').not($('#screen>div').eq(index)).hide();
 
 	    })
+    })
+     // 点击页面所有下来收起
+    $(document).click(function(){
+      $('#screen>div').hide();
+       $('#s_table thead tr th .screen').removeClass("screen_active_con");
+    })
+    // 阻止冒泡
+     $('#screen>div').click(function(e){
+       e.stopPropagation();
     })
 </script>

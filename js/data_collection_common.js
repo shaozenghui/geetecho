@@ -1,6 +1,4 @@
-
 $(document).ready(function($) {
-
 	// 支出项
 		$('#expenditure_item').click(function(e){
 			e.stopPropagation();
@@ -242,7 +240,6 @@ $(document).ready(function($) {
 	  			$('.con_list_con_list .con_list_con_list_item').hide();
 	  			$('.con_list_con_list .con_list_con_list_item').eq(selectIndex).show();
 	  		}
-
 	  })
 	  $('.con_list_>li .con_list_add_con .add').click(function(){
 	  		$('.con_list_>li').eq(1).fadeOut(300);

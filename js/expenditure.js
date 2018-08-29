@@ -16,7 +16,6 @@ $(document).ready(function($) {
     $('#s_table thead tr th:nth-child(2)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
     $('#s_table thead tr th:nth-child(3)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
     $('#s_table thead tr th:nth-child(4)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>')
-
     // 固定支出
 	$('#del_select_o').change(function(event) {
 		var str = $('#del_select_o option:selected').html();
@@ -92,7 +91,9 @@ $(document).ready(function($) {
     })
     // 点击筛选图标
     $('#s_table thead tr th .screen').each(function(index){
-    	 $(this).click(function(){
+      // 阻止冒泡
+    	 $(this).click(function(e){
+        e.stopPropagation();
 	    	$(this).toggleClass("screen_active_con");
 	    	$('#s_table thead tr th .screen').not($(this)).removeClass("screen_active_con");
 	    	
@@ -101,5 +102,13 @@ $(document).ready(function($) {
 
 	    })
     })
-
+    // 点击页面所有下来收起
+    $(document).click(function(){
+      $('#screen>div').hide();
+       $('#s_table thead tr th .screen').removeClass("screen_active_con");
+    })
+    // 阻止冒泡
+     $('#screen>div').click(function(e){
+       e.stopPropagation();
+    })
 })
