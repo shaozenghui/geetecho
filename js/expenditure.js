@@ -1,8 +1,8 @@
 $(document).ready(function($) {
 	// 表格
-	var H = $('#s_table').height();
+	 var H = $('#s_table').height();
     $('#table1').bootstrapTable({
-      height: H-50,
+          height: H-50,
           columns: [
             {'checkbox':true,field:'state'},
             { field: 'type'},
