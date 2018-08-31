@@ -131,7 +131,7 @@ input[type='number']{
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
-.data{
+.header .data{
 	position: absolute;
 	top: 0;
 	right: 207px;
