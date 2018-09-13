@@ -2,17 +2,11 @@ body{
 	background: #f6f6f6 !important;
 }
 /*头部开始 */
-.header{
-	height: 60px;
-	width: 100%;
-	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-	background: #fff;
-	padding: 0px !important;
-}
+
 .h_back{
 	width: 93px;
-	height: 60px;
-	line-height: 60px;
+	height: 51px;
+	line-height: 51px;
 	padding-left: 47px;
 	font-size: 18px;
 	color: #202020;

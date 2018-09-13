@@ -124,9 +124,6 @@ $(document).ready(function($) {
     $('select').change(function(event) {
 		$(this).css({color:'#303030'})
 	});
-	$('select').focus(function(event) {
-		$(this).children('option').eq(0).hide()
-	});
 	// 点击模态框叉号
 	$('#prompt_modal .prompt_modal_title .img').click(function(){
 		$('#prompt_modal').fadeOut(200);

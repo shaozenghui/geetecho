@@ -698,6 +698,10 @@ tbody tr td span:nth-child(2){
 	color: #909090;
 	font-size: 18px;
 }
+.sociaSecurity img{
+	position: relative;
+	left: -40px;
+}
 /* 方案推荐 */
 .programme_item thead th{
 	width: 70px;

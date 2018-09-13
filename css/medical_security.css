@@ -90,7 +90,12 @@
 	font-size: 14px;
 }
 .con_list table td p{
+	width: 25%;
 	line-height: 20px;
+	float: left;
+}
+.con_list table td .tit{
+	width: 100%;
 }
 .con_list tbody tr:nth-child(odd){
 	background: #f0f0f0;
