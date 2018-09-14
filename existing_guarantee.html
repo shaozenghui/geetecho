@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>现有保障</title>
+		<link rel="stylesheet" href="css/s_bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-table.css">
+	<link rel="stylesheet" href="css/bootstrap-editable.css">
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/existing_guarantee.css">
 	<link rel="stylesheet" href="css/iconfont.css">
@@ -54,429 +57,234 @@
 		<ul class="con_list clearfix" id="con_list">
 			<li>
 				<p class="con_list_tit">张三<span>五险一金  （上海）</span></p>
-				<div>
-					<div>
-						<div class="con_list_a">
-							<div class="custom_from">
-								<div>
-									<p>五险缴纳基数</p>
-									<p ><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-								<div>
-									<p>公积金缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-							</div>
-							<table cellpadding="0" cellspacing="0">
-								<thead >
-									<tr>
-										<th>类型</th>
-										<th>个人</th>
-										<th>公司</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>养老</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>医疗</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>失业</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>工伤</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>生育</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>公积金</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="total_amount">
-								<div >
-									<p>个人缴纳</p>
-									<p>800.00</p>
-								</div>
-								<div>
-									<p>个人缴纳</p>
-									<p>1700.00</p>
-								</div>
-							</div>
+				<div class="con_list_a">
+					<div class="custom_from">
+						<div>
+							<span>五险基数</span>
+							<input type="text" class="demoUp" tit="比例上下限(8.000,8.000)">
+						</div>
+						<div>
+							<span>公积金基数</span>
+							<input type="text" class="demoUp" tit="比例上下限(8.000,8.000)">
+						</div>
+					</div>
+					<table data-toggle="table" data-striped="true" class="table">
+						<thead >
+							<tr>
+								<th>类型</th>
+								<th>个人</th>
+								<th>公司</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>养老</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>医疗</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>失业</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>工伤</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>生育</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>公积金</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="total_amount">
+						<div >
+							<p>个人缴纳</p>
+							<p>800.00</p>
+						</div>
+						<div>
+							<p>个人缴纳</p>
+							<p>1700.00</p>
 						</div>
 					</div>
 				</div>
 			</li>
 			<li>
 				<p class="con_list_tit">张三<span>五险一金  （上海）</span></p>
-				<div>
-					<div>
-						<div class="con_list_a">
-							<div class="custom_from">
-								<div>
-									<p>五险缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-								<div>
-									<p>公积金缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-							</div>
-							<table cellpadding="0" cellspacing="0">
-								<thead >
-									<tr>
-										<th>类型</th>
-										<th>个人</th>
-										<th>公司</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>养老</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>医疗</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>失业</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>工伤</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>生育</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>公积金</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="total_amount">
-								<div >
-									<p>个人缴纳</p>
-									<p>800.00</p>
-								</div>
-								<div>
-									<p>个人缴纳</p>
-									<p>1700.00</p>
-								</div>
-							</div>
-							
+				<div class="con_list_a">
+					<div class="custom_from">
+						<div>
+							<span>五险基数</span>
+							<input type="text" class="demoUp" tit="比例上下限(8.000,8.000)">
+						</div>
+						<div>
+							<span>公积金基数</span>
+							<input type="text" class="demoUp" tit="比例上下限(8.000,8.000)">
+						</div>
+					</div>
+					<table data-toggle="table" data-striped="true" class="table">
+						<thead >
+							<tr>
+								<th>类型</th>
+								<th>个人</th>
+								<th>公司</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>养老</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>医疗</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>失业</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>工伤</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>生育</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+							<tr>
+								<td>公积金</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+								<td>
+									<span>300,00</span>
+									<span>(8%)</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="total_amount">
+						<div >
+							<p>个人缴纳</p>
+							<p>800.00</p>
+						</div>
+						<div>
+							<p>个人缴纳</p>
+							<p>1700.00</p>
 						</div>
 					</div>
 				</div>
 			</li>
-			<li>
-				<p class="con_list_tit">张三<span>五险一金  （上海）</span></p>
-				<div>
-					<div>
-						<div class="con_list_a">
-							<div class="custom_from">
-								<div>
-									<p>五险缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-								<div>
-									<p>公积金缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-							</div>
-							<table cellpadding="0" cellspacing="0">
-								<thead >
-									<tr>
-										<th>类型</th>
-										<th>个人</th>
-										<th>公司</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>养老</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>医疗</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>失业</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>工伤</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>生育</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>公积金</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="total_amount">
-								<div >
-									<p>个人缴纳</p>
-									<p>800.00</p>
-								</div>
-								<div>
-									<p>个人缴纳</p>
-									<p>1700.00</p>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<p class="con_list_tit">张三<span>五险一金  （上海）</span></p>
-				<div>
-					<div>
-						<div class="con_list_a">
-							<div class="custom_from">
-								<div>
-									<p>五险缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-								<div>
-									<p>公积金缴纳基数</p>
-									<p><input type="text" class="demoUp" tit="比例上下限(8.000,8.000)"></p>
-								</div>
-							</div>
-							<table cellpadding="0" cellspacing="0">
-								<thead >
-									<tr>
-										<th>类型</th>
-										<th>个人</th>
-										<th>公司</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>养老</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>医疗</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>失业</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>工伤</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>生育</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-									<tr>
-										<td>公积金</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-										<td>
-											<span>300,00</span>
-											<span>(8%)</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="total_amount">
-								<div >
-									<p>个人缴纳</p>
-									<p>800.00</p>
-								</div>
-								<div>
-									<p>个人缴纳</p>
-									<p>1700.00</p>
-								</div>
-							</div>
-							
-						</div>
-					</div>
+			<!-- 儿童保障 -->
+			<li class="children">
+				<p class="con_list_tit">张三儿<span>儿童保障  （上海）</span></p>
+				<div class="con_list_a">
+					<table data-toggle="table" data-striped="true" class="table">
+						<thead >
+							<tr>
+								<th>类型</th>
+								<th data-editable="true" data-toggle="num">金额</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>少儿医保</td>
+								<td>300,00</td>
+							</tr>
+							<tr>
+								<td>住院基金</td>
+								<td>300,00</td>
+							</tr>
+							<tr>
+								<td>学平险</td>
+								<td>300,00</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</li>
 		</ul>
@@ -485,14 +293,18 @@
 		<div class="cont">
 			<div id='next_step'>保存</div>
 			<div>下一步</div>
-
 		</div>
 	</div>
 	<!-- 推送信息 -->
 	<div id="push"><i class="img iconfont icon-guanbi"></i><span></span></div>
 </body>
 </html>
-<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/bootstrap-table-zh-CN.js"></script>
+<script src="js/bootstrap-editable.min.js"></script>
+<script src="js/bootstrap-table-editable.min.js"></script>
 <script src="js/echarts.min.js"></script>
 <script src="js/existing_guarantee.js"></script>
 <script src="js/justTools.js"></script>

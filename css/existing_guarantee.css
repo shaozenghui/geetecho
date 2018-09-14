@@ -1,14 +1,4 @@
-.header {
-    height: 50px;
-    line-height: 50px;
-}
-.header_second {
-    height: 44px;
-}
-.h_list_second a {
-    height: 42px;
-    line-height: 42px;
-}
+
 /* 主题内容开始 */
 .container{
 	margin-bottom: 100px;
@@ -16,167 +6,126 @@
 }
 .con_list{
 	width: 100%;
+	overflow: hidden;
+	padding-bottom: 80px;
 }
 .con_list li{
 	width: 610px;
-	height: 560px;
+	height: 540px;
+	padding: 20px;
 	float: left;
 	margin-right: 26px;
+	background: #fff;
+	border: 1px solid #cacaca;
+	border-radius: 4px;
+	margin-bottom: 20px;
 }
-.con_list li>p{
+
+.con_list li .con_list_tit{
+	width: 100%;
+	height: 40px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cacaca;
 	font-size: 20px;
 	color: #202020;
+	font-weight: bold;
+		margin-bottom: 20px;
+}
+.con_list li .con_list_tit span{
+	margin-left: 20px;
+    color: #909090;
+    font-size: 16px;
+}
+.con_list li .con_list_a{
+	width: 100%;
+	overflow: hidden;
+}
+.con_list li  .custom_from{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+
 	margin-bottom: 25px;
 }
-.con_list li>p span{
-	margin-left: 20px;
-	color: #909090;
-	font-size: 16px;
+.con_list li  .custom_from div{
+	width: 50%;
+	float: left;
 }
-.con_list li>div{
-	width: 596px;
-	height: 445px;
-	background: #fff;
-	border-radius: 4px;
+.con_list li  .custom_from div span{
+	margin-right:20px; 
+	float: left;
+	font-size: 16px;
+    color: #202020;
+    font-weight: bold;
+}
+.con_list li  .custom_from div  input{
+	width:183px;
+	height: 40px;
+	line-height: 40px; 
 	border: 1px solid #cacaca;
-	padding: 20px 10px;
-}
-.con_list li>div>div{
-	width: 600px;
-	height: 621px;
-}
-.con_list .con_list_a:first-child{
-	margin-bottom: 30px;
-}
-.con_list .con_list_a>p{
-	width: 595px;
-	margin-bottom: 20px;
-	line-height: 25px;
-	height: 25px;
-}
-.con_list .con_list_a>p>span:first-child{
-	font-size: 18px;
-	color: #303030;
-	font-weight: bold;
-}
-.con_list .con_list_a:first-child >p span:last-child{
-	float: right;
-	width: 100px;
-	color: #909090;
+    border-radius: 4px;
+    padding: 0px 14px;
+    float: left;
 	font-size: 16px;
-	text-align: right;
-	font-weight: 400;
-	cursor: pointer;
-}
-.con_list .con_list_a:first-child >p span:last-child:hover{
-	color: #3da8f5;
-}
-.icon-baobiao{
-	margin-right: 10px;
-}
-.con_list .con_list_a:last-child >p span:last-child{
-	float: right;
-	width: 100px;
-	color: #909090;
-	font-size: 16px !important;
-	text-align: right;
-	font-weight: 400;
-	cursor: pointer;
-}
-.con_list .con_list_a:last-child >p span:last-child:hover{
-	color: #3da8f5;
-
+    color: #202020;
 }
 .icon-icon02{
 	font-size: 20px !important;
 	margin-right: 8px;
 }
-.con_list .con_list_a table{
-	border-top: 1px solid #cacaca;
-	border-left: 1px solid #cacaca;
-	width: 595px;
+.con_list li .table{
+	border-bottom: 0px;
 }
-
-.con_list .con_list_a table tr{
+.con_list li .table td{
 	height: 35px;
-	width: 100%;
-}
-.con_list .con_list_a table td{
-	border-right: 1px solid #cacaca;
-	border-bottom: 1px solid #cacaca;	
-}
-.con_list .con_list_a table tbody tr:nth-child(odd){
-	background: #f0f0f0;
-}
-.con_list .con_list_a table tbody tr:hover{
-	background: #f6f6f6;
-}
-.con_list .con_list_a table th{
-	border-right: 1px solid #cacaca;
-	border-bottom: 1px solid #cacaca;
-	font-weight: bold;
-}
-.con_list  li .con_list_a tr th{
-	width: 198px;
-	background: #fff !important;
-	color: #303030 !important;
-}
-.con_list  li .con_list_a tr th:first-child {
-	width: 140px;
-}
-.con_list  li .con_list_a tr td:first-child {
-	width: 140px;
-}
-.con_list .con_list_a table tr td{
-	width: 140px;
-	padding-left: 20px;
+	line-height: 35px;
+	text-align: right;
+	padding-right: 20px;
 	font-size: 14px;
+}
+.con_list li .table tr td:nth-child(1){
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 0px;
+
+}
+.con_list li .table tr td a{
+	width: 100%;
+	text-decoration: none;
+	border-bottom: none;
 	color: #303030;
 }
-.con_list .con_list_a table tr th:first-child{
-	width: 140px;
-	padding-left: 20px;
-}
-.con_list .con_list_a table>tr{
+.con_list li .table tr th .th-inner{
 	height: 40px;
 	line-height: 40px;
-	font-size: 18px;
+	padding: 0 !important;
+	padding-right: 20px !important;
+	text-align: right;
+	padding-right: 20px;
 	color: #303030;
+	font-weight: bold;
+	font-size: 18px;
 }
-.con_list .con_list_a table tr td:nth-child(2){
-	text-align: right;
-	padding-right: 20px;
-	padding-left: 0px !important;
+.con_list li .table tr th:nth-child(1){
+		width: 130px;
 }
-.con_list .con_list_a table tr td:last-child{
-	text-align: right;
-	padding-right: 20px;
-	padding-left: 0px !important;
-}
-.con_list .con_list_a table tr th:nth-child(2){
-	text-align: right;
-	padding-right: 20px;
-	padding-left: 0px !important;
-}
-.con_list .con_list_a table tr th:last-child{
-	text-align: right;
-	padding-right: 20px;
-	padding-left: 0px !important;
-}
-.con_list .con_list_a table tr td:last-child{
-	text-align: right;
-	padding-right: 20px;
-	padding-left: 0px !important;
+.con_list li .table tr th:nth-child(1) .th-inner{
+	text-align: left;
+	padding-left: 20px !important;
+	padding-right: 0px !important;
+
 }
 
 .con_list .con_list_a .total_amount {
-	width: 610px;
+	width: 100%;
 	height: 70px;
 	padding-bottom: 25px;
 	margin-top: 25px;
 } 
 .con_list .con_list_a .total_amount>div{
-	width: 305px;
+	width: 50%;
 	height: 70px;
 	text-align: center;
 	float: left;
@@ -186,75 +135,28 @@
 	line-height: 32px;
 }
 .con_list .con_list_a .total_amount>div:nth-child(1){
-	width: 304px;
+	width: 50%;
 	border-right: 1px solid #cecece;
 }
 .con_list .con_list_a .total_amount>div p:nth-child(1){
 	color: #303030;
-	font-size: 20px;
+	font-size: 18px;
 }
 .con_list .con_list_a .total_amount>div p:nth-child(2){
 	color: #3da8f5;
 	font-size: 18px;
 }
-.con_list .con_list_a .custom_from{
-	width: 600px;
-	overflow: hidden;
-}
-.con_list .con_list_a .custom_from div{
-	width: 300px;
-	height: 100px;
-	float: left;
-}
-.con_list .con_list_a .custom_from div p{
-	width: 100%;
-	height: 30px;
-	line-height: 30px;
-	font-size: 16px;
-    color: #202020;
-    float: left;
-    text-align: center;
-}
-.con_list .con_list_a .custom_from div p:nth-child(1){
-	margin-bottom: 10px;
-}
-.con_list .con_list_a .custom_from p input{
-	width: 200px;
-	height: 40px;
-	line-height: 40px;
-	border: 0 none;
-	border: 1px solid #cacaca;
-	border-radius: 4px;
-	padding: 0px 14px;
-	text-align: center;
-}
+
     
 /* 儿童保险样式 */
-.con_list .con_list_a_child table tr td{
-	text-align: right;
-	padding-right: 20px;
-	width: 436px;
+.con_list .children{
+	height: 260px;
 }
-.con_list .con_list_a_child table tr th{
-	text-align: right;
-	padding-right: 20px;
+.con_list .children .con_list_tit{
+	margin-bottom: 0;
 }
-.con_list .con_list_a_child table tr th:first-child{
-	text-align: left;
-	padding-left: 20px;
-}
-.con_list .con_list_a_child table tr td{
-	text-align: left;
-	padding-left: 20px;
-}
-.con_list .con_list_a_child:first-child{
-	margin-bottom: 174px;
-}
-.con_list li .con_list_a:last-child tr td:last-child{
-	width: 200px !important;
-}
-#con_list .con_list_a td span:last-child{
-	font-size: 12px;
+.con_list .children .con_list_a{
+	padding-top: 30px;
 }
 /* footer开始 */
 .s_footer{
