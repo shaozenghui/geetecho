@@ -1,4 +1,6 @@
-
+.fixed-table-body {
+    overflow-x:hidden !important;
+}
 /* 添加支出 */
 .container{
 	margin-top: 20px;
@@ -650,7 +652,7 @@
 	top:0;
 	left: 0;
 	display: none;
-	z-index: 10;
+	z-index: 1000;
 }
 #custom_modal2 .custom_modal2_con{
 	width: 430px;
@@ -1084,17 +1086,17 @@ padding:0px 14px;
 #screen>div:nth-child(1){
 	position: absolute;
 	top: 10px;
-	left: 106px;
+	left: 114px;
 }
 #screen>div:nth-child(2){
 	position: absolute;
     top: 10px;
-    left: 290px;
+    left: 295px;
 }
 #screen>div:nth-child(3){
 	position: absolute;
 	top: 10px;
-	left: 476px;
+	left: 475px;
 }
 .screen_active_con{
 	color:#3da8f5 !important;

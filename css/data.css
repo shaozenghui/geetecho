@@ -40,15 +40,10 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }
-#search_sel_class_list::-webkit-scrollbar{
-  background:#fff;
-  width: 6px;
+#search_sel_class_list li{
+	width: 130px;
 }
- 
-#search_sel_class_list::-webkit-scrollbar-thumb { 
-	background:#cacaca;
-	border-radius: 3px;
-}
+
 .content{
 	width: 1246px;
 	position: absolute;

@@ -249,20 +249,7 @@ input[type='number']{
 	border: 1px solid  #a94442 !important;
 	box-shadow: 0px 0px 5px #a94442;
 }
-/* 点击a链接切换背景图片的class */
 
-.first_con{
-	background-image: url(../img/MemberFamily/1-2.png);
-	color: #fff;
-}
-.middle_con{
-	background-image: url(../img/MemberFamily/2-2.png);
-	color: #fff;
-}
-.last_con{
-	background-image: url(../img/MemberFamily/3-2.png);
-	color: #fff;
-}
 /* 模态框 */
 #prompt_modal{
 	width: 100%;
