@@ -5,10 +5,12 @@ window.onload = function(){
 		}
 	})
 	$(".table .tab ul li").click(function(){
-		var scroll = $(this).parents(".table").find(".tab_content").find('li').eq($(this).index()).offset().top - $(this).parents("ul").offset().top - 56;	
-		$(this).parents(".table").find(".tab_content ul").animate({scrollTop:scroll})  ;	
 		$(this).addClass("tab_class");
 		$(this).parents(".table").find(".tab").find('li').not($(this)).removeClass('tab_class');
+		var container = $(this).parents(".table").find(".tab_content ul");
+		var scrollTo = $(this).parents(".table").find(".tab_content").find('li').eq($(this).index());
+		var scroll = scrollTo.offset().top - container.offset().top + container.scrollTop();
+		container.animate({scrollTop:scroll})
 	});
 	// 支出
 	 $(".demoUp").mouseover(function(){
@@ -38,7 +40,7 @@ window.onload = function(){
 	            data:[
 	                {value:335, name:'自由支出', },
 	                {value:310, name:'还贷支出'},
-	                {value:234, name:'固定支出',selected:true},
+	                {value:234, name:'固定支出',},
 	            ],
 	            label: {
 	                normal: {
@@ -65,13 +67,35 @@ window.onload = function(){
 	    xAxis: {
 	        type: 'category',
 	        data: ['流动资产', '固定资产', '实业资产', '负债'],
+	        axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#909090'
+                }
+            },
 	        nameTextStyle:{
-	        	color:'#fff',
+	        	color:'#909090',
 	        	fontSize:14
+	        },
+	        axisLine:{
+	        	lineStyle:{
+	        		color:"#dbdbdb",
+	        	}
 	        }
 	    },
 	    yAxis: {
-	        type: 'value'
+	        type: 'value',
+	        axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#909090'
+                }
+            },
+	        axisLine:{
+	        	lineStyle:{
+	        		color:"#dbdbdb",
+	        	}
+	        }
 	    },
 	    grid: {
 	        left: '0%',

@@ -74,14 +74,20 @@
 	margin-right: 8px;
 }
 .con_list li .table{
+	width: 100%;
 	border-bottom: 0px;
+	overflow-x: hidden;
+	table-layout: fixed;
 }
 .con_list li .table td{
+	width: 214px;
 	height: 35px;
 	line-height: 35px;
 	text-align: right;
 	padding-right: 20px;
 	font-size: 14px;
+
+
 }
 .con_list li .table tr td:nth-child(1){
 	height: 35px;
@@ -89,15 +95,18 @@
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 0px;
+	
 
 }
 .con_list li .table tr td a{
-	width: 100%;
+	width: 100% !important;
 	text-decoration: none;
 	border-bottom: none;
 	color: #303030;
+	
 }
 .con_list li .table tr th .th-inner{
+	width: 214px;
 	height: 40px;
 	line-height: 40px;
 	padding: 0 !important;
@@ -109,9 +118,10 @@
 	font-size: 18px;
 }
 .con_list li .table tr th:nth-child(1){
-		width: 130px;
+	width: 130px !important;
 }
 .con_list li .table tr th:nth-child(1) .th-inner{
+	width: 130px !important;
 	text-align: left;
 	padding-left: 20px !important;
 	padding-right: 0px !important;
@@ -157,6 +167,43 @@
 }
 .con_list .children .con_list_a{
 	padding-top: 30px;
+}
+.con_list .children .con_list_a td {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;	
+}
+.con_list .children .con_list_a tr td:nth-child(2){
+	width: 110px !important;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.con_list .children .con_list_a tr td:nth-child(3){
+	width: 280px !important;
+	text-align: left !important;
+	padding-left: 20px;
+	padding-right: 0 !important;
+}
+.con_list .children .con_list_a tr th:nth-child(2){
+	width: 110px !important;
+	
+}
+.con_list .children .con_list_a tr th:nth-child(3){
+	width: 280px !important;
+	text-align: left !important;
+	padding-left: 20px;
+	padding-right: 0 !important;
+	
+}
+.con_list .children .con_list_a tr th:nth-child(2) .th-inner{
+	width: 110px !important;
+}
+.con_list .children .con_list_a tr th:nth-child(3) .th-inner{
+	width: 280px !important;
+	text-align: left !important;
+	padding-left: 20px;
+	padding-right: 0 !important;
 }
 /* footer开始 */
 .s_footer{

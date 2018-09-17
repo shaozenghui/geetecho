@@ -378,3 +378,6 @@ input[type='number']{
 	cursor: not-allowed;
 }
 
+table{
+	table-layout: fixed;
+}
