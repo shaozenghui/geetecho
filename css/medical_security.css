@@ -1,4 +1,6 @@
-
+table {
+    table-layout: auto !important;
+}
 
 /* 内容开始 */
 
@@ -142,8 +144,8 @@
 }
 .con_list3 .con_list_table p img{
 	position:relative;
-	top: -20px;
-	left: -40px;
+	top: 0px;
+	left: -15px;
 }
 .con_list3 .con_list_table p:last-child{
 	margin-top: 10px;
