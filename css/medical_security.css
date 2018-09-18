@@ -1,7 +1,9 @@
 table {
     table-layout: auto !important;
 }
-
+.user_list a {
+    width: 130px !important;
+}
 /* 内容开始 */
 
 .con_list li{

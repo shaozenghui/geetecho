@@ -1,6 +1,9 @@
 .fixed-table-body {
     overflow-x:hidden !important;
 }
+.user_list a {
+    width: 130px !important;
+}
 /* 添加支出 */
 .container{
 	margin-top: 20px;
@@ -936,22 +939,22 @@ padding:0px 14px;
 /* 月度支出详情 */
 #adjustment2_modal{
 	width: 630px;
-	height: 190px;
-	/* background: rgba(56,56,56,0.7); */
-	position: absolute;
-	top:325px;
-	left: 50%;
-	margin-left: -137px;
-	display: none;
-	 z-index: 30000; 
-}
-#adjustment2_modal .adjustment2_modal_con{
-	width: 630px;
-	height: 190px;
+	overflow: hidden;
 	background: #fff;
-	padding: 0px 20px;
+	position: absolute;
+	top:330px;
+	left: 35%;
+	display: none;
+	z-index: 30000; 
+	padding:20px;
 	border-radius: 4px;
 	box-shadow: 0px 5px 15px rgba(0,0,0,.2);
+}
+#adjustment2_modal .adjustment2_modal_con{
+	width: 100%;
+	overflow: hidden;
+
+	
 }
 #adjustment2_modal .adjustment2_modal_title{
 	width: 100%;
@@ -979,29 +982,19 @@ padding:0px 14px;
 }
 #adjustment2_modal .adjustment2_modal_body{
 	width: 596px;
-	height: 194px;
-	padding: 10px 0px;
+	overflow: hidden;
 }
 #adjustment2_modal  .adjustment2_form{
 	width: 100%;
 	height: 100%;
 	overflow-y:scroll;
 }
-#adjustment2_modal  .adjustment2_form::-webkit-scrollbar{
-  background:#fff;
-  width: 6px;
-}
-#adjustment2_modal  .adjustment2_form::-webkit-scrollbar-thumb { 
-	background:#cacaca;
-	border-radius: 3px;
-	opacity: 0.5;
-}
+
 #adjustment2_modal  .adjustment2_form table{
 	border-top: 1px solid #cacaca;
 	border-left: 1px solid #cacaca;
-	margin-top: 10px;
 	margin-right: 2px;
-	width: 100%;
+	width: 585px;
 }
 #adjustment2_modal  .adjustment2_form table tbody tr:nth-child(odd){
 	background: #f0f0f0;
@@ -1178,6 +1171,7 @@ padding:0px 14px;
 	color: #101010;
 	font-size: 14px;
 	padding-left: 20px;
+	line-height: 15px;
 }
 .checkbox_all>div>p:nth-child(1){
 	width:158px;
@@ -1188,7 +1182,8 @@ padding:0px 14px;
 	position: ab;
 	top: 0;
 	left: 0;
-	z-index: 2000
+	z-index: 2000;
+	line-height: 15px;
 }
 .checkbox_all>div>p:nth-child(1) span{
 	margin-left: 16px;

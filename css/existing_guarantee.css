@@ -1,4 +1,6 @@
-
+.user_list a {
+    width: 130px !important;
+}
 /* 主题内容开始 */
 .container{
 	margin-bottom: 100px;

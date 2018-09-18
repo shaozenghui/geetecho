@@ -524,20 +524,20 @@ tbody tr:hover{
 	padding:0px 14px;
 }
 #select_pro_modal table tr th:nth-child(8){
-	width: 170px !important;
+	width: 190px !important;
 	text-align: right;
 	padding-right: 20px;
 }
 #select_pro_modal table tr th:nth-child(9){
-	width: 170px !important;
+	width: 150px !important;
 	text-align: right;
 	padding-right: 20px;
 }
 #select_pro_modal table tr td:nth-child(8){
-	width: 170px !important;
+	width: 190px !important;
 }
 #select_pro_modal table tr td:nth-child(9){
-	width: 170px !important;
+	width: 150px !important;
 }
 #select_pro_modal table tr td:nth-child(8) input{
 	width: 84px;

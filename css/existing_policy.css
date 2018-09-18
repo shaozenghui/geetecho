@@ -1,4 +1,11 @@
-
+.add_item_modal_body .error {
+    width: 100%;
+    font-size: 14px;
+    color: red;
+    margin-top: 6px;
+    margin-left: 100px;
+    float: left;
+}
 .header {
     height: 50px;
     line-height: 50px;
@@ -1109,7 +1116,7 @@ tbody tr td span:nth-child(2){
     color: #3da8f5;
 }
 #add_item_modal .add_item_modal_body{
-    width: 780px;
+    width: 100%;
     overflow: hidden;
     padding: 18px 10px;
     position: relative;
