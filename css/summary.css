@@ -495,20 +495,14 @@
 	text-align: left;
 	padding-right: 0px;
 }
-/*#existing_guarantee .table .tab_content  thead th:nth-child(2){
-	text-align: center;
-}
-#existing_guarantee .table .tab_content  tbody tr td:nth-child(2){
-	text-align: center;
 
-}*/
-#existing_guarantee .children {
+#existing_guarantee  .tab_content ul .children{
 	width: 49%;
 	margin-right: 2%;
+	margin-bottom: 20px;
+	float: left;
 }
-#existing_guarantee .children:nth-child(even){
-	margin-right: 0;
-}
+
 #existing_guarantee .children  thead th:nth-child(2){
 	text-align: right !important;
 }
@@ -606,20 +600,18 @@
 #expenditure .modal{
 	position: absolute;
 	top:70px;
-	left: 50%;
+	left: 20%;
 	margin-left: -137px;
 }
 #income .modal{
 	position: absolute;
 	top:87px;
-	left: 50%;
-	margin-left: -137px;
+	left:10%;
 }
 #assets_liabilities .modal{
 	position: absolute;
 	top:87px;
-	left: 50%;
-	margin-left: -137px;
+	left: 11%;
 }
 /*详情*/
 .modal{

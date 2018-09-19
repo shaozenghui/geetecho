@@ -4,6 +4,11 @@ window.onload = function(){
 			$('#userList li').eq(index).css({marginRight:0})
 		}
 	})
+	$('#existing_guarantee .tab_content ul .children').each(function(index,el){
+		if( (index+1) % 2 == 0){
+			$('#existing_guarantee .tab_content ul .children').eq(index).css({marginRight:0})
+		}
+	})
 	$(".table .tab ul li").click(function(){
 		$(this).addClass("tab_class");
 		$(this).parents(".table").find(".tab").find('li').not($(this)).removeClass('tab_class');
@@ -100,7 +105,8 @@ window.onload = function(){
 	    grid: {
 	        left: '0%',
 	        right: '0%',
-	        bottom: '0%',
+	        y:45,
+	        y2:10,	
 	        containLabel: true
 	    },
 	    tooltip : {
@@ -138,12 +144,11 @@ window.onload = function(){
 		        	value:20000,
 		        	name:'实业资产'
 		        }, 
-		         {
+		        {
 		        	value:-120000,
 		        	name:'负债',
 		        	label: {
     	                normal: {
-    	                    show: true,
     	                    position: 'bottom'
     	                }
     	            },
