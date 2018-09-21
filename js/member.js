@@ -62,6 +62,7 @@ $(document).ready(function($) {
 	});
 	// 点击头部链接跳转提示信息
 	$('.transparent').click(function(){
+		
 		prompt('请完善家庭成员信息并保存');
 	})
 	// 点击下一步跳转提示信息

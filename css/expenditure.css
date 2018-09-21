@@ -173,8 +173,9 @@
 	float: left;
 	font-size: 14px;
 	color: #303030;
-	width: 133px;
+	width: 155px;
 	margin-bottom: 14px;
+	margin-right: 20px;
 	cursor: pointer;
 }
 .con_list_>li .con_list_con_list_item>div ul li:hover{
@@ -941,7 +942,7 @@ padding:0px 14px;
 	overflow: hidden;
 	background: #fff;
 	position: absolute;
-	top:330px;
+	top:300px;
 	left: 35%;
 	display: none;
 	z-index: 30000; 

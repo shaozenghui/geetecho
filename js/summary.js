@@ -68,6 +68,21 @@ window.onload = function(){
 	})
 	// 资产负债
 	var myChart2 = echarts.init(document.getElementById('assets_echarst'));
+	function formatNum(strNum) {
+		if (strNum.length <= 3) {
+			return strNum;
+		}
+		if (!/^(\+|-)?(\d+)(\.\d+)?$/.test(strNum)) {
+			return strNum;
+		}
+		var a = RegExp.$1, b = RegExp.$2, c = RegExp.$3;
+		var re = new RegExp();
+		re.compile("(\\d)(\\d{3})(,|$)");
+		while (re.test(b)) {
+		b = b.replace(re, "$1,$2$3");
+		}
+		return a + "" + b + "" + c;
+	}
 	myChart2.setOption({
 	    xAxis: {
 	        type: 'category',
@@ -75,31 +90,34 @@ window.onload = function(){
 	        axisLabel: {
                 show: true,
                 textStyle: {
-                    color: '#909090'
+                    color: '#606060',
+                    fontSize:14
                 }
             },
-	        nameTextStyle:{
-	        	color:'#909090',
-	        	fontSize:14
-	        },
 	        axisLine:{
 	        	lineStyle:{
-	        		color:"#dbdbdb",
+	        		color:"#cecece",
 	        	}
-	        }
+	        },  
 	    },
 	    yAxis: {
 	        type: 'value',
 	        axisLabel: {
                 show: true,
                 textStyle: {
-                    color: '#909090'
+                    color: '#606060',
                 }
             },
 	        axisLine:{
 	        	lineStyle:{
-	        		color:"#dbdbdb",
+	        		color:"#cecece",
 	        	}
+	        },
+	        splitLine:{  
+	            show:true,
+	            lineStyle:{
+				    color:'#f1f1f1',
+			    }
 	        }
 	    },
 	    grid: {
@@ -117,20 +135,26 @@ window.onload = function(){
 	    },
 	    series: [{
 	    	barWidth : 20,
-	        itemStyle: { 
-	            normal: { 
-	                barBorderRadius:[4, 4, 4,4],
+	    	itemStyle: {
+				normal: {
+					barBorderRadius:[4, 4, 4,4],
 	                color: function(params) { 
 	                    var colorList = [ 
 	                    '#5aee98','#43a0ff','#ffe138','#ff6b38']; 
 	                    return colorList[params.dataIndex] 
 	                },
-	                label: { 
-	                    show: true ,
-	                    position:'top'
-	                } 
-	            } 
-	        } ,
+					label: {
+						show: true,
+						formatter: function(p){
+							return formatNum(p.value);
+						},
+						position:'top',
+						textStyle:{
+							color:'#000'
+						}
+					}
+				}
+			},
 	        data: [
 		        {
 		        	value:10000,
@@ -147,11 +171,6 @@ window.onload = function(){
 		        {
 		        	value:-120000,
 		        	name:'负债',
-		        	label: {
-    	                normal: {
-    	                    position: 'bottom'
-    	                }
-    	            },
 		        }
 		    ],
 	        type: 'bar',
