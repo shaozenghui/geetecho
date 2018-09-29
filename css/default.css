@@ -295,6 +295,9 @@ input[type='number']{
 	margin-top: 23px;
 	margin-bottom: 12px;
 }
+.h_list_second a span:first-child i{
+	color: #909090;
+}
 .h_list_second a span:last-child{
 	font-size: 14px;
 	color: #101010;
@@ -302,9 +305,15 @@ input[type='number']{
 .h_list_second a:hover span{
 	color: #3da8f5 !important;
 }
+.h_list_second a:hover i{
+	color: #3da8f5 !important;
+}
 .active_head_tab span{
 	color: #3da8f5 !important;
 
+}
+.active_head_tab span i{
+	color: #3da8f5 !important;
 }
 /* 错误信息提示类 */
 .input_focus_error{
