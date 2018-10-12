@@ -3,7 +3,6 @@
 }
 /* 主题内容开始 */
 .container{
-	margin-bottom: 100px;
 	background: #f6f6f6;
 }
 .con_list{
@@ -162,7 +161,7 @@
     
 /* 儿童保险样式 */
 .con_list .children{
-	height: 260px;
+	height: 225px;
 }
 .con_list .children .con_list_tit{
 	margin-bottom: 0;
@@ -199,7 +198,7 @@
 	
 }
 .con_list .children .con_list_a tr th:nth-child(2) .th-inner{
-	width: 110px !important;
+	width: 124px !important;
 }
 .con_list .children .con_list_a tr th:nth-child(3) .th-inner{
 	width: 280px !important;
@@ -257,9 +256,7 @@
 #next_step{
 	background: #3da8f5;
 }
-/* footer结束
-
-
+/* footer结束     
 
 
 

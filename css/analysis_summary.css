@@ -1,3 +1,6 @@
+table {
+     table-layout: auto !important;
+}
 .header {
     height: 50px;
     line-height: 50px;
