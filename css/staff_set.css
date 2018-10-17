@@ -150,6 +150,9 @@ body {
 .content table tbody tr td:nth-child(5) span{
 	cursor: pointer;
 }
+.content table tbody tr td:nth-child(5) span:nth-child(2){
+	margin-left: 20px;
+}
 .content table tbody {
 	margin-top: 40px;
 }

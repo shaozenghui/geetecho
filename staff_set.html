@@ -53,98 +53,98 @@
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com2</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com3</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com8</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com9</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com8</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 							<tr>
 								<td>test@test.com9</td>
 								<td>张三</td>
 								<td>2017-10-24</td>
 								<td>启用</td>
-								<td class="edit"><span>编辑</span></td>
+								<td class="edit"><span class="edit_con">编辑</span><span class='del_con'>删除</span></td>
 							</tr>
 						</tbody>
 					</table>
@@ -153,7 +153,7 @@
 		</div>
 	</div>
 	<!-- 编辑员工模态框 -->
-	<div id="edit_modal">
+	<div id="edit_modal"> class="edit_con"
 		<div class="edit_modal_con">
 			<div class="edit_modal_title">
 				<span>编辑员工</span><i class="img iconfont icon-guanbi"></i>
@@ -192,6 +192,20 @@
 			</div>
 			<div class="edit_modal_footer">
 				<button>保存</button>
+			</div>
+		</div>
+	</div>
+	<!-- class='del_con' 删除提示模态框 -->
+	<div id="prompt_modal"  >
+		<div class="prompt_modal_con">
+			<div class="prompt_modal_title">
+				提示<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="prompt_modal_body">
+			 删除的员工信息无法找回,确认是否删除?
+			</div>
+			<div class="prompt_modal_footer">
+				<button>确认</button>
 			</div>
 		</div>
 	</div>

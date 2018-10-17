@@ -1,5 +1,5 @@
 // 编辑员工模态框
-	$('.content .edit span').click(function(){
+	$('.content .edit .edit_con').click(function(){
 		$('.edit_modal_title span').html('编辑员工');
 		var str = $(this).parents('tr').children('td').eq(0).html();
 		$('.edit_modal_body input').eq(0).val(str)
@@ -48,3 +48,24 @@ $('#add_member').click(function(){
 	$('#edit_modal .edit_modal_con').stop(true,true).animate({top:'50%'},400);
 	$('body').css({overflowY:'hidden'})
 })
+
+// 删除员工模态框
+// 点击模态框叉号
+	$('#prompt_modal .prompt_modal_title .img').click(function(){
+		$('#prompt_modal').fadeOut(200);
+		$('#prompt_modal .prompt_modal_con').stop(true,true).animate({top:'40%'},400);
+		$('body').css({overflowY:'visible'})
+	})
+	// 点击模态框按钮
+	$('#prompt_modal .prompt_modal_footer button').click(function(){
+		$('#prompt_modal').fadeOut(200);
+		$('#prompt_modal .prompt_modal_con').stop(true,true).animate({top:'40%'},400);
+		$('body').css({overflowY:'visible'});
+		con_list();
+	})	
+	// 删除提示信息
+	$('.content .edit .del_con').click(function(){
+		$('#prompt_modal').fadeIn(200);
+		$('#prompt_modal .prompt_modal_con').stop(true,true).animate({top:'50%'},400);
+		$('body').css({overflowY:'hidden'})
+	})
