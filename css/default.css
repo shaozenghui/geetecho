@@ -50,27 +50,15 @@ button{
 	border: 0 none;
 	outline: none;
 }
-select {  
-  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/  
-  border: solid 1px #000;  
-  
-  /*很关键：将默认的select选择框样式清除*/  
-  appearance:none;  
-  -moz-appearance:none;  
-  -webkit-appearance:none;  
-  
-  /*在选择框的最右侧中间显示小箭头图片*/  
-  background: url("../img/pull-down-display.png") no-repeat scroll right center transparent;  
-  background-position: 232px center;
-  
-  /*为下拉小箭头留出一点位置，避免被文字覆盖*/  
-  padding-right: 14px;  
-}  
-  
-  
-/*清除ie的默认选择框样式清除，隐藏下拉箭头*/  
-select::-ms-expand { display: none; }  
 
+/* 滚动条样式自定义 */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 2px;
+}
 
 /* 去掉input type属性为number 的箭头 */
 input::-webkit-outer-spin-button,
@@ -222,7 +210,7 @@ input[type='number']{
 /*二级tab——header*/
 .header_second{
 	width: 100%;
-	height: 85px;
+	height: 110px;
 	box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.1);
 	background: #fff;
 	position: fixed;
@@ -277,8 +265,8 @@ input[type='number']{
 }
 .h_list_second a{
 	width: 114px;
-	height: 84px;
-	line-height: 84px;
+	height: 110px;
+	line-height: 110px;
 	float: left;
 	color: #101010;
 	font-size: 14px;
@@ -287,16 +275,17 @@ input[type='number']{
 .h_list_second a span{
 	width: 114px;
 	float: left;
-	height: 16px;
-	line-height: 16px;
+	height:20px;
+	line-height: 20px;
 	text-align: center;
 }
 .h_list_second a span:first-child{
-	margin-top: 23px;
+	margin-top: 36px;
 	margin-bottom: 12px;
 }
 .h_list_second a span:first-child i{
 	color: #909090;
+	font-size: 18px ;
 }
 .h_list_second a span:last-child{
 	font-size: 14px;

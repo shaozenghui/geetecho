@@ -11,14 +11,13 @@
 	padding-bottom: 80px;
 }
 .con_list li{
-	width: 610px;
-	height: 540px;
+	width:1246px;
+	overflow: hidden;
+	background:rgba(255,255,255,1);
 	padding: 20px;
 	float: left;
-	margin-right: 26px;
-	background: #fff;
 	border: 1px solid #cacaca;
-	border-radius: 4px;
+	border-radius: 6px;
 	margin-bottom: 20px;
 }
 
@@ -45,24 +44,32 @@
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
-
-	margin-bottom: 25px;
 }
 .con_list li  .custom_from div{
-	width: 50%;
+	width: 330px;
+	padding-right: 40px;
+	height: 50px;
+	padding-top: 6px;
+	padding-bottom: 9px;
+	border-right: 1px solid #cacaca;
 	float: left;
 }
+.con_list li  .custom_from div:last-child{
+	width: 400px;
+	padding-left:40px;
+	border-right: 0px; 
+}
 .con_list li  .custom_from div span{
-	margin-right:20px; 
+	margin-right:29px; 
 	float: left;
 	font-size: 16px;
     color: #202020;
     font-weight: bold;
 }
 .con_list li  .custom_from div  input{
-	width:183px;
-	height: 40px;
-	line-height: 40px; 
+	width:160px;
+	height: 35px;
+	line-height: 35px; 
 	border: 1px solid #cacaca;
     border-radius: 4px;
     padding: 0px 14px;
@@ -74,13 +81,39 @@
 	font-size: 20px !important;
 	margin-right: 8px;
 }
-.con_list li .table{
+.con_list li .con_list_from{
+	width: 100%;
+	overflow: hidden;
+}
+.con_list li .con_list_from_item{
+	width: 570px;
+	overflow: hidden;
+	margin-right: 30px;
+	float: left;
+}
+.con_list li .con_list_from_item:nth-child(even){
+	margin-right: 0px;
+}
+.con_list li .con_list_from_item .table{
 	width: 100%;
 	border-bottom: 0px;
 	overflow-x: hidden;
 	table-layout: fixed;
 }
-.con_list li .table td{
+.fixed-table-container {
+    position: relative;
+    clear: both;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+table{
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.con_list li .con_list_from_item .table td{
 	width: 214px;
 	height: 35px;
 	line-height: 35px;
@@ -90,24 +123,38 @@
 
 
 }
-.con_list li .table tr td:nth-child(1){
+
+.con_list li .con_list_from_item .table tr td:nth-child(1){
 	height: 35px;
 	line-height: 35px;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 0px;
-	
+	width: 141px !important;
 
 }
-.con_list li .table tr td a{
+.con_list li .con_list_from_item .table tr td:nth-child(2){
+
+	width: 141px !important;
+
+}
+.con_list li .con_list_from_item .table tr td:nth-child(3){
+
+	width: 141px !important;
+
+}
+.con_list li .con_list_from_item .table tr td:nth-child(4) .editable-container.popover{
+	left: 363px !important
+}
+.con_list li .con_list_from_item .table tr td a{
 	width: 100% !important;
 	text-decoration: none;
 	border-bottom: none;
 	color: #303030;
 	
 }
-.con_list li .table tr th .th-inner{
-	width: 214px;
+.con_list li .con_list_from_item .table tr th .th-inner{
+	width: 100%;
 	height: 40px;
 	line-height: 40px;
 	padding: 0 !important;
@@ -118,51 +165,55 @@
 	font-weight: bold;
 	font-size: 18px;
 }
-.con_list li .table tr th:nth-child(1){
-	width: 130px !important;
-}
-.con_list li .table tr th:nth-child(1) .th-inner{
-	width: 130px !important;
+
+.con_list li .con_list_from_item .table tr th:nth-child(1) .th-inner{
+	width: 128px;
 	text-align: left;
 	padding-left: 20px !important;
 	padding-right: 0px !important;
-
 }
 
 .con_list .con_list_a .total_amount {
 	width: 100%;
-	height: 70px;
-	padding-bottom: 25px;
-	margin-top: 25px;
+	height: 22px;
+	line-height: 22px;
+	margin-bottom: 15px;
+	font-weight:bold;
+    color:rgba(48,48,48,1);
+    margin-top: 25px;
+    font-size: 16px;
 } 
-.con_list .con_list_a .total_amount>div{
-	width: 50%;
-	height: 70px;
-	text-align: center;
-	float: left;
+.con_list .con_list_a .total_amount span{
+	margin-left: 36px;
+	font-size: 18px;
+	color: #3DA8F5;
+	font-weight: normal;
+	height: 22px;
+	line-height: 22px;
 } 
-.con_list .con_list_a .total_amount>div p{
-	height: 32px;
-	line-height: 32px;
-}
-.con_list .con_list_a .total_amount>div:nth-child(1){
-	width: 50%;
-	border-right: 1px solid #cecece;
-}
-.con_list .con_list_a .total_amount>div p:nth-child(1){
-	color: #303030;
-	font-size: 18px;
-}
-.con_list .con_list_a .total_amount>div p:nth-child(2){
-	color: #3da8f5;
-	font-size: 18px;
+/*公积金样式*/
+.table_gjin{
+	height: 35px;
+	overflow-x: hidden;	
+	border-bottom: 1px solid #cacaca !important;
 }
 
-    
+.table_gjin tr td{
+	width: 142px !important;
+	padding-right: 20px;
+	text-align: right;
+}
+.table_gjin tr:nth-child(odd) {
+    background-color: #f0f0f0;
+} 
 /* 儿童保险样式 */
 .con_list .children{
-	height: 225px;
+	width: 100%;
+	overflow: hidden;
+
+
 }
+
 .con_list .children .con_list_tit{
 	margin-bottom: 0;
 }
@@ -170,42 +221,64 @@
 	padding-top: 20px;
 }
 .con_list .children .con_list_a td {
+	width: 214px;
+	text-align: left;
+	padding-left: 20px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;	
+	height: 30px;
+	line-height: 30px;
 }
-.con_list .children .con_list_a tr td:nth-child(2){
-	width: 110px !important;
+.con_list .children .con_list_a td a{
+	width: 80%;
+	color: #303030 !important;
+	border-bottom: 0 !important;
+}
+
+.con_list .children .con_list_a th {
+	width: 194px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	padding-left: 20px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	overflow: hidden;
+	overflow: hidden;	
+	 color: #303030;
+    font-weight: bold;
+    font-size: 18px;
 }
-.con_list .children .con_list_a tr td:nth-child(3){
-	width: 280px !important;
-	text-align: left !important;
-	padding-left: 20px;
-	padding-right: 0 !important;
+.con_list .children .con_list_a tr th  .th-inner{
+	padding: 0px !important;
+	height: 40px;
+	line-height: 40px;
+}
+.con_list .children .con_list_a tr td:nth-child(1){
+	width: 130px !important;
+}
+.con_list .children .con_list_a tr td:nth-child(2){
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 0;
+}
+.con_list .children .con_list_a tr th:nth-child(1){
+	width: 150px !important;
 }
 .con_list .children .con_list_a tr th:nth-child(2){
-	width: 110px !important;
-	
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 0;
 }
-.con_list .children .con_list_a tr th:nth-child(3){
-	width: 280px !important;
-	text-align: left !important;
-	padding-left: 20px;
-	padding-right: 0 !important;
-	
+.con_list .children .con_list_a tr th:nth-child(1)  .th-inner{
+	width: 150px !important;
 }
 .con_list .children .con_list_a tr th:nth-child(2) .th-inner{
-	width: 124px !important;
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 0;
 }
-.con_list .children .con_list_a tr th:nth-child(3) .th-inner{
-	width: 280px !important;
-	text-align: left !important;
-	padding-left: 20px;
-	padding-right: 0 !important;
-}
+
 /* footer开始 */
 .s_footer{
 	width: 100%;

@@ -4,11 +4,11 @@
     line-height: 50px;
 }
 .header_second {
-    height: 84px;
+    height: 110px;
 }
 .h_list_second a {
-    height: 82px;
-    line-height: 82px;
+    height: 108px;
+    line-height: 108px;
 }
 .head_list_tab a{
     height: 50px !important;
@@ -501,6 +501,7 @@
   color: #101010;
   font-weight: bold;
   float: left;
+  border-bottom: 0;
 }
 #assets_liabilities .list_tit_th thead th{
 	 height: 40px;
@@ -565,7 +566,7 @@
 	padding-right: 0px;
 }
 
-#existing_guarantee  .tab_content ul .children{
+/*#existing_guarantee  .tab_content ul .children{
 	width: 49%;
 	margin-right: 2%;
 	margin-bottom: 20px;
@@ -578,7 +579,7 @@
 #existing_guarantee .children  tbody tr td:nth-child(2){
 	text-align: right !important;
 
-}
+}*/
 
 /*收入*/
 #income{
@@ -631,6 +632,7 @@
   color: #101010;
   font-weight: bold;
   float: left;
+    border-bottom: 0;
 }
 #income .list_tit_th thead th{
 	 height: 40px;
