@@ -207,13 +207,18 @@ table{
     background-color: #f0f0f0;
 } 
 /* 儿童保险样式 */
+#con_list{
+	padding-bottom: 0px;
+}
 .con_list .children{
-	width: 100%;
-	overflow: hidden;
-
+	width: 610px;
+	height: 206px;
+	margin-right: 25px;
 
 }
-
+.con_list .children:nth-child(even){
+	margin-right: 0;
+}
 .con_list .children .con_list_tit{
 	margin-bottom: 0;
 }
