@@ -189,7 +189,7 @@ $(document).ready(function($) {
 			$('#prompt_modal .prompt_modal_con').stop(true,true).animate({top:'50%'},400);
 			$('body').css({overflowY:'hidden'})
 		}
-		// 删除提示信息
+		// 删除产品提示信息
 		$('.del').click(function(){
 			prompt('您选择删除31项内容.删除的内容无法恢复,请谨慎操作');
        	    var obj = $(this).parent().parent().attr("class");
@@ -212,7 +212,9 @@ $(document).ready(function($) {
 			$(".con_list_tit_policy_list").hide();
 			$('#change_policy .change_policy_con').animate({top:'50%'},400);
 			$('#change_policy input').removeAttr('checked');
-			$('body').css({overflowY:'hidden'})
+			$('body').css({overflowY:'hidden'});
+			// 不能删除团体险提示信息
+			// prompt('团体险不可调整');
 		})
 	      // 点击叉号
 	      $('#change_policy .change_policy_title .img').click(function(){
