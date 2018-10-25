@@ -1324,9 +1324,9 @@ tbody tr td span:nth-child(2){
     color: #3da8f5;
 }
 #del_item_modal .del_item_modal_body{
-    width: 780px;
+    width: 800px;
     overflow: hidden;
-    padding: 18px 10px;
+    padding: 18px 0px;
     position: relative;
 }
 #del_item_modal  .del_item_form{
@@ -1337,7 +1337,7 @@ tbody tr td span:nth-child(2){
 }
 #del_item_modal  .del_item_form:first-child{
     height: 270px;
-    width: 370px;
+    width: 390px;
 }
 
 #del_item_modal .del_item_form_list_item{
@@ -1347,25 +1347,55 @@ tbody tr td span:nth-child(2){
 }
 #del_item_modal .del_item_form_list_item>p{
     width: 100%;
-    height: 42px;
-    line-height: 42px;
+    height: 18px;
+    line-height: 18px;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
+    color: #101010;
+    font-weight: bold;
 }
 #del_item_modal .del_item_form_list_item ul{
     width: 100%;
     overflow: hidden;
 }
 #del_item_modal .del_item_form_list_item ul li{
-    width: 100%;
-    height: 20px;
+    width:356px;
+    height:38px;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(238,238,238,1);
+    border-radius:4px;
     color: #303030;
     font-size: 16px;
-    margin-bottom: 27px;
+    margin-bottom: 14px;
+    float: left;
+    padding: 12px;
 }
 #del_item_modal .del_item_form_list_item ul li span:nth-child(2){
     position: relative;
     top: -3px;
+}
+#del_item_modal .del_item_form_list_item ul li .text{
+    width: 320px;
+    overflow: hidden;
+    float: left;
+}
+#del_item_modal .del_item_form_list_item ul li .text p:nth-child(1){
+    font-size: 14px;
+    color: #101010;
+    margin-bottom: 8px;
+    line-height: 14px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+}
+#del_item_modal .del_item_form_list_item ul li .text p:nth-child(2){
+    font-size: 14px;
+    color: #909090;
+    line-height: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #del_item_modal  .del_item_form_list{
     width: 100%;
@@ -1373,9 +1403,28 @@ tbody tr td span:nth-child(2){
     overflow-y:scroll;
     margin-bottom: 20px;
 }
+/*人寿险边框颜色*/
+.con_1{
+    border-left: 4px solid #419FFF !important;
+}
+/*意外边框颜色*/
+.con_2{
+    border-left: 4px solid #FFD74D !important;
+}
+/*重疾边框颜色*/
+.con_3{
+    border-left: 4px solid  #ff6b38 !important;
+}
+/*医疗边框颜色*/
+.con_4{
+    border-left: 4px solid #57DA98 !important;
+}
+
 .del_item_form_list_item span {
     position: relative;
-    margin-right: 20px;
+    margin-top: 10px;
+    margin-right: 16px;
+    float: left;
 }
 .del_item_form_list_item .input_check {
     position: absolute;

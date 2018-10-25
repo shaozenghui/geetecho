@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>选择保险</title>
+	<link rel="stylesheet" href="css/s_bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-table.css">
+	<link rel="stylesheet" href="css/bootstrap-editable.css">
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/select_insurance.css">
@@ -14,9 +17,12 @@
 			box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 			background: #fff;
 			padding: 0px !important;
+			position: fixed;
+			top: 0;
+			left: 0;
 		}
 		.h_back{
-			width: 93px;
+			width: 130px;
 			height: 50px;
 			line-height: 50px;
 			padding-left: 47px;
@@ -35,220 +41,187 @@
 		<a href="index.html" class="h_back" >客户列表</a>
 	</div>
 	<div class="container clearfix">
-		<div class="leftList">
-			<!-- <div class="con_tit_left">
-				<button>当前已选</button>
-			</div> -->
-			<div class="con_list_left">
-				<ul>
-					<li>平安人寿</li>
-					<li>弘康人寿</li>
-					<li>瑞泰瑞享</li>
-					<li>平安人寿123</li>
+		<div class="title">
+			<div class="fl">
+				<span>保险管理</span>
+				<span>(已选：20/300)</span>
+			</div>
+			<div class="fr">
+				<input type="text" class="search" placeholder="产品搜索">
+				<div class="select">全部</div>
+				<ul class="search_list">
+					<li>选项一</li>
+					<li>选项二</li>
+					<li>全部</li>
 				</ul>
 			</div>
 		</div>
-		<div class="rightList">
-			<p>选择保险<span>(已选: <span></span>)</span></p>
-			<ul class="con_list_right">
-				<li>
-					<div class="no_img">
-						<img src="img/empty.png" height="110" width="189" alt="">
-					</div>
-					<div class="con_tit_right">
-						<p>平安中国人寿有限公司</p>
-						<p><span>全选</span></p>
-					</div>
-					<div class="con_list_right_select">
-						<ul>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身
-								瑞泰瑞享保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							
-						</ul>
-					</div>
-				</li>
-				<li>
-					<div class="con_tit_right">
-						<p>平安中国人寿有限公司</p>
-						<p><span>全选2</span></p>
-					</div>
-					<div class="con_list_right_select">
-						<ul>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身
-								瑞泰瑞享保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身
-								瑞泰瑞产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<div class="con_tit_right">
-						<p>平安中国人寿有限公司</p>
-						<p><span>全选</span></p>
-					</div>
-					<div class="con_list_right_select">
-						<ul>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身
-								瑞泰瑞享保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							
-						</ul>
-					</div>
-				</li>
-				<li>
-					<div class="con_tit_right">
-						<p>平安中国人寿有限公司</p>
-						<p><span>全选2</span></p>
-					</div>
-					<div class="con_list_right_select">
-						<ul>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身
-								瑞泰瑞享保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身
-								瑞泰瑞产品</p>
-								<span>人寿险</span>
-							</li>
-							<li>
-								<p>瑞泰瑞享金生终身保险产品
-								瑞泰瑞享金生终身保险产品</p>
-								<span>人寿险</span>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-
+		<p class="small_title">请选择您目前能够销售的保险产品</p>
+		<div class="table_content">
+			<table id='table' data-toggle="table" data-striped="true" style="word-break:break-all; word-wrap:break-all;" data-height="510">
+	            <thead>
+		            <tr>
+		                <th data-checkbox="true"></th>
+		                <th >保险产品</th>
+		                <th >公司名称</th>
+		                <th >险种类型</th>
+		                <th >保障利益 </th>
+		                <th data-editable="true">产品评分</th>
+		            </tr>
+	            </thead>
+	            <tbody id="data-info">
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+					 <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                 <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	                <tr>
+	                    <td data-checkbox="true"></td>
+	                    <td >同方全球新和一生终身寿险</td>
+	                    <td>同方全球人寿</td>
+	                    <td>人寿险</td>
+	                    <td>身故或全残</td>
+	                    <td>80</td>
+	                </tr>
+	            </tbody>
+	        </table>
 		</div>
-		<!-- 已选产品内容 -->
-		<!-- <div class="rightList2">
-			<p>已选保险<span>(已选: <span></span>)</span></p>
-			<div class="con_list_right_select2">
-				<ul>
-					<li>
-						<p>瑞泰瑞享金生终身保险产品
-						瑞泰瑞享金生终身保险产品</p>
-						<span>人寿险</span>
-					</li>
-					<li>
-						<p>瑞泰瑞享金生终身保险产品</p>
-						<span>人寿险</span>
-					</li>
-					<li>
-						<p>瑞泰瑞享金生终身
-						瑞泰瑞享保险产品</p>
-						<span>人寿险</span>
-					</li>
-					<li>
-						<p>瑞泰瑞享金生终身保险产品
-						瑞泰瑞享金生终身保险产品</p>
-						<span>人寿险</span>
-					</li>
-				</ul>
-			</div>
-		</div> -->
 	</div>
-	<div class="footer">
-		<button>保存</button>
+	<div class="s_footer">
+		<div class="cont">
+			<div id='next_step'>保存</div>
+		</div>
 	</div>
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/bootstrap-table-zh-CN.js"></script>
+<script src="js/bootstrap-editable.min.js"></script>
+<script src="js/bootstrap-table-editable.min.js"></script>
 <script src="js/select_insurance.js"></script>
-<script>
-	var W =  $('.container').width() - 260
-	$('.rightList').width(W);
-</script>
+
