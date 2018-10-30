@@ -202,6 +202,9 @@ table{
 	width: 142px !important;
 	padding-right: 20px;
 	text-align: right;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .table_gjin tr:nth-child(odd) {
     background-color: #f0f0f0;
@@ -216,6 +219,7 @@ table{
 	margin-right: 25px;
 
 }
+
 .con_list .children:nth-child(even){
 	margin-right: 0;
 }
@@ -266,6 +270,9 @@ table{
 	text-align: right;
 	padding-right: 20px;
 	padding-left: 0;
+}
+.con_list .children .con_list_a tr td:nth-child(3) .editable-container.popover{
+	left: 260px !important;
 }
 .con_list .children .con_list_a tr th:nth-child(1){
 	width: 150px !important;

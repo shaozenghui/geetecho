@@ -22,12 +22,11 @@ a,span,img{
 img{
 	border: 0 none;
 }
-body,html,h1,h2,h3,h4,h5,h6,ul,ol,input,form,div,a,span,label,button,table,tr,th,td,select,option{
+*,body,html,h1,h2,h3,h4,h5,h6,ul,ol,input,form,div,a,span,label,button,table,tr,th,td,select,option{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	font-family:"微软雅黑","Microsoft YaHei",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	
+	font-family:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei ui",\\5FAE\8F6F\96C5\9ED1,SimHei,Helvetica,Arial,sans-serif;	
 }
 .clearfix:after {
   content: " ";
@@ -285,10 +284,10 @@ input[type='number']{
 }
 .h_list_second a span:first-child i{
 	color: #909090;
-	font-size: 18px ;
+	font-size: 20px ;
 }
 .h_list_second a span:last-child{
-	font-size: 14px;
+	font-size: 16px;
 	color: #101010;
 }
 .h_list_second a:hover span{

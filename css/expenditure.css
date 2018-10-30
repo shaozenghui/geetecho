@@ -24,6 +24,12 @@ select {
   
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/  
 select::-ms-expand { display: none; }  
+.fixed-table-container input[type="radio"], .fixed-table-container input[type="checkbox"]{
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 3px;
+}
 /* 添加支出 */
 .container{
 	margin-top: 20px;
@@ -130,6 +136,10 @@ select::-ms-expand { display: none; }
 	cursor: pointer;
 	margin-left: 24px !important;
 	margin-right: 0px !important;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	margin-top: 8px;
 }
 .con_list_>li .con_list_jd span:first-child i{
 	font-size: 19px !important;
@@ -886,7 +896,7 @@ padding:0px 14px;
  #s_table thead tr th .screen{
   	position: absolute;
   	top: 11px;
-  	right: 10px;
+  	right: 23px;
   	cursor: pointer;
   	color: #dcdcdc
   }
@@ -1099,17 +1109,17 @@ padding:0px 14px;
 #screen>div:nth-child(1){
 	position: absolute;
 	top: 10px;
-	left: 114px;
+	left: 102px;
 }
 #screen>div:nth-child(2){
 	position: absolute;
     top: 10px;
-    left: 295px;
+    left: 282px;
 }
 #screen>div:nth-child(3){
 	position: absolute;
 	top: 10px;
-	left: 475px;
+	left: 462px;
 }
 .screen_active_con{
 	color:#3da8f5 !important;

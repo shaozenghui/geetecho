@@ -251,4 +251,13 @@ $(document).ready(function($) {
 	  $('#push i').click(function(){
 		$(this).parent().hide();
 	})
+  $(".demoUp").mouseover(function(){
+       var _this = $(this);
+       _this.justToolsTip({
+           animation:"moveInTop",
+           contents:_this.attr('tit'),
+           gravity:'top',    
+           animation: 'none'
+       });
+    })
 });

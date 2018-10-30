@@ -150,6 +150,9 @@
 	z-index: 11;
 
 }
+.con_list li .del:hover{
+	color: #3da8f5;
+}
 .con_list li .sel{
 	width: 20px;
 	height: 20px;

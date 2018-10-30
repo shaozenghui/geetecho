@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/expenditure.css">
 	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/just-tip.css">
 </head>
 <body>
 	<div class="header">
@@ -70,6 +71,10 @@
 				<span><i class="iconfont icon-baoxian"></i></span>
 				<span>商业保险</span>
 			</a>
+			<a href="health.html">
+				<span><i class="iconfont icon-health_record"></i></span>
+				<span>健康状况</span>
+			</a>
 		</div>
 	</div>
 	<div class="header_second header_second_b">
@@ -107,8 +112,8 @@
 								<div>资产收入</div>
 							</div>
 							<div class="con_list_jd">
-								<span><i class="iconfont icon-shanchu" ></i></span>
-								<span><i class="iconfont icon-icon02"></i></span>
+								<span  class="demoUp" tit="删除项目"><i class="iconfont icon-shanchu" ></i></span>
+								<span  class="demoUp" tit="添加项目"><i class="iconfont icon-icon02" ></i></span>
 							</div>
 						</div>
 						<div class="con_list_con">
@@ -189,9 +194,9 @@
 	                <thead>
 	                <tr>
 	                    <th data-checkbox="true"></th>
-	                    <th  id="aaaa">项目</th>
-	                    <th >结算周期</th>
-	                    <th >成员</th>
+	                    <th  id="aaaa" data-sortable="true">项目</th>
+	                    <th  data-sortable="true">结算周期</th>
+	                    <th  data-sortable="true">成员</th>
 	                    <th data-editable="true" >金额 </th>
 	                    <th data-editable="true">备注</th>
 	                    <th data-visible="false">ID</th>
@@ -395,3 +400,4 @@
 <script src="js/header_common.js"></script>
 <script src="js/checkbox.js"></script>
 <script src="js/expenditure.js"></script>
+<script src="js/justTools.js"></script>

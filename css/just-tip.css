@@ -1,6 +1,6 @@
 /* just-Tips */
-.just-tooltip{position:absolute;left:0;top:0;border-radius:5px;background:#000;/*display:inline-block;*/z-index:9999;}
-.just-tooltip .just-con{padding:8px 10px;color:#fff;}
+.just-tooltip{position:absolute;left:0;top:0;border-radius:5px;background:rgba(61,70,77,1);/*display:inline-block;*/z-index:9999;}
+.just-tooltip .just-con{padding:10px 21px;color:#f5f5f5;font-size: 14px }
 
 .just-tooltip .just-top,
 .just-tooltip .just-bottom,
@@ -8,21 +8,21 @@
 .just-tooltip .just-right{content:"";position:absolute;width:0;height:0;overflow:hidden;border-style:solid;}
 
 .just-tooltip .just-top{left:50%;top:100%;border-width: 7px 5px 0 5px;margin-left:-5px;
-	border-color: #1B1E24 transparent transparent transparent;
+	border-color: rgba(61,70,77,1) transparent transparent transparent;
   	_border-color: #1B1E24 #000000 #000000 #000000;
   	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 }
 .just-tooltip .just-bottom{ left:50%; top:-7px;border-width: 0 5px 7px 5px;margin-left:-5px;
-	border-color: transparent transparent #1B1E24 transparent;
+	border-color: transparent transparent rgba(61,70,77,1) transparent;
   	_border-color:#000000 #000000 #1B1E24 #000000;
   	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');}
 .just-tooltip .just-left{ right:-7px; top:50%;border-width: 5px 0 5px 7px;margin-top:-5px;;
-	border-color: transparent transparent transparent #1B1E24;
+	border-color: transparent transparent transparent rgba(61,70,77,1);
   	_border-color:#000000 #000000 #000000 #1B1E24;
   	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
   }
 .just-tooltip .just-right{ left:-7px; top:50%;border-width: 5px 7px 5px 0;margin-top:-5px;
-	border-color: transparent #1B1E24 transparent transparent;
+	border-color: transparent rgba(61,70,77,1) transparent transparent;
   	_border-color:#000000 #000000 #000000 #1B1E24;
   	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
   }

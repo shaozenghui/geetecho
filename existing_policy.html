@@ -6,10 +6,13 @@
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/existing_policy.css">
 	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/just-tip.css">
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/echarts.min.js"></script>
 	<script src="js/existing_policy.js"></script>
 	<script src="js/header_common.js"></script>
+	<script src="js/justTools.js"></script>
+
 </head>
 <body>
 	<div class="header">
@@ -71,6 +74,10 @@
 				<span><i class="iconfont icon-baoxian"></i></span>
 				<span>商业保险</span>
 			</a>
+			<a href="health.html">
+				<span><i class="iconfont icon-health_record"></i></span>
+				<span>健康状况</span>
+			</a>
 		</div>
 	</div>
 	<div class="header_second header_second_b">
@@ -99,14 +106,18 @@
 	</div>
 	<div class="container clearfix">
 		<div class="wrapper clearfix" id="contnet">
-			<p class="con_title">现有保单 <span class="add_policy">添加保单<i class="iconfont icon-zhcc_xiangxiajiantou"></i></span></p>
-			<div class="add_policy_list">
-				<p>个人保单</p>
-				<p>团体保单</p>
-			</div>
+			<p class="con_title">现有保单 </p>
 			<ul class="cont_f_list clearfix">
 				<li>
-					<p><span>张三</span><span  class="del"><i class="iconfont icon-lajixiang"></i>删除保单</span></p>
+					<p>
+						<span>张三</span>
+						<span  class="del demoUp" tit="删除保单">
+							<i class="iconfont icon-lajixiang"></i>
+						</span>
+						<span class="add_policy demoUp" tit="添加保单"  >
+							<i class="iconfont icon-icon02"></i>
+						</span>
+					</p>
 					<div class="cont_f_list_con">
 						<ul>
 							<li>
@@ -153,7 +164,15 @@
 					</div>
 				</li>
 				<li>
-					<p><span>张三</span><span  class="del"><i class="iconfont icon-lajixiang"></i>删除保单</span></p>
+					<p>
+						<span>张三</span>
+						<span  class="del demoUp" tit="删除保单">
+							<i class="iconfont icon-lajixiang"></i>
+						</span>
+						<span class="add_policy demoUp" tit="添加保单"  >
+							<i class="iconfont icon-icon02"></i>
+						</span>
+					</p>
 					<div class="cont_f_list_con">
 						<ul>
 							<li>
@@ -197,7 +216,15 @@
 					</div>
 				</li>
 				<li>
-					<p><span>张三</span><span  class="del"><i class="iconfont icon-lajixiang"></i>删除保单</span></p>
+					<p>
+						<span>张三</span>
+						<span  class="del demoUp" tit="删除保单">
+							<i class="iconfont icon-lajixiang"></i>
+						</span>
+						<span class="add_policy demoUp" tit="添加保单"  >
+							<i class="iconfont icon-icon02"></i>
+						</span>
+					</p>
 					<div class="cont_f_list_con">
 						<ul>
 							<li>
@@ -237,6 +264,12 @@
 					</div>
 				</li>
 			</ul>
+		</div>
+	</div>
+	<div class="s_footer">
+		<div class="cont">
+			<!-- <div id='next_step'>保存</div> -->
+			<div>下一步</div>
 		</div>
 	</div>
 	<!-- 推送信息 -->
@@ -1553,11 +1586,11 @@
 			<div class="add_item_modal_body">
 				<div class="add_item_form add_item_form1">
 				    <div>
-						<label for="">成员</label>
+						<label for="">保单类型</label>
 						<select name=""  >
 							<option value="" >请选择</option>
-							<option value="">成员一</option>
-							<option value="">成员二</option>
+							<option value="">个人</option>
+							<option value="">团体</option>
 						</select>
 					</div>
 					<div class="add_item_modal_name">
@@ -1672,6 +1705,20 @@
 			<div class="del_item_modal_footer">
 				<button class="btn1">下一步</button>
 				<button class="btn2">确认</button>
+			</div>
+		</div>
+	</div>
+	<!-- 暂无保单提示信息 -->
+	<div id="no_insurance_modal">
+		<div class="no_insurance_modal_con">
+			<div class="no_insurance_modal_title">
+				提示<i class="img iconfont icon-guanbi"></i>
+			</div>
+			<div class="no_insurance_modal_body">
+				暂无保单
+			</div>
+			<div class="no_insurance_modal_footer">
+				<button>确认</button>
 			</div>
 		</div>
 	</div>

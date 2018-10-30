@@ -164,4 +164,13 @@ function conlist(){
 	 	}
 	 	focus_color('input');
 	 	focus_color('select');
+ 		$(".demoUp").mouseover(function(){
+ 	        var _this = $(this);
+ 	        _this.justToolsTip({
+ 	            animation:"moveInTop",
+ 	            contents:_this.attr('tit'),
+ 	            gravity:'top',    
+ 	            animation: 'none'
+ 	        });
+ 	     })
 }

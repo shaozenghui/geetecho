@@ -4,20 +4,24 @@ $(document).ready(function($) {
 			$(this).css({marginRight:0});
 		}
 	});
+	$(".demoUp").mouseover(function(){
+        var _this = $(this);
+        _this.justToolsTip({
+            animation:"moveInTop",
+            contents:_this.attr('tit'),
+            gravity:'top',    
+            animation: 'none'
+        });
+     })
 	$(document).click(function(){
 		$('.add_policy_list').hide();
-		$('.add_policy i').removeClass('icon-xiangshang').addClass('icon-zhcc_xiangxiajiantou');
      	$('.d_s_add ul').hide(10);
 		$('.d_s_add .img').hide(10);
 		$('.guanbi').css({transform:'rotate(-100deg)',transform:'scale(0)'});
 		$('.caidan').css({transform:'rotate(-100deg)',transform:'scale(1)'});
 		d_s_flag = true;
 	})
-	$('.add_policy').click(function(e) {
-		e.stopPropagation();
-		$('.add_policy_list').toggle();
-		$('.add_policy i').toggleClass('icon-xiangshang');
-	});
+
     // 生成规划书
    
     	$('.creat_plan_book').click(function(){
@@ -141,19 +145,13 @@ $(document).ready(function($) {
     	$('select').focus(function(event) {
     		$(this).children('option').eq(0).hide()
     	});
-	    
-	  // 添加项目模态框
-	  	$(".add_policy_list p").click(function(){
-	  		if($(this).html() == "个人保单"){
-	  			$('.add_item_modal_name label').html('产品名称')
-	  		}else{
-	  			$('.add_item_modal_name label').html('公司名称')
-	  		}
-	  		$(".add_policy_list").hide();
-	  		$('#add_item_modal').fadeIn(200);
-	  		$('#add_item_modal .add_item_modal_con').animate({top:'50%'},400);
-	  		$('body').css({overflowY:'hidden'});
-	  	})
+   // 添加保单模态框
+    	$('.add_policy').click(function(e) {
+    		e.stopPropagation();
+    		$('#add_item_modal').fadeIn(200);
+    		$('#add_item_modal .add_item_modal_con').animate({top:'50%'},400);
+    		$('body').css({overflowY:'hidden'});
+    	});
 	    // 点击叉号
 	    $('#add_item_modal .add_item_modal_title .img').click(function(){
 	    	$('#add_item_modal').fadeOut(200);
@@ -165,7 +163,6 @@ $(document).ready(function($) {
 	    		$(".add_item_form2").hide();
 	    		$(".add_item_form1").show();
 	    	});
-	    	$('.add_policy i').removeClass('icon-xiangshang').addClass('icon-zhcc_xiangxiajiantou')
 	    })
 	    // 点击下一步按钮
 	    $('#add_item_modal .add_item_modal_footer .btn1').click(function(){
@@ -200,23 +197,26 @@ $(document).ready(function($) {
     		 	setTimeout(function(){
     		 	 	 $('#push').fadeOut(5000);
     		 	 },5000)
-    		 });
-
+    		});
 	    })
 	    $('#push i').click(function(){
 			$(this).parent().hide();
 		})
 
-	    // 删除项目
+// 删除保单模态框
     	$(".cont_f_list li>p .del").click(function(){
     		$('#del_item_modal').fadeIn(200);
     		$('#del_item_modal .del_item_modal_con').animate({top:'50%'},400);
     		$('#del_item_modal input').removeAttr('checked');
-    		$('body').css({overflowY:'hidden'})
+    		$('body').css({overflowY:'hidden'});
+    		// 暂无保险提示信息
+   //  		$('#no_insurance_modal').fadeIn(200);
+			// $('#no_insurance_modal .no_insurance_modal_con').animate({top:'50%'},400);
+			// $('body').css({overflowY:'visible'})
     	})
 	      // 点击叉号
 	      $('#del_item_modal .del_item_modal_title .img').click(function(){
-	      $('#del_item_modal').fadeOut(200);
+	      	$('#del_item_modal').fadeOut(200);
   	      	$('body').css({overflowY:'visible'});
   	      	$('#del_item_modal .del_item_modal_con').animate({top:'40%'},400,function(){
   	      		$('#del_item_modal .del_item_modal_title .fanhui').hide();
@@ -275,8 +275,29 @@ $(document).ready(function($) {
     	}
     	input_color('#add_item_modal input','#add_item_modal select');
 
-
-		
+    	// 暂无保险提示信息
+	
+			// 点击叉号
+			$('#no_insurance_modal .no_insurance_modal_title .img').click(function(){
+				$('#no_insurance_modal').fadeOut(200);
+				$('#no_insurance_modal .no_insurance_modal_con').animate({top:'40%'},400);
+				$('body').css({overflowY:'visible'})
+			})
+			// 点击删除按钮
+			$('#no_insurance_modal .no_insurance_modal_footer button').click(function(){
+				$('#no_insurance_modal').fadeOut(200);
+				$('#no_insurance_modal .no_insurance_modal_con').animate({top:'40%'},400);
+				$('body').css({overflowY:'visible'})
+			});
+			// // 保存提示信息
+			// $('#next_step').click(function(){
+			// 	$('#push span').html('信息已保存')
+			// 	$('#push').fadeIn(1000,function(){
+			// 	 	setTimeout(function(){
+			// 	 	 	 $('#push').fadeOut(5000);
+			// 	 	 },5000)
+			// 	 });
+			// });
 	    // 支出
 	    (function(){
 	    	    // 基于准备好的dom，初始化echarts实例

@@ -30,5 +30,7 @@ $(document).ready(function($) {
 		$('.select').html($(this).html())
 		$('.select').removeClass('color_1');
 	})
-
+	$("#table tbody tr td:first-child input").change(function(){
+		console.log($(this).prop("checked"))
+	})
 });

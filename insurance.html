@@ -10,31 +10,6 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/select_insurance.css">
 	<link rel="stylesheet" href="css/iconfont.css">
-	<style>
-		.header{
-			height: 50px;
-			width: 100%;
-			box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-			background: #fff;
-			padding: 0px !important;
-			position: fixed;
-			top: 0;
-			left: 0;
-		}
-		.h_back{
-			width: 130px;
-			height: 50px;
-			line-height: 50px;
-			padding-left: 47px;
-			font-size: 18px;
-			color: #202020;
-			float: left;
-			border-right: 1px solid #cacaca;
-			background-image: url(img/MemberFamily/back.png) ;
-			background-repeat: no-repeat;
-			background-position: 20px center;
-		}
-	</style>
 </head>
 <body>
 	<div class="header">
@@ -44,9 +19,12 @@
 		<div class="title">
 			<div class="fl">
 				<span>保险管理</span>
-				<span>(已选：20/300)</span>
+				<span>(已选：</span>
+				<span>20</span>
+				<span>/300)</span>
 			</div>
 			<div class="fr">
+				<input type="text" class="search" placeholder="公司搜索">
 				<input type="text" class="search" placeholder="产品搜索">
 				<div class="select">全部</div>
 				<ul class="search_list">
@@ -65,7 +43,6 @@
 		                <th >保险产品</th>
 		                <th >公司名称</th>
 		                <th >险种类型</th>
-		                <th >保障利益 </th>
 		                <th data-editable="true">产品评分</th>
 		            </tr>
 	            </thead>
@@ -75,7 +52,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -83,7 +59,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -91,7 +66,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -99,7 +73,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -107,7 +80,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -115,7 +87,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -123,7 +94,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	                <tr>
@@ -131,79 +101,6 @@
 	                    <td >同方全球新和一生终身寿险</td>
 	                    <td>同方全球人寿</td>
 	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-					 <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                 <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
-	                    <td>80</td>
-	                </tr>
-	                <tr>
-	                    <td data-checkbox="true"></td>
-	                    <td >同方全球新和一生终身寿险</td>
-	                    <td>同方全球人寿</td>
-	                    <td>人寿险</td>
-	                    <td>身故或全残</td>
 	                    <td>80</td>
 	                </tr>
 	            </tbody>
