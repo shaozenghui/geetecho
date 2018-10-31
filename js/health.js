@@ -5,68 +5,72 @@ $(document).ready(function($){
 		}
 	});
 	// 编辑删除
-	$('.cont_f_list>li .cont_f_list_con div span').mouseenter(function(){
+	$('.cont_f_list>li .cont_f_list_con ._item ._list span').mouseenter(function(){
 		$(this).next().show();
 		$(this).children("i").css({color:'#3da8f5'})
 	})
-	$('.cont_f_list>li .cont_f_list_con div span').mouseleave(function(){
+	$('.cont_f_list>li .cont_f_list_con ._item ._list span').mouseleave(function(){
 		$(this).next().hide();
 		$(this).children("i").css({color:'#919191'})
 	})
-	$('.cont_f_list>li .cont_f_list_con div ul').mouseenter(function(){
+	$('.cont_f_list>li .cont_f_list_con ._item ._list ul').mouseenter(function(){
 		$(this).show();
 		$(this).prev().children("i").css({color:'#3da8f5'})
 	})
-	$('.cont_f_list>li .cont_f_list_con div ul').mouseleave(function(){
+	$('.cont_f_list>li .cont_f_list_con ._item ._list ul').mouseleave(function(){
 		$(this).hide();
 		$(this).prev().children("i").css({color:'#919191'})
 	})
 
 	// 选择颜色
-	$('.cont_f_list>li .cont_f_list_edit .color_list span').click(function(){
-		$(this).parents('li').find('.cont_f_list_edit .color_list span').removeClass("con_select");
+	$('.cont_f_list>li ._item .cont_f_list_edit .color_list span').click(function(){
+		$(this).parents('._item').find('.cont_f_list_edit .color_list span').removeClass("con_select");
 		$(this).addClass("con_select");
 	})
 
 	// 添加备注
 
-	$('.cont_f_list_add span').click(function(){
-		$(this).parents('li').find('.cont_f_list_add').hide();
-		$(this).parents('li').find('.cont_f_list_edit').show();
+	$('#cont_f_list_add .cont_f_list_add').click(function(){
+		$(this).hide();
+		$(this).parents('._item').find('.cont_f_list_edit').show();
 	})
 
-	// 保存编辑,获取选中的颜色
+	//保存编辑,获取选中的颜色
 
-	$('._btn .submit').click(function(){
+	$('.cont_f_list>li ._item .cont_f_list_edit ._btn .submit').click(function(){
 		$(this).parents('.cont_f_list_edit').find('.color_list span').each(function(el,index){
 			if($(this).is('.con_select')){
 				var con = $(this).css('background').indexOf(')')+1;
-				console.log($(this).css('background').slice(0,con));
+				var color = $(this).css('background').slice(0,con);
+				$(this).parents('._item').find('._list').css('borderLeft',`5px solid ${color}`);
 			}
 		})
 		$('#push span').html('信息已保存')
 		$('#push').fadeIn(1000,function(){
-			
 		 	 setTimeout(function(){
  		 	 	 $('#push').fadeOut(1000);
  		 	 },2000)
 		});
-		$(this).parents('li').find('.cont_f_list_add').show();
-		$(this).parents('li').find('.cont_f_list_edit').hide();
+		$(this).parents('li').find('#cont_f_list_add').show();
+		$(this).parents('li').find('#cont_f_list_add .cont_f_list_add').show();
+		$(this).parents('._item').find('.cont_f_list_edit').hide();
+		$(this).parents('._item').find("._list").show();
 	})
 
 	// 取消编辑
-	$('._btn .cancel').click(function(){
-		$(this).parents('li').find('.cont_f_list_add').show();
-		$(this).parents('li').find('.cont_f_list_edit').hide();
+	$('.cont_f_list>li ._item .cont_f_list_edit ._btn .cancel').click(function(){
+		$(this).parents('li').find('#cont_f_list_add').show();
+		$(this).parents('li').find('#cont_f_list_add .cont_f_list_add').show();
+		$(this).parents('._item').find('.cont_f_list_edit').hide();
+		$(this).parents('._item').find("._list").show();
+		$(this).parents('li').find('#cont_f_list_add .color_list span').removeClass("con_select");
+		$(this).parents('li').find('#cont_f_list_add .cont_f_list_edit textarea').val("");
+		$(this).parent().find('.submit').attr('disabled',true);
+		$(this).parent().find('.submit').addClass('submit_no_active');
 	})
-
-	
-
 	// 判断输入内容是否为空
 
-	$('.cont_f_list>li .cont_f_list_edit textarea').keyup(function(){
-		console.log($(this).val());
+	$('.cont_f_list>li ._item .cont_f_list_edit textarea').keyup(function(){
 		if($(this).val().trim() == ''){
 			$(this).parent().find('.submit').attr('disabled',true);
 			$(this).parent().find('.submit').addClass('submit_no_active');
@@ -79,19 +83,20 @@ $(document).ready(function($){
 	$('#push i').click(function(){
 		$(this).parent().hide();
 	})
-	// 点击点进行编辑和删除
-
-
-	$('.cont_f_list>li .cont_f_list_con div ul .edit').click(function(){
-		$(this).parents('li').find('.submit').removeAttr('disabled');
-		$(this).parents('li').find('.submit').removeClass('submit_no_active');
-		$(this).parents('li').find('.cont_f_list_add').hide();
-		$(this).parents('li').find('.cont_f_list_edit').show();
+	//点击点进行编辑和删除
+	$('.cont_f_list>li .cont_f_list_con ._item ._list ul .edit').click(function(){
+		$(this).parents('li').find('._list').show();
+		$(this).parents('._item').find('._list').hide();
+		$(this).parents('._item').find('.submit').removeAttr('disabled');
+		$(this).parents('._item').find('.submit').removeClass('submit_no_active');
+		$(this).parents('li').find('.cont_f_list_edit').hide();
+		$(this).parents('li').find('#cont_f_list_add').hide();
+		$(this).parents('._item').find('.cont_f_list_edit').show();
 		$(this).parent().hide();
 		var str = $(this).parents('div').children('p').html()
-		$(this).parents('li').find('.cont_f_list_edit').children('textarea').val(str);
+		$(this).parents('._item').find('.cont_f_list_edit').children('textarea').val(str);
 		var color = $(this).parents('div').css('borderLeftColor');
-		$(this).parents('li').find('.cont_f_list_edit .color_list span').each(function(){
+		$(this).parents('._item').find('.cont_f_list_edit .color_list span').each(function(){
 			var con = $(this).css('background').indexOf(')')+1;
 			var str = $(this).css('background').slice(0,con);
 			if(color == str){
