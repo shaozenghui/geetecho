@@ -39,7 +39,14 @@ $(document).ready(function($) {
 	  $('#adjustment_modal .adjustment_modal_footer button').click(function(){
 		  	$('#adjustment_modal').fadeOut(200);
 		  	$('#adjustment_modal .adjustment_modal_con').animate({top:'40%'},400);
-		  	$('body').css({overflowY:'visible'})
+		  	$('body').css({overflowY:'visible'});
+  	    	// 保存提示信息
+  	    	$('#push span').html('信息已保存')
+  			$('#push').fadeIn(1000,function(){
+  			 	setTimeout(function(){
+  			 	 	 $('#push').fadeOut(5000);
+  			 	 },5000)
+  			});
 	  })
 
 
@@ -88,7 +95,14 @@ $(document).ready(function($) {
 	  $('#select_pro_modal .select_pro_modal_footer button').click(function(){
 	  	$('#select_pro_modal').fadeOut(200);
 	  	$('#select_pro_modal .select_pro_modal').animate({top:'40%'},400);
-	  	$('body').css({overflowY:'visible'})
+	  	$('body').css({overflowY:'visible'});
+    	// 保存提示信息
+    	$('#push span').html('信息已保存')
+		$('#push').fadeIn(1000,function(){
+		 	setTimeout(function(){
+		 	 	 $('#push').fadeOut(5000);
+		 	 },5000)
+		});
 	  })
       // 备注提示信息
      $(".demoUp").mouseover(function(){
@@ -117,11 +131,30 @@ $(document).ready(function($) {
 	   })
 	   // 点击保存按钮
 	   $('#q_adjustment_modal .q_adjustment_modal_footer button').click(function(){
-	   	$('#q_adjustment_modal').fadeOut(200);
-	   	$('#q_adjustment_modal .q_adjustment_modal_con').animate({top:'40%'},400);
-	   	$('body').css({overflowY:'visible'})
+		   	$('#q_adjustment_modal').fadeOut(200);
+		   	$('#q_adjustment_modal .q_adjustment_modal_con').animate({top:'40%'},400);
+		   	$('body').css({overflowY:'visible'});
+	    	// 保存提示信息
+	    	$('#push span').html('信息已保存')
+			$('#push').fadeIn(1000,function(){
+			 	setTimeout(function(){
+			 	 	 $('#push').fadeOut(5000);
+			 	 },5000)
+			});
 	   })
- 
+	 	$('#q_adjustment_modal  .box>div:nth-child(1) input[type="radio"]').change(function(){
+	 		var index = $(this).parent().index() - 1 ;
+	 		$('#q_adjustment_modal  .box>div:nth-child(2) div').hide().eq(index).show();
+
+	 	})
+	 	// $('#q_adjustment_modal  .box>div:nth-child(1) input[type="radio"]').each(function(el){
+	 	// 	if($(this).prop('checked')){
+	 	// 		console.log($(this).val());
+	 	// 	}
+	 	// })
+	 	$('#push i').click(function(){
+			$(this).parent().hide();
+		})
        	function input_color(a,b){
        		$(a).focus(function(){
    				$(this).addClass('input_focus');

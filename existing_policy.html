@@ -1584,127 +1584,317 @@
 			<div class="add_item_modal_title"><i class="fl iconfont icon-fanhuijiantou fanhui"  ></i><span>添加保单</span><i class="img iconfont icon-guanbi"></i>
 			</div>  
 			<div class="add_item_modal_body">
-				<div class="add_item_form add_item_form1">
-				    <div>
-						<label for="">保单类型</label>
-						<select name=""  >
-							<option value="" >请选择</option>
-							<option value="">个人</option>
-							<option value="">团体</option>
-						</select>
+				<div class="item">
+					<div class="title">
+						<input type="text" placeholder="产品名称">
+						<div>
+							<span>
+								<input class="magic-radio" type="radio" name="radio" id="r1" value="option1" checked="">
+								<label for="r1">个险</label>
+							</span>
+							<span>
+								<input class="magic-radio" type="radio" name="radio" id="r2" value="option1">
+								<label for="r2">团险</label>
+							</span>
+						</div>
 					</div>
-					<div class="add_item_modal_name">
-						<label for="">产品名称</label>
-						<input type="text">
-					</div>
-					<div>
-						<label for="">险种类型</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">人寿险</option>
-							<option value="">意外险</option>
-							<option value="">医疗险</option>
-							<option value="">重疾险</option>
-						</select>
-					</div>
-					<div>
-						<label for="">险种</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">险种一</option>
-							<option value="">险种二</option>
-						</select>
-					</div>
-					<div>
-						<label for="">类型</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">给付</option>
-							<option value="">补偿</option>
-						</select>
+					<div class="form">
+						<p>
+							<span>险种</span>
+							<select name="" id="">
+								<option value="" selected="">请选择</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+						</p>
+						<p>
+							<span>年缴保费</span>
+							<input type="number">
+						</p>
+						<p>
+							<span>险种类型</span>
+							<select name="" id="">
+								<option value="" selected="">请选择</option>
+								<option value="">1</option>
+							</select>
+						</p>
+						
+						<p>
+							<span>产品保额</span>
+							<input type="number">
+						</p>
+						<p>
+							<span>支付方式</span>
+							<select name="" id="">
+								<option value="" selected="">请选择</option>
+								<option value="">1</option>
+							</select>
+						</p>
+						<p>
+							<span>产品周期</span>
+							<select name="" id="" style="width: 182px;background-position: 157px center !important;">
+								<option value="" selected="">请选择</option>
+								<option value="">次</option>
+								<option value="">月</option>
+								<option value="">年</option>
+							</select>
+						</p>
+						<p style="width: 100%">
+							<span>备注</span>
+							<input type="text" style="width: 475px">
+						</p>
 					</div>
 				</div>
-				<div class="add_item_form add_item_form2">
-					<div>
-						<label for="">住院险</label>
-						<input type="text" autofocus="autofocus">
-					</div>
-					<div>
-						<label for="">周期</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">每次</option>
-							<option value="">每天</option>
-							<option value="">每年</option>
-						</select>
+				<div class="add_item_list">
+					<div class="item">
+						<div class="title">
+							<input type="text" placeholder="产品名称">
+						</div>
+						<div class="form">
+							<p>
+								<span>险种</span>
+								<select name="" id="">
+									<option value="" selected="">请选择</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+								</select>
+							</p>
+							<p>
+								<span>年缴保费</span>
+								<input type="number">
+							</p>
+							<p>
+								<span>险种类型</span>
+								<select name="" id="">
+									<option value="" selected="">请选择</option>
+									<option value="">1</option>
+								</select>
+							</p>
+							
+							<p>
+								<span>产品保额</span>
+								<input type="number">
+							</p>
+							<p>
+								<span>支付方式</span>
+								<select name="" id="">
+									<option value="" selected="">请选择</option>
+									<option value="">1</option>
+								</select>
+							</p>
+							<p>
+							<span>产品周期</span>
+								<select name="" id="" style="width: 182px;background-position: 157px center !important;">
+									<option value="" selected="">请选择</option>
+									<option value="">次</option>
+									<option value="">月</option>
+									<option value="">年</option>
+								</select>
+							</p>
+							<p style="width: 100%">
+								<span>备注</span>
+								<input type="text" style="width: 475px">
+							</p>
+						</div>
 					</div>
 				</div>
-				<p class="error">请完善你信息</p>
+				<div class="add_item">
+					<span ><i class="iconfont icon-icon02"></i>添加附加险</span>
+				</div>
+				<p class="error" id="userInfo-error">*你有信息未完善</p>
 			</div>
 			<div class="add_item_modal_footer">
-				<button class="btn1">下一步</button>
-				<button class="btn2">保存</button>
+				<button class="btn">确认</button>
 			</div>
 		</div>
 	</div>
 	<!-- 删除保单 -->
 	<div id="del_item_modal">
 		<div class="del_item_modal_con">
-			<div class="del_item_modal_title"><i class="fl iconfont icon-fanhuijiantou fanhui"  ></i>删除保单<i class="img iconfont icon-guanbi"></i>
+			<div class="del_item_modal_title"><i class="fl iconfont icon-fanhuijiantou fanhui"  ></i><span>删除保单</span><i class="img iconfont icon-guanbi"></i>
 			</div>  
 			<div class="del_item_modal_body">
-				<div class="del_item_form del_item_form1">
-				    <div class="del_item_form_list">
-			    	    <div class="del_item_form_list_item">
-			    			<p>个人保险</p>
-			    			<ul>
-			    				<li class="con_1">
-			    					<span><input type="checkbox"class="input_check" id="check1"><label for="check1"></label></span>
-			    					<div class="text">
-			    						<p>宏康大白1宏康大白1宏康大白1宏康大白1宏康大白1</p>
-			    						<p>意外身故或全残意外身故或全残意外身故或全残意外身故或全残</p>
-			    					</div>
-			    				</li>
-			    				<li class="con_2">
-			    					<span><input type="checkbox"class="input_check" id="check2"><label for="check2"></label></span>
-			    					<div class="text">
-			    						<p>宏康大白1</p>
-			    						<p>意外身故或全残</p>
-			    					</div>
-			    				</li>
-			    			</ul>
-			    		</div>
-			    		<div class="del_item_form_list_item">
-			    			<p>团体保险</p>
-			    			<ul>
-			    				<li class="con_3">
-			    					<span><input type="checkbox"class="input_check" id="check3"><label for="check3"></label></span>
-			    					<div class="text">
-			    						<p>宏康大白1</p>
-			    						<p>意外身故或全残</p>
-			    					</div>
-			    				</li>
-			    				<li class="con_4">
-			    					<span><input type="checkbox"class="input_check" id="check4"><label for="check4"></label></span>
-			    					<div class="text">
-			    						<p>宏康大白1</p>
-			    						<p>意外身故或全残</p>
-			    					</div>
-			    				</li>
-			    			</ul>
-			    		</div>
-				    </div>
+				<p >确认删除选中的保单？
+删除后数据无法恢复，请谨慎操作</p>
+				<div class="personal_policy">
+					<p class="tit">个人保险</p>
+					<div class="content">
+						<div class="item con_2">
+							<div class="con_b">
+								<div class="fl_">
+									<p>平安常青树2017</p>
+									<p>
+										<span>意外险</span>
+										<span>意外身故或全残</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+								</div>
+								<div class="fr_">
+									<input class="magic-checkbox" type="checkbox" name="layout" id="c1"  >
+									<label for="c1" >￥560</label>
+								</div>
+							</div>
+							<p class="additional"><span>附加险 <i class="iconfont icon-zhcc_xiangxiajiantou"></i></span></p>
+							<div class="additional_con">
+								<div class="additional_item">
+									<p>平安常青树2017附加住院补偿医疗险</p>
+									<p>
+										<span>医疗险</span>
+										<span>住院</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+									<p>
+										<input class="magic-checkbox" type="checkbox" name="layout" id="c11"  >
+										<label for="c11" >￥560</label>
+									</p>
+								</div>
+								<div class="additional_item">
+									<p>平安常青树2017附加住院补偿医疗险</p>
+									<p>
+										<span>医疗险</span>
+										<span>住院</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+									<p>
+										<input class="magic-checkbox" type="checkbox" name="layout" id="c111"  >
+										<label for="c111" >￥560</label>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item con_1">
+							<div class="con_b">
+								<div class="fl_">
+									<p>平安常青树2017</p>
+									<p>
+										<span>人寿</span>
+										<span>意外身故或全残</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+								</div>
+								<div class="fr_">
+									<input class="magic-checkbox" type="checkbox" name="layout" id="c2"  >
+									<label for="c2" >￥560</label>
+								</div>
+							</div>
+							<p class="additional"><span>附加险 <i class="iconfont icon-zhcc_xiangxiajiantou"></i></span></p>
+							<div class="additional_con">
+								<div class="additional_item">
+									<p>平安常青树2017附加住院补偿医疗险</p>
+									<p>
+										<span>医疗险</span>
+										<span>住院</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+									<p>
+										<input class="magic-checkbox" type="checkbox" name="layout" id="c22"  >
+										<label for="c22" >￥560</label>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="del_item_form del_item_form2">
-					<p>
-						确认删除选中的保单？<br>
-						删除后数据无法恢复，请谨慎操作
-					</p>
+				<div class="personal_policy">
+					<p class="tit">团体保险</p>
+					<div class="content">
+						<div class="item con_3">
+							<div class="con_b">
+								<div class="fl_">
+									<p>平安常青树2017</p>
+									<p>
+										<span>重疾险</span>
+										<span>意外身故或全残</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+								</div>
+								<div class="fr_">
+									<input class="magic-checkbox" type="checkbox" name="layout" id="c3"  >
+									<label for="c3" >￥560</label>
+								</div>
+							</div>
+							<p class="additional"><span>附加险 <i class="iconfont icon-zhcc_xiangxiajiantou"></i></span></p>
+							<div class="additional_con">
+								<div class="additional_item">
+									<p>平安常青树2017附加住院补偿医疗险</p>
+									<p>
+										<span>医疗险</span>
+										<span>住院</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+									<p>
+										<input class="magic-checkbox" type="checkbox" name="layout" id="c33"  >
+										<label for="c33" >￥560</label>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item con_4">
+							<div class="con_b">
+								<div class="fl_">
+									<p>平安常青树2017</p>
+									<p>
+										<span>医疗险</span>
+										<span>意外身故或全残</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+								</div>
+								<div class="fr_">
+									<input class="magic-checkbox" type="checkbox" name="layout" id="c4"  >
+									<label for="c4" >￥560</label>
+								</div>
+							</div>
+							<p class="additional"><span>附加险 <i class="iconfont icon-zhcc_xiangxiajiantou"></i></span></p>
+							<div class="additional_con">
+								<div class="additional_item">
+									<p>平安常青树2017附加住院补偿医疗险</p>
+									<p>
+										<span>医疗险</span>
+										<span>住院</span>
+									</p>
+									<p>
+										<span>定期给付</span>
+										<span>20,000,000</span>
+									</p>
+									<p>
+										<input class="magic-checkbox" type="checkbox" name="layout" id="c44"  >
+										<label for="c44" >￥560</label>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="del_item_modal_footer">
-				<button class="btn1">下一步</button>
-				<button class="btn2">确认</button>
+				<button class="next_step">下一步</button>
+				<button class="submit" style="display: none;">确认</button>
 			</div>
 		</div>
 	</div>

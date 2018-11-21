@@ -533,10 +533,57 @@
 			</div>
 			<div class="q_adjustment_modal_body">
 				<div class="form_f box">
-					<p>紧急准备金</p>
 					<div>
-						<label for="">月数</label>
-						<input type="text" class="form-control">
+						<span>计算方式</span>
+						<span>
+							<input class="magic-radio" type="radio" name="layout" id="c1"  checked value="按月计">
+							<label for="c1" >按月计</label>
+						</span>
+						<span>
+							<input class="magic-radio" type="radio" name="layout" id="c2"  value="按年计">
+							<label for="c2" >按年计</label>
+						</span>
+					</div>
+					<div class="select_con">
+						<div>
+							<span>周期</span>
+							<select name="" id="">
+								<option value="">请选择</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+								<option value="">5</option>
+								<option value="">6</option>
+								<option value="">7</option>
+								<option value="">8</option>
+								<option value="">9</option>
+								<option value="">10</option>
+								<option value="">11</option>
+								<option value="">12</option>
+								<option value="">13</option>
+								<option value="">14</option>
+								<option value="">15</option>
+								<option value="">16</option>
+								<option value="">17</option>
+								<option value="">18</option>
+								<option value="">19</option>
+								<option value="">20</option>
+								<option value="">21</option>
+								<option value="">22</option>
+								<option value="">23</option>
+								<option value="">24</option>
+							</select>
+						</div>
+						<div>
+							<span>周期</span>
+							<select name="" id="">
+								<option value="">请选择</option>
+								<option value="1">1</option>
+								<option value="1">1</option>
+								<option value="1">1</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -972,6 +1019,8 @@
 			<li class="btn3">选择产品</li>
 		</ul>
 	</div>
+	<!-- 推送信息 -->
+	<div id="push"><i class="img iconfont icon-guanbi"></i><span></span></div>
 </body>
 </html>
 <script src="js/jquery.min.js"></script>
@@ -985,6 +1034,4 @@
 <script src="js/justTools.js"></script>
 	<script src="js/header_common.js"></script>
 <link rel="stylesheet" href="css/just-tip.css">
-<script>	
-	
-</script>
+

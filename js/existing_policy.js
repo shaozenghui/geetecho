@@ -156,41 +156,13 @@ $(document).ready(function($) {
 	    $('#add_item_modal .add_item_modal_title .img').click(function(){
 	    	$('#add_item_modal').fadeOut(200);
 	    	$('body').css({overflowY:'visible'});
-	    	$('#add_item_modal .add_item_modal_con').animate({top:'40%'},400,function(){
-	    		$('#add_item_modal .add_item_modal_title .fanhui').hide();
-	    		$('#add_item_modal .btn1').show();
-	    		$('#add_item_modal .btn2').hide();
-	    		$(".add_item_form2").hide();
-	    		$(".add_item_form1").show();
-	    	});
+	    	$('#add_item_modal .add_item_modal_con').animate({top:'40%'},400);
 	    })
-	    // 点击下一步按钮
-	    $('#add_item_modal .add_item_modal_footer .btn1').click(function(){
-	    	$(".add_item_form1").hide();
-	    	$(".add_item_form2").show();
-	    	$('#add_item_modal .add_item_modal_title .fanhui').show();
-	    	$(this).hide();
-	    	$('#add_item_modal .btn2').show();
-	    	$('.add_item_modal_title span').html("保额");
-	    })
-	    $('#add_item_modal .add_item_modal_title .fanhui').click(function(){
-	    	$('#add_item_modal .add_item_modal_title .fanhui').hide();
-	    	$('#add_item_modal .btn1').show();
-	    	$('#add_item_modal .btn2').hide();
-	    	$(".add_item_form2").hide();
-	    	$(".add_item_form1").show();
-	    	$('.add_item_modal_title span').html("添加保单");
-	    })
-	    $('#add_item_modal .btn2').click(function(){
+
+	    $('#add_item_modal .btn').click(function(){
 	    	$('#add_item_modal').fadeOut(200);
 	    	$('body').css({overflowY:'visible'});
-	    	$('#add_item_modal .add_item_modal_con').animate({top:'40%'},400,function(){
-	    		$('#add_item_modal .add_item_modal_title .fanhui').hide();
-	    		$('#add_item_modal .btn1').show();
-	    		$('#add_item_modal .btn2').hide();
-	    		$(".add_item_form2").hide();
-	    		$(".add_item_form1").show();
-	    	});
+	    	$('#add_item_modal .add_item_modal_con').animate({top:'40%'},400);
 	    	// 保存提示信息
 	    	$('#push span').html('信息已保存')
     		$('#push').fadeIn(1000,function(){
@@ -199,68 +171,100 @@ $(document).ready(function($) {
     		 	 },5000)
     		});
 	    })
+	    $('#add_item_modal .add_item span').click(function(){
+	    	var con = $('#add_item_modal .add_item_list .item').eq(0).clone();
+	    	$("#add_item_modal .add_item_list").append(con);
+	    })
 	    $('#push i').click(function(){
 			$(this).parent().hide();
 		})
 
 // 删除保单模态框
-    	$(".cont_f_list li>p .del").click(function(){
-    		$('#del_item_modal').fadeIn(200);
-    		$('#del_item_modal .del_item_modal_con').animate({top:'50%'},400);
-    		$('#del_item_modal input').removeAttr('checked');
-    		$('body').css({overflowY:'hidden'});
-    		// 暂无保险提示信息
-   //  		$('#no_insurance_modal').fadeIn(200);
-			// $('#no_insurance_modal .no_insurance_modal_con').animate({top:'50%'},400);
-			// $('body').css({overflowY:'visible'})
-    	})
-	      // 点击叉号
-	      $('#del_item_modal .del_item_modal_title .img').click(function(){
-	      	$('#del_item_modal').fadeOut(200);
-  	      	$('body').css({overflowY:'visible'});
-  	      	$('#del_item_modal .del_item_modal_con').animate({top:'40%'},400,function(){
-  	      		$('#del_item_modal .del_item_modal_title .fanhui').hide();
-  	      		$('#del_item_modal .btn1').show();
-  	      		$('#del_item_modal .btn2').hide();
-  	      		$(".del_item_form2").hide();
-  	      		$(".del_item_form1").show();
-  	      	});
-	      })
-	      // 点击下一步按钮
-	      $('#del_item_modal .del_item_modal_footer .btn1').click(function(){
-	      	$('#del_item_modal .del_item_modal_title .fanhui').show();
-	      	$(this).hide();
-	      	$('#del_item_modal .btn2').show();
-	      	$(".del_item_form1").hide();
-	      	$(".del_item_form2").show();
-	      	$('.del_item_form_list input:checkbox').each(function() {
-    	      	if ($(this).attr('checked') == "checked") {
-    	      		console.log($(this).parents('li').find('.text').html());
-    	      	}
-	      	});
-	      })
-	      $('#del_item_modal .del_item_modal_title .fanhui').click(function(){
-	      	$('#del_item_modal .del_item_modal_title .fanhui').hide();
-	      	$('#del_item_modal .btn1').show();
-	      	$('#del_item_modal .btn2').hide();
-	      	$(".del_item_form2").hide();
-	      	$(".del_item_form1").show();
-	      })
-	      $('#del_item_modal .btn2').click(function(){
-	      	$('#del_item_modal').fadeOut(200);
-	      	$('body').css({overflowY:'visible'});
-	      	$('#del_item_modal .del_item_modal_con').animate({top:'40%'},400,function(){
-	      		$('#del_item_modal .del_item_modal_title .fanhui').hide();
-	      		$('#del_item_modal .btn1').show();
-	      		$('#del_item_modal .btn2').hide();
-	      		$(".del_item_form2").hide();
-	      		$(".del_item_form1").show();
-	      	});
+		$('.del').click(function(e) {
+			e.stopPropagation();
+			$('#del_item_modal').fadeIn(200);
+			$('#del_item_modal .del_item_modal_con').animate({top:'40%'},400);
+			$('body').css({overflowY:'hidden'});
+		});
+		 // 点击叉号
+	    $('#del_item_modal .del_item_modal_title .img').click(function(){
+	    	$('#del_item_modal').fadeOut(200);
+	    	$('body').css({overflowY:'visible'});
+	    	$('#del_item_modal .del_item_modal_con').animate({top:'30%'},400);
+	    })
+		$('#del_item_modal .del_item_modal_body .personal_policy .content .item .additional span').click(function(){
+			$(this).parent().next().slideToggle();
+			$(this).toggleClass('additional_active');
+			$(this).children("i").toggleClass('icon-xiangshang');
+			$(this).children("i").toggleClass('icon-zhcc_xiangxiajiantou');
+			
+		})
+		$('#del_item_modal .del_item_modal_body .personal_policy .content .item .con_b .fr_ input').change(function(){
+			if($(this).prop('checked')){
+				$(this).parents('.item').find('.additional_con input').prop('checked',true)
+			}else{
+				$(this).parents('.item').find('.additional_con input').prop('checked',false)
+			}
+		})
+		// $('#del_item_modal .del_item_modal_body .personal_policy .content .item .additional_con input').change(function(){
+		// 	var arr = [];
+		// 	$(this).parents('.additional_con').find('input').each(function(el){
+		// 		arr.push($(this).prop('checked'));
+		// 	})
+		// 	var con = arr.every(function(val){return val;})
+		// 	if(con){
+		// 		$(this).parents('.item').find('.con_b .fr_ input').prop('checked',true)
+		// 	}else{
+		// 		$(this).parents('.item').find('.con_b .fr_ input').prop('checked',false)
+		// 	}
+		// })
+		// 点击下一步
+		$('#del_item_modal .next_step').click(function(){
+			$(this).hide();
+			$(this).next().show();
+			$(this).parents('.del_item_modal_con').css({width:'430px',height:"240px",marginLeft:-215})
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_body").height(120);
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_body .personal_policy").hide()
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_body>p").show();
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_title span").html("提示");
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_title .fanhui").show();
+			
+		})
+		// 点击确认
+		$('#del_item_modal .submit').click(function(){
+			$(this).hide();
+			$(this).prev().show();
+			$('#del_item_modal').fadeOut(200);
+	    	$('body').css({overflowY:'visible'});
+	    	$('#del_item_modal .del_item_modal_con').animate({top:'40%'},400);
+	    	// 保存提示信息
+	    	$('#push span').html('信息已保存')
+    		$('#push').fadeIn(1000,function(){
+    		 	setTimeout(function(){
+    		 	 	 $('#push').fadeOut(5000);
+    		 	 },5000)
+    		});
 
-	      })
+		})
+
+		$('#del_item_modal .del_item_modal_title .fanhui').click(function(){
+			$('#del_item_modal .submit').hide();
+			$('#del_item_modal .next_step').show();
+			$(this).parents('.del_item_modal_con').css({width:'630px',height:"458px",marginLeft:-315})
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_body").height(339);
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_body .personal_policy").show()
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_body>p").hide();
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_title span").html("删除保单");
+			$(this).parents('.del_item_modal_con').find(".del_item_modal_title .fanhui").hide();
+		})
+
+
+
+
     	function input_color(a,b){
     		$(a).focus(function(){
 				$(this).addClass('input_focus');
+				console.log("11")
 			})
 			$(a).blur(function(){
 				$(this).removeClass('input_focus');
@@ -274,6 +278,7 @@ $(document).ready(function($) {
 
     	}
     	input_color('#add_item_modal input','#add_item_modal select');
+    	input_color('.add_item_list input','.add_item_list select');
 
     	// 暂无保险提示信息
 	
