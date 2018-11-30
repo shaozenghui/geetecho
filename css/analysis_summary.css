@@ -27,66 +27,77 @@ table {
 	margin-top: 0px;
 }
 .cont_f_list li{
-	width: 339px;
-	height: 400px;
-	background: #fff;
+	width: 308px;
+	height: 720px;	
+	margin-right: 20px;
+	border-top: 4px solid #3da8f5;
 	border-radius: 4px;
-	border: 1px solid #dedede;
-	padding:10px;
-	padding-top: 0px;
-	margin-right: 38px;
+	background: #fff;
 	float: left;
-	padding-bottom: 20px;
+	padding: 58px 26px;
 }
 .cont_f_list li:last-child{
 	margin-right: 0px;
 }
-.cont_f_list li>p{
-	height: 52px;
-	line-height: 52px;
-	border-bottom: 1px solid #dedede;
-	font-size: 18px;
-	color: #303030;
-	margin-bottom: 10px;
-}
-.cont_f_list .cont_f_list_text{
-	height: 338px;
+.cont_f_list li .cont_f_list_tit{
 	width: 100%;
-	color: #202020;
+	height: 98px;
+	float: left;
+	border-bottom: 1px solid #dedede;
+}
+.cont_f_list li .cont_f_list_tit p:nth-child(1){
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.cont_f_list li .cont_f_list_tit p:nth-child(1) i{
+	font-size: 30px ;
+	color: #3da8f5;
+}
+.cont_f_list li .cont_f_list_tit p:nth-child(2){
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+	text-align: center;
+	color: #303030;
+	font-weight: bold;
+}
+.cont_f_list li .cont_f_list_text{
+	width: 281px;
+	overflow: hidden;
+	float: left;
+	padding:0 14px;
+	padding-top: 30px;
+	
+}
+/*人身保障*/
+.cont_f_list li:nth-child(1) .cont_f_list_text{
+	width: 213px;
+	padding:0 49px;
+	padding-top: 30px;
+}
+.cont_f_list li .cont_f_list_text p{
+	width: 100%;
+	overflow: hidden;
+	line-height: 25px;
 	font-size: 14px;
-	overflow-y:scroll;
+	color: #303030;
 }
-.cont_f_list .cont_f_list_text::-webkit-scrollbar{
-  background:#fff;
-  width: 8px;
+.cont_f_list li .cont_f_list_text .fb{
+	font-size: 18px;
+	color: #474747;
+	font-weight: bold;
 }
-.cont_f_list .cont_f_list_text::-webkit-scrollbar-thumb { 
-	background:#cacaca;
-	border-radius: 4px;
+.cont_f_list li .cont_f_list_text div{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 15px;
 }
-.cont_f_list .cont_f_list_text div:nth-child(1){
-	margin-bottom: 24px;
-}
-.cont_f_list .cont_f_list_text p{
-	line-height: 28px;
-}
-.cont_f_list .gary{
-	color: #202020;
-}
-.down_loading{
-	width: 40px;
-	height: 40px;
-	background: url(../img/down_loading.gif);
-	background-size: 40px 40px ;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -20px;
-	margin-left: -20px;
-	display: none;
-	z-index: 100;
-}
+
+
 /* 销售完成提示信息模态框 */
 #plan_modal1{
 	width: 100%;

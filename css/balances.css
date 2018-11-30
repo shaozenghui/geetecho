@@ -14,71 +14,358 @@
     height: 50px !important;
     line-height: 50px !important;
 }
+
+/* footer开始 */
+.s_footer{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	box-shadow: 0px -2px 2px rgba(0,0,0,0.2);
+}
+.s_footer .cont{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+	height: 40px;
+}
+.s_footer .cont a{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #6bcf6b;
+	border: 0 none;
+	border-radius: 4px;
+	color: #fff;
+	float: left;
+	cursor: pointer;
+	font-size: 14px;
+}
+.s_footer .cont a:hover{
+	background: #6bcf83;
+}
+.s_footer .cont a:active{
+	background: #49c365;
+}
+
+/* footer结束 */
+/* 内容 */
+#contnet{
+	margin-bottom: 100px;
+}
+#contnet>p{
+	margin: 20px 0px;
+	font-size: 20px;
+	color: #202020;
+	margin-top: 0px;
+}
 /* 内容开始 */
 .con_list{
-	width: 1216px;
-	height: 272px;
-	border-radius: 4px;
-	border: 1px solid #dedede;
-	background: #fff;
-	padding: 20px 14px 16px 14px ;
+	width: 1246px;
+	overflow: hidden;	
 	
 }
-.con_list li{
+.con_list .lg{
+	width: 1204px;
+	height: 354px;
+	background: #fff;
+	border: 1px solid #dbdbdb;
+	border-radius: 6px;
+	float: left;
+	padding: 18px 20px;
+	margin-bottom: 30px;
+}
+.con_list .sm{
+	width: 571px;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #dbdbdb;
+	border-radius: 6px;
+	float: left;
+	padding: 18px 20px;
+	margin-right: 20px;
+}
+.con_list .sm_no{
+	margin-right: 0px !important;
+	padding-bottom: 0px;
+}
+.con_list .lg>p{
+	width: 100%;
+	height: 18px;
+	font-weight:bold;
+	line-height: 18px;
+	font-size: 18px;
+	color: #303030;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dedede;
+}
+.con_list .lg .con_list_con{
 	width: 100%;
 	overflow: hidden;
+}
+/*全年支出*/
+.con_list .lg .con_list_con .box {
+  width: 600px;
+  height: 300px;
+  position: relative;
+  float: left;
+
+}
+.con_list .lg .con_list_con .box .link_y {
+  width: 540px;
+  height: 250px;
+  position: absolute;
+  top: 44px;
+  left: 60px;
+  border-right: 1px dashed #cacaca;
+}
+ .con_list .lg .con_list_con .box .link_y li {
+  width: 1px;
+  height: 100%;
+  margin-left: 50px;
+  background: #cacaca;
+  float: left;
+  opacity: 0.46
+}
+ .con_list .lg .con_list_con .box .link_x {
+   width: 443px;
+  height: 250px;
+  position: absolute;
+   top: 40px;
+  left: 60px;
+  border-bottom: 1px solid #cacaca;
+  border-left: 1px solid #cacaca;
+}
+ .con_list .lg .con_list_con .box .content {
+  width: 540px;
+  height: 250px;
+  position: absolute;
+   top: 40px;
+  left: 60px;
+}
+ .con_list .lg .con_list_con .box .content .tit {
+  width: 380px;
+  padding-left: 20px;
+  overflow: hidden;
+  float: left;
+  margin-bottom: 20px;
+}
+ .con_list .lg .con_list_con .box .content .tit span:nth-child(1) {
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #808080;
+  font-weight: bold;
+}
+ .con_list .lg .con_list_con .box .content .tit span:nth-child(2) {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  float: left;
+  font-size: 24px;
+  color: #303030;
+}
+ .con_list .lg .con_list_con .box .content ul {
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+ .con_list .lg .con_list_con .box .content ul li {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+  margin-bottom: 20px;
+}
+ .con_list .lg .con_list_con .box .content ul li .bar {
+  width: 200px;
+  max-width: 356px;
+  height: 100%;
+  float: left;
+  background: #3da8f5;
+  margin-right: 32px;
+}
+ .con_list .lg .con_list_con .box .content ul li .text {
+  width: 100px;
+  height: 100%;
+  float: left;
+}
+ .con_list .lg .con_list_con .box .content ul li .text span:nth-child(1) {
+  width: 100%;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #808080;
+  float: left;
+  font-weight: bold;
+}
+ .con_list .lg .con_list_con .box .content ul li .text span:nth-child(2) {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  color: #101010;
+  float: left;
+}
+.con_list .lg .con_list_con .box:nth-child(2){
+	margin-left: 20px;
+	width: 580px;
+}
+ .con_list .lg .con_list_con .box:nth-child(2) .content ul li .bar{
+ 	background: #FFC148;
+ }
+ /*全年结余，结论与建议*/
+ .con_list .sm>p{
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	font-size: 18px;
+	font-weight:bold;
+	color: #303030;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dedede;
+}
+.con_list .surplus .con_list_con{
+	width: 500px;
+	overflow: hidden;
+	padding:51px 18px; 
+
+}
+.con_list .surplus .con_list_con div{
+	width:100%;
+	height: 64px;
+	margin-bottom: 50px;
+	float: left;
+}
+.con_list .surplus .con_list_con div:last-child{
+	margin-bottom: 0;
+}
+.con_list .surplus .con_list_con div>span{
+	width: 64px;
+	height: 64px;
+	background: #3da8f5;
+	float: left;
+	text-align: center;
+	border-radius: 32px;
+	line-height: 64px;
+}
+.con_list .surplus .con_list_con div:nth-child(2)>span{
+	background: #FF9B39;
+}
+.con_list .surplus .con_list_con div>span i{
+	color: #fff;
+	font-size: 30px;
+}
+.con_list .surplus .con_list_con div .sum{
+	width: 144px;
+	height: 44px;
+	border-right: 1px solid #cacaca;
+	text-align: right;
+	padding-right: 35px;
+	margin-top: 10px;
+}
+.con_list .surplus .con_list_con div .sum p:nth-child(1){
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #808080;
 	float: left;
 	margin-bottom: 10px;
-}
-/* 表格 */
-.con_list_table{
-	padding-top: 10px;
-	height: 246px;
-}
-.con_list table{
-	border-top: 1px solid #dedede;
-	border-left: 1px solid #dedede;
-}
-.con_list table th,td{
-	width:615px;
-	height: 36px;
-	line-height: 35px;
-	padding:0px 20px;
-	border-bottom: 1px solid #dedede;
-	border-right: 1px solid #dedede;
-	color: #303030;
-}
-.con_list table th{
-	font-size: 18px;
 	font-weight: bold;
-	height: 34px;
 }
-.con_list table td span{
+.con_list .surplus .con_list_con div .sum p:nth-child(2){
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	font-size: 24px;
+	color: #101010;
+	font-weight: 500;
+	float: left;
+}
+.con_list .surplus .con_list_con div .text{
+	width: 226px;
+	height: 44px;
+	float: left;
+	padding-left: 30px;
+	margin-top: 10px;
+}
+.con_list .surplus .con_list_con div .text p:nth-child(1){
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #808080;
+	margin-bottom: 13px;
+}
+.con_list .surplus .con_list_con div .text p:nth-child(2){
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #101010;
+	font-weight: bold;
+}
+.con_list .sm_no p{
+	line-height: 25px;
+	font-size:14px;
+	color: #303030; 
+}
+.con_list .sm_no>p{
+	font-size: 18px;
+	color: #303030;
+	font-weight: bold;
+}
+.con_list .sm_no .con_list_con{
+	padding-top: 20px;
+	width: 500px;
+	height:233px;
+	float: left;
+	padding-right: 70px; 
+	border-bottom: 1px solid #cacaca;
+}
+.con_list .sm_no .remark{
+	width: 100%;
+overflow: hidden;
+	float: left;
+}
+.con_list .sm_no .remark>p{
+	width: 100%;
+	height: 44px;
+	float: left;
+	line-height: 44px;
+	font-size: 14px;
+	color: #303030;
+	
+	
+}
+.con_list .sm_no .remark>p span:nth-child(1){
+	float: left;
+font-weight: bold;
+}
+.con_list .sm_no .remark>p span:nth-child(2){
 	float: right;
+	padding: 0 5px;
+	cursor: pointer;
 }
-.con_list table td{
+.con_list .sm_no .remark>p span:nth-child(2) i{
 	font-size: 14px;
 }
-.con_list tbody tr:nth-child(odd){
-	background: #f0f0f0;
+.con_list .sm_no .remark .remark_con{
+	width: 100%;
+	overflow: hidden;
+	display: none;
 }
-/* 中间部分 */
-.cont_middle{
-	width: 1246px;
-	height: 70px;
-	background-image: url(../img/Personal_security/info-blu.png);
-	background-repeat: no-repeat;
-	margin: 10px 0px;
-}
-.cont_middle div{
-	height: 70px;
-	background: #d7f3ff;
-	width: 1240px;
-	float: right;
-}
-.cont_middle p{
-	font-size: 14px;
-	color: #202020;
-	text-indent: 13px;
-	line-height: 35px;
+.con_list .sm_no .remark .remark_con div{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
 }

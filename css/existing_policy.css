@@ -167,11 +167,18 @@ select::-ms-expand { display: none; }
 }
 .cont_f_list>li ul li .text div p{
     width: 100%;
-    height: 14px;
+    overflow: hidden;
     line-height: 14px;
     margin-top: 10px;
     color: #909090;
     font-size: 14px;
+}
+.cont_f_list>li ul li .text div p span:first-child{
+    float: left;
+}
+.cont_f_list>li ul li .text div p span:last-child{
+    float: right;
+    margin-right: 10px;
 }
 .cont_f_list_con{
     width: 100%;
@@ -1251,8 +1258,7 @@ select:focus{
     color: #101010;
 }
 #add_item_modal .add_item_modal_body .form p span{
-    width: 64px;
-    margin-right: 24px;
+    width: 88px;
     float: left;
     color: #101010;
     font-size: 16px;

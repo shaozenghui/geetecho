@@ -60,7 +60,7 @@
 	border-right: 0px; 
 }
 .con_list li  .custom_from div span{
-	margin-right:29px; 
+	margin-right:27px; 
 	float: left;
 	font-size: 16px;
     color: #202020;
@@ -97,7 +97,7 @@
 .con_list li .con_list_from_item .table{
 	width: 100%;
 	border-bottom: 0px;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	table-layout: fixed;
 }
 .fixed-table-container {
@@ -194,7 +194,7 @@ table{
 /*公积金样式*/
 .table_gjin{
 	height: 35px;
-	overflow-x: hidden;	
+	/*overflow-x: hidden;	*/
 	border-bottom: 1px solid #cacaca !important;
 }
 

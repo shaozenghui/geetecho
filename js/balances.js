@@ -1,6 +1,8 @@
-/*
-* @Author: shao
-* @Date:   2017-11-15 18:01:39
-* @Last Modified by:   shao
-* @Last Modified time: 2017-11-23 15:23:08
-*/
+$(document).ready(function($) {
+	$('.con_list .sm_no .remark>p span:nth-child(2)').click(function(){
+		$(this).parents('.remark').children('.remark_con').toggle();
+		$(this).children("i").toggleClass('icon-xiangshang');
+		$(this).children("i").toggleClass('icon-zhcc_xiangxiajiantou');
+		console.log($(this).children("span").html())
+	})
+})
