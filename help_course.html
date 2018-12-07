@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>帮助中心</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href='css/iconfont.css'>
+	<link rel="stylesheet" href="css/help_course.css">
+</head>
+<body>
+	<div class="header">
+		<div class="fl">
+			<div class="logo">
+				<a  target="_blank">寄意科技</a>
+			</div>
+			<div class="small_tit">帮助中心</div>
+		</div>
+	</div>
+	<div class="container">
+		 <div class="wrapper">
+		 	<div id="navList" class="fl">
+		 		<div>
+		 			<p><span><i class="iconfont icon-xiangyoujiantou"></i></span>账号相关</p>
+		 			<ul>
+		 				<li>首次登录</li>
+		 				<li>登录</li>
+		 				<li>修改账号信息</li>
+		 				<li>账号权限</li>
+		 			</ul>
+		 		</div>
+		 		<div>
+		 			<p><span><i class="iconfont icon-xiangyoujiantou"></i></span>资料收集</p>
+		 			<ul>
+		 				<li>创建和删除账户</li>
+		 				<li>家庭成员的编辑</li>
+		 				<li>财务项目的相关操作</li>
+		 				<li>自定义项的相关操作</li>
+		 				<li>社会保障页的相关操作</li>
+		 				<li>商业保险的添加与删除</li>
+		 				<li>生成规划书和导出数据</li>
+		 				<li>备注健康状况</li>
+		 			</ul>
+		 		</div>
+		 		<div>
+		 			<p><span><i class="iconfont icon-xiangyoujiantou"></i></span>分析规划</p>
+		 			<ul>
+		 				<li>资料汇总页</li>
+		 				<li>财务分析页</li>
+		 				<li>需求分析-人身保障的相关操作</li>
+		 				<li>需求分析-医疗保障的相关操作</li>
+		 				<li>选择产品与自选方案</li>
+		 				<li>完成销售和导出数据</li>
+		 			</ul>
+		 		</div>
+		 		<div>
+		 			<p><span><i class="iconfont icon-xiangyoujiantou"></i></span>管理员</p>
+		 			<ul>
+		 				<li>员工设置</li>
+		 				<li>保险管理</li>
+		 				<li>添加团队</li>
+		 				<li>销售数据的查看</li>
+		 			</ul>
+		 		</div>
+		 	</div>
+		 	<div id="content" class="fr">
+		 		<ul>
+		 			<li>
+		 				<img src="img/help_course/account_number/1.png" alt="">
+		 				<img src="img/help_course/account_number/2.png" alt="">
+		 				<img src="img/help_course/account_number/3.png" alt="">
+		 				<img src="img/help_course/account_number/4.png" alt="">
+		 			</li>
+		 			<li>
+		 				<img src="img/help_course/collection/1.png" alt="">
+		 				<img src="img/help_course/collection/2.png" alt="">
+		 				<img src="img/help_course/collection/3.png" alt="">
+		 				<img src="img/help_course/collection/4.png" alt="">
+		 				<img src="img/help_course/collection/5.png" alt="">
+		 				<img src="img/help_course/collection/6.png" alt="">
+		 				<img src="img/help_course/collection/7.png" alt="">
+		 				<img src="img/help_course/collection/8.png" alt="">
+		 			</li>
+		 			<li>
+		 				<img src="img/help_course/planning/1.png" alt="">
+		 				<img src="img/help_course/planning/2.png" alt="">
+		 				<img src="img/help_course/planning/3.png" alt="">
+		 				<img src="img/help_course/planning/4.png" alt="">
+		 				<img src="img/help_course/planning/5.png" alt="">
+		 				<img src="img/help_course/planning/6.png" alt="">
+		 			</li>
+		 			<li>
+		 				<img src="img/help_course/administrators/1.png" alt="">
+		 				<img src="img/help_course/administrators/2.png" alt="">
+		 				<img src="img/help_course/administrators/3.png" alt="">
+		 				<img src="img/help_course/administrators/4.png" alt="">
+		 			</li>
+		 		</ul>
+		 	</div>
+		 </div>
+	</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$('#navList div').eq(0).children('ul').show();
+$('#navList div').eq(0).find('i').removeClass('icon-xiangyoujiantou');
+$('#navList div').eq(0).find('i').addClass('icon--xiangxiajiantou');
+$('#navList div').eq(0).children('ul').children('li').eq(0).show();
+$('#navList div').eq(0).children('ul').children('li').eq(0).addClass('active');
+$('#navList div>p').click(function(){
+	$(this).next().toggle();
+	$(this).find('i').toggleClass('icon-xiangyoujiantou');
+	$(this).find('i').toggleClass('icon--xiangxiajiantou');
+	$('#navList div ul').not($(this).next()).hide();
+	$('#navList div p i').not($(this).find('i')).addClass('icon-xiangyoujiantou');
+	$('#navList div p i').not($(this).find('i')).removeClass('icon--xiangxiajiantou');
+})
+$('#navList div ul li').click(function(){
+	$('html').scrollTop(0)
+	var indx = $(this).parents('div').index() - 1;
+	var indx_ = $(this).index();
+	$(this).addClass('active');
+	$('#navList div ul li').not($(this)).removeClass('active');
+	$('#content ul li img').hide();
+	$('#content ul li').eq(indx).children('img').eq(indx_).show();
+})
+</script>

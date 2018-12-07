@@ -1,0 +1,99 @@
+body{
+	background: #FFF;
+}
+.header  .logo {
+	float: left;
+	margin-right: 22px;
+}
+.header .small_tit{
+	height: 16px;
+	line-height: 16px;
+	margin-top: 20px;
+	font-size: 16px;
+	color: #101010;
+	float: left;
+} 
+.wrapper{
+	overflow: hidden;
+	margin-top: 108px;
+	padding-bottom: 40px;
+}
+#navList{
+	width: 260px;
+	overflow: hidden;
+	position: fixed;
+	top: 108px;
+}
+#navList div{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 43px;
+}
+#navList div>p{
+	height: 18px;
+	line-height: 18px;
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+	float: left;
+	color: #303030;
+	cursor: pointer;
+}
+#navList div>p span{
+	width: 18px;
+	line-height: 18px;
+	padding-right: 20px;
+	color: #aaa;
+	cursor: pointer;
+}
+#navList div>p span i{
+	font-size: 14px;
+	position: relative;
+    top: -1px;
+}
+#navList div ul{
+	width: 100%;
+	overflow: hidden;
+	display: none;
+}
+#navList div ul li{
+	width: 222px;
+	float: left;
+	overflow: hidden;	
+	margin-top: 32px;
+	height: 16px;
+	line-height: 16px;
+	color: #303030;
+	font-weight: bold;
+	padding-left: 38px;
+	cursor: pointer;
+
+}
+#navList div ul li:hover{
+	color: #3da8f5;
+}
+.active{
+	color: #3da8f5 !important;
+}
+
+#content{
+	width: 810px;
+	overflow: hidden;
+}
+#content ul{
+	overflow: hidden;
+}
+#content ul li{
+	overflow: hidden;
+	float: left;
+}
+#content ul li img{
+	width: 100%;
+	height: auto;
+	display: none;
+	float: left;
+}
+#content ul li:first-child>img:first-child{
+	display: block;
+}

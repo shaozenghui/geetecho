@@ -331,6 +331,35 @@
 	float: left;
 	padding-right: 70px; 
 	border-bottom: 1px solid #cacaca;
+	overflow-x: scroll;
+}
+.con_list .sm_no .con_list_con .jl{
+	color: #3da8f5;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 16px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.con_list .sm_no .con_list_con div {
+    margin-bottom: 15px;
+}
+.con_list .sm_no .con_list_con .jl span {
+    margin-right: 10px;
+}
+.con_list .sm_no .con_list_con p {
+    width: 100%;
+    line-height: 20px;
+    color: #303030;
+    font-size: 14px;
+}
+.con_list .sm_no .con_list_con .jy {
+    color: #4AD883;
+    font-size: 16px;
+    margin-bottom: 18px;
+    height: 16px;
+    line-height: 16px;
+    font-weight: bold;
 }
 .con_list .sm_no .remark{
 	width: 100%;

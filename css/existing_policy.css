@@ -1118,7 +1118,7 @@ tbody tr td span:nth-child(2){
 }
 #add_item_modal .add_item_modal_con{
     width: 590px;
-    height: 458px;
+    height: 479px;
     position: absolute;
     left:50%;
     top: 40%;
@@ -1159,7 +1159,7 @@ tbody tr td span:nth-child(2){
 }
 #add_item_modal .add_item_modal_body{
     width: 100%;
-    height: 339px;
+    height: 360px;
     overflow-x: scroll;
 }
 #add_item_modal .add_item_modal_footer{
