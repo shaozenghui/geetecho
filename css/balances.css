@@ -316,7 +316,7 @@
 }
 .con_list .sm_no p{
 	line-height: 25px;
-	font-size:14px;
+	font-size:16px;
 	color: #303030; 
 }
 .con_list .sm_no>p{
@@ -347,11 +347,14 @@
 .con_list .sm_no .con_list_con .jl span {
     margin-right: 10px;
 }
+.con_list .sm_no .con_list_con .jy span {
+    margin-right: 10px;
+}
 .con_list .sm_no .con_list_con p {
     width: 100%;
-    line-height: 20px;
+    line-height: 25px;
     color: #303030;
-    font-size: 14px;
+    font-size: 16px;
 }
 .con_list .sm_no .con_list_con .jy {
     color: #4AD883;
@@ -371,14 +374,13 @@ overflow: hidden;
 	height: 44px;
 	float: left;
 	line-height: 44px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #303030;
-	
 	
 }
 .con_list .sm_no .remark>p span:nth-child(1){
 	float: left;
-font-weight: bold;
+   font-weight: bold;
 }
 .con_list .sm_no .remark>p span:nth-child(2){
 	float: right;
@@ -392,9 +394,13 @@ font-weight: bold;
 	width: 100%;
 	overflow: hidden;
 	display: none;
+	padding-bottom: 10px;
 }
-.con_list .sm_no .remark .remark_con div{
-	width: 100%;
-	float: left;
-	margin-bottom: 20px;
+.con_list .sm_no .remark .remark_con  .p_b{
+	line-height: 16px;
+	border-left: 2px solid #3da8f5;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
 }

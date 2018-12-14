@@ -32,7 +32,7 @@ $(document).ready(function($) {
 	// 缺口
 	var myChart = echarts.init(document.getElementById('expenditure_echarst'));
 	myChart.setOption({
-		color:["#FFE138","#3682F4"],
+		color:["#FFE138","#fe7358"],
 	    tooltip : {
 	        trigger: 'item',
 	        axisPointer : {

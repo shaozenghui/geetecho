@@ -66,18 +66,21 @@ table {
 	font-weight: bold;
 }
 .cont_f_list li .cont_f_list_text{
+
+	height: 632px;
 	width: 281px;
-	overflow: hidden;
+	overflow-y: scroll;
 	float: left;
 	padding:0 14px;
-	padding-top: 30px;
 	
+}
+.cont_f_list li:nth-child(2) .cont_f_list_text{
+	padding-top: 0;
 }
 /*人身保障*/
 .cont_f_list li:nth-child(1) .cont_f_list_text{
 	width: 213px;
 	padding:0 49px;
-	padding-top: 30px;
 }
 .cont_f_list li .cont_f_list_text p{
 	width: 100%;
@@ -85,6 +88,8 @@ table {
 	line-height: 25px;
 	font-size: 14px;
 	color: #303030;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 .cont_f_list li .cont_f_list_text .fb{
 	font-size: 18px;
@@ -93,8 +98,10 @@ table {
 }
 .cont_f_list li .cont_f_list_text div{
 	width: 100%;
-	overflow: hidden;
+		overflow: hidden;
 	margin-bottom: 15px;
+
+
 }
 
 
@@ -314,13 +321,13 @@ table {
 }
 #select_pro_modal .select_pro_modal{
 	width: 1246px !important;
-	height: 660px;
+	height: 640px;
 	position: absolute;
 	left:50%;
 	top: 50% !important;
 	background: #fff;
 	margin-left: -644px !important;
-	margin-top: -330px;
+	margin-top: -320px;
 	padding: 0px 20px;
 	border-radius: 4px;
 	box-shadow: 0px 5px 15px rgba(0,0,0,.5);
@@ -391,10 +398,10 @@ table {
 .select_pro_modal_footer {
 	width: 1240px !important;
 	height: 60px;
-	position: absolute;
+	position: relative;
 	border-top: 1px solid #cacaca;
-	bottom: 0;
-	left:20px !important;
+	/*bottom: 0;
+	left:20px !important;*/
 }
 .select_pro_modal_footer div{
 	position: absolute;

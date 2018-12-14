@@ -16,14 +16,8 @@ $(document).ready(function($) {
 		var index = $(this).index();
 		$('#contnet .content .policy .title ul li').removeClass('selct_active');
 		$(this).addClass('selct_active');
-		$('#contnet .content .policy .table .item').hide();
-		$('#contnet .content .policy .table .item').eq(index).show(0,function(){
-			$('#contnet .content .policy .table .item .tit_td>li .fjx .con').each(function(el,index){
-				var H = $(this).height();
-				$(this).prev().css({height:H+"px",lineHeight:H+"px"})
-			})
-		});
-
+		$('#contnet .content .policy .table>div').hide();
+		$('#contnet .content .policy .table>div').eq(index).show();
 	})
 	// 备注
 	$('#contnet .content  .recommend .remark>p span:nth-child(2)').click(function(){
@@ -36,27 +30,20 @@ $(document).ready(function($) {
 		$('.con_list_tit_policy_list').hide();
 	})
 	// 调整保额加减号
-	$('#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6) div span:nth-child(1)').click(function(){
-		var val = $(this).next().children('input').val() ;
-		$(this).next().children('input').val(Number(val) - 1000);
+	$('#contnet .content .policy .table .item tbody tr td:nth-child(6) .reduce').click(function(){
+
+		var val = $(this).next().val() ;
+			console.log(val)
+		$(this).next().val(Number(val) - 1000);
 		
 	})
-	$('#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6) div span:nth-child(3)').click(function(){
-		var val = $(this).prev().children('input').val() ;
-		$(this).prev().children('input').val(Number(val) + 1000);
-	})
-	$('#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5) div span:nth-child(1)').click(function(){
-		var val = $(this).next().children('input').val() ;
-		$(this).next().children('input').val(Number(val) - 1000);
-		
-	})
-	$('#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5) div span:nth-child(3)').click(function(){
-		var val = $(this).prev().children('input').val() ;
-		$(this).prev().children('input').val(Number(val) + 1000);
+	$('#contnet .content .policy .table .item tbody tr td:nth-child(6) .add').click(function(){
+		var val = $(this).prev().val() ;
+		$(this).prev().val(Number(val) + 1000);
 	})
 	$('#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(6)').click(function(){
     	$('#push span').html('信息已保存')
-		$('#push').fadeIn(1000,function(){
+		$('#push').fadeIn(1000,function(){ 	
 		 	setTimeout(function(){
 		 	 	 $('#push').fadeOut(5000);
 		 	 },5000)

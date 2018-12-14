@@ -147,320 +147,128 @@
 	padding-top: 20px;
 	overflow: hidden;
 }
-#contnet .content .policy .table .item{
+#contnet .content .policy .table>div{
 	width: 100%;
-	overflow: hidden;
+	border: 1px solid #dedede;
 	float: left;
-	border-left: 1px solid #cacaca;
-	border-top: 1px solid #cacaca;
+	overflow: hidden;
 	display: none;
 }
-#contnet .content .policy .table .item:first-child{
+#contnet .content .policy .table>div:nth-child(1){
 	display: block;
 }
-
-#contnet .content .policy .table .item .tit_th{
-	width: 100%;
-	height: 40px;
-	line-height: 40px;
-	background:rgba(240,240,240,1);
-	border-right: 1px solid #cacaca;
-	border-bottom: 1px solid #cacaca;
-	float: left;
-	padding-left: 42px;
+#contnet .content .policy .table >div tr{
+	border-bottom: 1px solid #dedede;
 }
-#contnet .content .policy .table .item .tit_th li{
-	width: 135px;
-	height: 40px;
-	line-height: 40px;
-	text-align: left;
-	font-size: 18px;
-	color: #303030;
-	float: left;
-	font-weight: bold;
+#contnet .content .policy .table >div thead tr{
+	border-bottom: 1px solid #dedede;
 }
-#contnet .content .policy .table .item .tit_th li:nth-child(5){
-	text-align: right;
+#contnet .content .policy .table >div tbody tr:last-child{
+	border-bottom: none;
 }
-#contnet .content .policy .table .item .tit_th li:nth-child(3){
-	width: 220px;
-}
-#contnet .content .policy .table .item .tit_th li:nth-child(4){
-	width: 170px;
-}
-#contnet .content .policy .table .item .tit_th li:nth-child(6){
-	text-align: right;
-	width: 250px;
-	padding-right: 30px;
-}
-#contnet .content .policy .table .item .tit_th li:nth-child(7){
-	width: 100px;
+#contnet .content .policy .table >div th{
+	width: 146px;
 	padding-left: 20px;
+	text-align: left;
+	height: 40px;
+	line-height: 40px;
+	background: #f0f0f0;
+	font-size: 18px;
+	font-weight: bold;
+	color: #303030;
+	
 }
-#contnet .content .policy .table .item .tit_td{
-	width: 100%;
-	overflow: hidden;
-}
-#contnet .content .policy .table .item .tit_td>li{
-	width: 100%;
-	overflow: hidden;
-}
-#contnet .content .policy .table .item .tit_td>li .zx{
-	width: 1203px;
-	float: left;
+#contnet .content .policy .table >div td{
+	padding-left: 20px;
+	text-align: left;
 	height: 50px;
 	line-height: 50px;
 	background: #fff;
-	border-right: 1px solid #cacaca;
-	border-bottom: 1px solid #cacaca;
-}
-#contnet .content .policy .table .item .tit_td >li .zx>span{
-	width: 42px;
-	height: 50px;
-	float: left;
-	text-align: center;
-	cursor: pointer;
-}
-#contnet .content .policy .table .item .tit_td >li .zx>span i{
-	font-size: 16px ;
-}
-#contnet .content .policy .table .item .tit_td >li .zx>span .icon-zhcc_xiangxiajiantou{
-	font-size: 12px !important;
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul{
-	width:1160px;
-	float: left;
-	height: 50px;
-
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul li{
-	width: 135px;
-	height: 50px;
-	line-height: 50px;
-	text-align: left;
 	font-size: 14px;
-	color: #303030;
-	float: left;
 	font-weight: bold;
-}
+	color: #303030;
+white-space: nowrap;/*控制单行显示*/
+overflow: hidden;/*超出隐藏*/
+text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(3){
-	width: 220px;
 }
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(4){
-	width: 170px;
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(5){
+#contnet .content .policy .table .item thead tr th:nth-child(5){
+	padding-left: 0;
 	text-align: right;
+	padding-right: 20px;
 }
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6){
+#contnet .content .policy .table .item tbody tr td:nth-child(5){
+	padding-left: 0;
 	text-align: right;
-	width: 250px;
-	padding-right: 30px;
+	padding-right: 20px;
+
+}
+#contnet .content .policy .table .item thead tr th:nth-child(6){
+	padding-left: 0;
+	text-align: right;
+	padding-right: 20px;
+
+}
+#contnet .content .policy .table .item tbody tr td:nth-child(6){
+	padding-left: 0;
+	text-align: right;
+	padding-right: 20px;
 	position: relative;
 }
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6) div{
-	width: 130px;
-	height: 32px;
-	border: 1px solid #cacaca;
-	border-radius: 4px;
-	position: absolute;
+#contnet .content .policy .table .item tbody tr td:nth-child(6) div{
 	right: 20px;
-	top: 10px
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6) div span{
-	width: 21px;
-	height: 30px;
-	background:rgba(222,222,222,1);
-	line-height: 30px;
-	text-align: center;
-	color: #303030;
-	float: left;
-	cursor: pointer;
-}
-
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6) div span:nth-child(2){
-	width: 76px;
-	height: 30px;
-	float: left;
-	line-height: 30px;
-	margin: 0 5px;
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(6) div span:nth-child(2) input{
-	width: 76px;
-	height: 30px;
-	float: left;
-	border: none;
-	text-align: center;
-	line-height: 30px;
-
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(7){
-	width: 100px;
-	padding-left: 20px;
-	color: #909090;
-	cursor: pointer;
-}
-#contnet .content .policy .table .item .tit_td>li .zx ul li:nth-child(7):hover{
-	color: #3da8f5;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx{
-	width: 100%;
-	overflow: hidden;
-	float: left;
-	background:rgba(248,248,248,1);
-	display: none;
-		border-bottom: 1px solid #cacaca;
-		border-right: 1px solid #cacaca;
-		padding: 10px 0;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .tit{
-	width: 130px;
-	text-align: center;
-	border-right: 1px solid #cacaca;
-	float: left;
-	font-size: 16px;
-	color: #303030;
-	font-weight: bold;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con{
-	width: 1072px;
-	overflow: hidden;
-	float: left;
-	padding-left: 46px;
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .fjx .con{
-	width: 1072px;
-	overflow: hidden;
-	float: left;
-	padding-left: 111px;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li{
-	width: 100%;
-	height: 32px;
-	line-height: 32px;
-	margin-bottom: 10px;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li:last-child{
-	margin-bottom: 0px;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span{
-	width: 135px;
-	height: 30px;
-	line-height: 30px;
-	text-align: left;
-	font-size: 14px;
-	color: #303030;
-	float: left;
-	font-weight: bold;
-}
-
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(2){
-	width: 220px;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(3){
-	width: 170px;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(4){
-	text-align: right;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5){
-	text-align: right;
-	width: 250px;
-	padding-right: 30px;
-	position: relative;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5) div{
 	width: 120px;
-	height: 32px;
-	border: 1px solid #cacaca;
+	border: 1px solid #dedede;
 	border-radius: 4px;
-	position: absolute;
-	right: 20px;
-	top: 0px
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5) div span{
-	width: 21px;
 	height: 32px;
-	background:rgba(222,222,222,1);
+	line-height: 32px;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+}
+#contnet .content .policy .table .item tbody tr td:nth-child(6) div span{
+	float: left;
+	width: 21px;
+	height: 30px;
 	line-height: 30px;
 	text-align: center;
-	color: #303030;
-	float: left;
+	background: rgba(240,240,240,1);
 	cursor: pointer;
 }
-
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5) div span:nth-child(2){
-	width: 76px;
-	height: 32px;
+#contnet .content .policy .table .item tbody tr td:nth-child(6) div input{
 	float: left;
-	line-height: 32px;
-}
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(5) div span:nth-child(2) input{
 	width: 76px;
 	height: 30px;
-	float: left;
-	border: none;
-	text-align: center;
 	line-height: 30px;
-
+	text-align: center;
+	border: none;
 }
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(6){
-	width: 100px;
-	padding-left: 20px;
-	color: #909090;
+#contnet .content .policy .table .item tbody tr td:nth-child(7){
 	cursor: pointer;
+	color: #909090;
+	font-size: 14px;
+	font-weight: bold;
+
 }
-#contnet .content .policy .table .item .tit_td>li .fjx .con li span:nth-child(6):hover{
+#contnet .content .policy .table .item tbody tr td:nth-child(7):hover{
 	color: #3da8f5;
+
 }
-#contnet .content .policy .table .item:nth-child(2) .tit_th li{
-	width: 290px;
+#contnet .content .policy .table .item2 th{
 	text-align: left;
+	padding-left: 20px;
+	padding-right: 0px;
 }
-#contnet .content .policy .table .item:nth-child(2) .tit_th li:nth-child(1){
-	width: 200px;
-
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_th li:nth-child(2){
-	width:200px;
-
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_th li:nth-child(5){
-	width:180px;
-	padding-right: 20px;
-	text-align: right;
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .zx ul li{
-	width: 290px;
+#contnet .content .policy .table .item2 td{
+	width: 300px;
 	text-align: left;
+	padding-left: 20px;
+	padding-right: 0px;
 }
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .zx ul li:nth-child(1){
-	width: 200px;
-
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .zx ul li:nth-child(2){
-	width:200px;
-
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .zx ul li:nth-child(5){
-	width:180px;
+#contnet .content .policy .table .item2 tr td:nth-child(5){
+	width: 152px;
 	padding-right: 20px;
-	text-align: right;
-}
-
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .fjx .con li span:nth-child(1){
-	width: 200px;
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .fjx .con li span:nth-child(2){
-	width: 290px;
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .fjx .con li span:nth-child(3){
-	width: 290px;
-}
-#contnet .content .policy .table .item:nth-child(2) .tit_td>li .fjx .con li span:nth-child(4){
-	width:180px;
-	padding-right: 20px;
+	padding-left: 0px;
 	text-align: right;
 }
 
@@ -489,6 +297,8 @@
 }
 #contnet .content  .recommend>p span:nth-child(2){
 	cursor: pointer;
+	position: relative;
+	left: 11px;
 }
 #contnet .content  .recommend>p span:nth-child(2) i{
    	font-size: 24px !important;
@@ -501,7 +311,7 @@
 	background: #fff;
 	position: absolute;
 	top: 42px;
-    right: 11px;
+    right: 0px;
 	z-index: 10;
 	border-radius: 4px;
 	box-shadow: 0 0 30px  rgba(0,0,0,0.15);
@@ -561,10 +371,20 @@
 }
 #contnet .content  .recommend .con p{
 	width: 100%;
-	line-height: 20px;
+	line-height: 25px;
 	color: #303030;
-	font-size: 14px;
+	font-size: 16px;
 }
+#contnet   .p_b{
+
+	line-height: 16px !important;
+	border-left: 2px solid #3da8f5;
+	padding-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
 #contnet .content  .recommend .con .jl{
 	color: #3da8f5;
 	font-size: 16px;
@@ -615,6 +435,9 @@
 	overflow: hidden;
 	padding-bottom: 20px;
 	display: none;
+}
+#contnet .content .recommend .remark .remark_con p{
+	font-size: 16px;
 }
 #contnet .content  .recommend .remark .remark_con div{
 	margin-bottom: 20px;
@@ -853,6 +676,9 @@
 	height: 50px;
 	border-bottom: 1px solid #cacaca;
 	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
 }
 .select_pro_modal_table li:nth-child(1) table thead th:nth-child(1){
 	width: 260px;

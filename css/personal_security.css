@@ -19,7 +19,9 @@ select {
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/  
 select::-ms-expand { display: none; }  
 table {
-    table-layout: auto !important;
+    table-layout:fixed  ;
+    width: 100%;
+    
 }
 .user_list a {
     width: 130px !important;
@@ -162,7 +164,7 @@ table {
 	font-size: 14px;
 	color: #101010;
 	height: 14px;
-	line-height: 14px;
+	line-height: 20px;
 	font-weight: bold;
 	float: left;
 }
@@ -292,7 +294,7 @@ table {
 
 }
 .gap_con1{
-	background: #3682F4;
+	background: #fe7358;
 }
 .gap_con2{
 	background: #FFE138;
@@ -463,6 +465,12 @@ table {
 }
 #adjustment_modal .adjustment_modal_footer button:active{
 	background: #3d7ef5;
+}
+#contnet .content .recommend .con .quk{
+  cursor: pointer;
+}
+#contnet .content .recommend .con .quk:hover{
+	color: #3da8f5;
 }
 /* 缺口调整模态框 */
 #q_adjustment_modal{

@@ -206,18 +206,7 @@ $(document).ready(function($) {
 				$(this).parents('.item').find('.additional_con input').prop('checked',false)
 			}
 		})
-		// $('#del_item_modal .del_item_modal_body .personal_policy .content .item .additional_con input').change(function(){
-		// 	var arr = [];
-		// 	$(this).parents('.additional_con').find('input').each(function(el){
-		// 		arr.push($(this).prop('checked'));
-		// 	})
-		// 	var con = arr.every(function(val){return val;})
-		// 	if(con){
-		// 		$(this).parents('.item').find('.con_b .fr_ input').prop('checked',true)
-		// 	}else{
-		// 		$(this).parents('.item').find('.con_b .fr_ input').prop('checked',false)
-		// 	}
-		// })
+		
 		// 点击下一步
 		$('#del_item_modal .next_step').click(function(){
 			$(this).hide();
@@ -259,8 +248,56 @@ $(document).ready(function($) {
 		})
 
 
+		// 编辑保单
+		    $('#edit_item_modal .edit_item_modal_title .img').click(function(){
+		    	$('#edit_item_modal').fadeOut(200);
+		    	$('body').css({overflowY:'visible'});
+		    	$('#edit_item_modal .edit_item_modal_con').animate({top:'30%'},400);
+		    })
+			$('#edit_item_modal .edit_item_modal_body .personal_policy .content .item .additional span').click(function(){
+				$(this).parent().next().slideToggle();
+				$(this).toggleClass('additional_active');
+				$(this).children("i").toggleClass('icon-xiangshang');
+				$(this).children("i").toggleClass('icon-zhcc_xiangxiajiantou');
+				
+			})
+			$('.cont_f_list>li>p .edit').click(function(e) {
+				e.stopPropagation();
+				$('#edit_item_modal').fadeIn(200);
+				$('#edit_item_modal .edit_item_modal_con').animate({top:'40%'},400);
+				$('body').css({overflowY:'hidden'});
+			});
 
-
+			$('#edit_item_modal .edit_item_modal_body .personal_policy .content .item .con_b .fr_ p:nth-child(1)').click(function(){
+				$('#edit_item_modal .edit_item_modal_body').hide();
+				$('#edit_item_modal .edit_item_modal_body2').show();
+				$('#edit_item_modal .edit_item_modal_title .fanhui').show();
+				$('#edit_item_modal .edit_item_modal_footer').show();
+			})
+			$('#edit_item_modal .edit_item_modal_title .fanhui').click(function(){
+				$('#edit_item_modal .edit_item_modal_body').show();
+				$('#edit_item_modal .edit_item_modal_body2').hide();
+				$('#edit_item_modal .edit_item_modal_title .fanhui').hide();
+				$('#edit_item_modal .edit_item_modal_footer').hide();
+			})
+			$('#edit_item_modal .edit_item_modal_footer .next_step').click(function(){
+				$('#edit_item_modal').fadeOut(200);
+				$('#edit_item_modal .edit_item_modal_con').animate({top:'50%'},400);
+				$('body').css({overflowY:'visible'});
+				// 保存提示信息
+		    	$('#push span').html('信息已保存')
+		    		$('#push').fadeIn(1000,function(){
+		    		 	setTimeout(function(){
+		    		 	 	 $('#push').fadeOut(5000);
+		    		 	 },5000)
+		    		});
+				});
+			$('#edit_item_modal .edit_item_modal_body .personal_policy_list li').click(function(){
+				console.log($(this).index());
+				$('#edit_item_modal .edit_item_modal_body .personal_policy_list li').removeClass('selct_con');
+				$(this).addClass('selct_con');
+				$('#edit_item_modal .edit_item_modal_body .personal_policy_cont .personal_policy').hide().eq($(this).index()).show();
+			})
     	function input_color(a,b){
     		$(a).focus(function(){
 				$(this).addClass('input_focus');

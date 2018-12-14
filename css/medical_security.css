@@ -146,7 +146,7 @@ table {
 #contnet .content .medical_status .con ul li div:nth-child(5) i{
 	margin-left: 10px;
 	position: relative;
-	top: 2px;
+	top: 1px;
 }
 /* 结论与建议模态框 */
 #jy_adjustment_modal{
