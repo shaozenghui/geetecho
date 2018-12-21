@@ -107,7 +107,7 @@ table {
 	height: 100%;
 	line-height: 100%;
 }
-#contnet .content .medical_status .con ul li div span{
+#contnet .content .medical_status .con ul li div p{
 	width: 100%;
 	float: left;
 	height: 14px;
@@ -115,7 +115,11 @@ table {
 	margin-bottom: 10px;
 
 }
-#contnet .content .medical_status .con ul li div span:last-child{
+#contnet .content .medical_status .con ul li div p span{
+	min-width: 90px;
+	margin-right: 10px;
+}
+#contnet .content .medical_status .con ul li div p:last-child{
 	margin-bottom: 0px;
 }
 #contnet .content .medical_status .con ul li div:nth-child(1){
@@ -459,6 +463,6 @@ table {
 #no_insurance_modal .no_insurance_modal_footer button:active{
     background:#3d7ef5;
 }
-#contnet .content .recommend .con p{
-	margin: 10px 0 !important;
+#contnet .content .recommend .con .p_b:nth-child(1){
+	margin-top: 0px !important;
 }

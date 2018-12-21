@@ -24,9 +24,9 @@ $(document).ready(function($) {
 			 	 },5000)
 			});
 	   })
-	 	$('#q_adjustment_modal  .box>div:nth-child(1) input[type="radio"]').change(function(){
+	 	$('#q_adjustment_modal  .box>div:nth-child(2) input[type="radio"]').change(function(){
 	 		var index = $(this).parent().index() - 1 ;
-	 		$('#q_adjustment_modal  .box>div:nth-child(2) div').hide().eq(index).show();
+	 		$('#q_adjustment_modal  .box>div:nth-child(3) div').hide().eq(index).show();
 
 	 	})
 	// 缺口

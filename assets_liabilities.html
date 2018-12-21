@@ -209,7 +209,22 @@
 	                </tr>
 	                </thead>
 	                <tbody id="data-info">
-	                   
+	                    <tr>
+	                        <td data-checkbox="true"></td>
+	                        <td title="1">伙食费</td>
+	                        <td>A</td>
+	                        <td class="editableClass">1000</td>
+	                        <td class="commentClass">备注一</td>
+	                        <td>1</td>
+	                    </tr>
+	                    <tr>
+	                        <td data-checkbox="true"></td>
+	                        <td title="1">伙食费</td>
+	                        <td>B</td>
+	                        <td class="editableClass">1000</td>
+	                        <td class="commentClass">备注一</td>
+	                        <td>1</td>
+	                    </tr>
 	                </tbody>
 	            </table>
 	            <div id="screen">
@@ -266,15 +281,15 @@
 						<label for="">选择分类</label>
 						<select name="" id="select_o" >
 							<option value="">请选择</option>
-							<option value="">流动资产</option>
-							<option value="">固定资产</option>
-							<option value="">实业资产</option>
-							<option value="">负债</option>
+							<option value="0">流动资产</option>
+							<option value="1">固定资产</option>
+							<option value="2">实业资产</option>
+							<option value="3">负债</option>
 						</select>
 					</p>
 					<p>
 						<label for="">项目名称</label>
-						<input type="text">
+						<input type="text" id="pro_value">
 					</p>
 				</div>
 				<p class="error_prompt">*项目名称只能是汉字   </p>
@@ -296,10 +311,10 @@
 						<label for="">选择分类</label>
 						<select name="" id="del_select_o" >
 							<option value="">请选择</option>
-							<option value="">流动资产</option>
-							<option value="">固定资产</option>
-							<option value="">实业资产</option>
-							<option value="">负债</option>
+							<option value="0">流动资产</option>
+							<option value="1">固定资产</option>
+							<option value="2">实业资产</option>
+							<option value="3">负债</option>
 						</select>
 					</p>
 					<p>
@@ -371,61 +386,52 @@
     });
     $('#s_table thead tr th:nth-child(2)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
     $('#s_table thead tr th:nth-child(3)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
-    $("#checkbox1").selectCheck({
-       allId:"checkAll1",
-    });
-    $("#checkbox2").selectCheck({
-       allId:"checkAll2",
-    });
-    $('.sure').eq(0).click(function(){
-          var arr1 = [];
-          $('#checkbox1 input:checkbox:checked').each(function(){
-          		arr1.push($(this).val())
-          })  
-          var arr1_ = arr1.filter(function(x){
-          	return x != "on"
-          })
-          console.log(arr1_)
-    });
-    $('.sure').eq(1).click(function(){
-    	  var arr2 = [];
-          $('#checkbox2 input:checkbox:checked').each(function(){
-          		console.log($(this).val())
-          		arr2.push($(this).val())
-          })  
-          var arr2_ = arr2.filter(function(x){
-          	return x != "on"
-          })
-          console.log(arr2_)
-    });
-    // 点击筛选确定按钮
-    $('.cancel').each(function(index){
-    	$(this).click(function(){
-    		$(this).parent().parent().hide();
-    		$(this).parent().parent().find('span').removeClass("check_span--checked");
-        	$(this).parent().parent().find('input:checkbox').removeAttr("checked");
-    		$('#s_table thead tr th .screen').eq(index).removeClass("screen_active_con");
-    	})
-    })
-    // 点击筛选图标
-    $('#s_table thead tr th .screen').each(function(index){
-    	 $(this).click(function(e){
-    	 	e.stopPropagation();
-	    	$(this).toggleClass("screen_active_con");
-	    	$('#s_table thead tr th .screen').not($(this)).removeClass("screen_active_con");
-	    	
-	    	$('#screen>div').eq(index).fadeToggle();
-	    	$('#screen>div').not($('#screen>div').eq(index)).hide();
-
-	    })
-    })
-     // 点击页面所有下来收起
-    $(document).click(function(){
-      $('#screen>div').hide();
-       $('#s_table thead tr th .screen').removeClass("screen_active_con");
-    })
-    // 阻止冒泡
-     $('#screen>div').click(function(e){
-       e.stopPropagation();
-    })
+	    var selectIndex ;
+	    var selectIndexFlag = false ;
+          // 添加完成的确认按钮
+       $('#creat').click(function(){
+           $('#custom_modal').fadeOut(200);
+           $('#custom_modal .custom_modal_con').animate({top:'40%'},400);
+           $('body').css({overflowY:'visible'})
+           var select_value = $('#select_o option:selected').val();
+           var pro_value = $('#pro_value').val();  
+           $('.con_list_tab div').each(function(index, el) {
+             if(select_value == index){
+               selectIndex = $(this).index();
+               selectIndexFlag = true ;
+             }
+           });
+           $('.con_list_tab div').each(function(index, el) {
+               if(select_value == index){
+                 $('<li>'+pro_value+'</li>').appendTo($(".con_list_con_list_item").eq(index).find('ul'));
+                 return false;
+               }
+             })
+           $('.con_list_>li').eq(0).fadeOut(300);
+           $('.con_list_>li').eq(1).fadeIn(300);
+           $('#con_list_add_con_project').val(pro_value);
+           $('.con_list_con_list_item li').click(function(){
+             $('.con_list_>li').eq(0).fadeOut(300);
+             $('.con_list_>li').eq(1).fadeIn(300);
+             $('#con_list_add_con_project').val($(this).html());
+             selectIndex = $(this).parents(".con_list_con_list_item").index();
+           })
+       })
+       // 点击三级类目切换
+   	    $('.con_list_con_list_item li').click(function(){
+   	        $('.con_list_>li').eq(0).fadeOut(300);
+   	        $('.con_list_>li').eq(1).fadeIn(300);
+   	        $('#con_list_add_con_project').val($(this).html());
+   	        selectIndex = $(this).parents(".con_list_con_list_item").index();
+   	    })
+   	    $('.con_list_add_tit p').click(function(){
+   	        $('.con_list_>li').eq(1).fadeOut(300);
+   	        $('.con_list_>li').eq(0).fadeIn(300);
+   	        if(selectIndexFlag){
+   	          $(".con_list_tab div").eq(selectIndex).addClass('con_list_tab_active');
+   	          $(".con_list_tab div").not($(".con_list_tab div").eq(selectIndex)).removeClass('con_list_tab_active');
+   	          $('.con_list_con_list .con_list_con_list_item').hide();
+   	          $('.con_list_con_list .con_list_con_list_item').eq(selectIndex).show();
+   	        }
+   	    })
 </script>

@@ -85,7 +85,7 @@ input:focus{
 	background: #fff;
 	border-bottom: 1px solid #cacaca;
 	position: fixed;
-	z-index: 100;
+	z-index: 10;
 	top: 0;
 }
 
@@ -431,4 +431,12 @@ input:focus{
 
 table{
 	table-layout: fixed;
+}
+.point{
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 25px;
+	position: relative;
+	top:1px;
+	margin-right: 6px;
 }

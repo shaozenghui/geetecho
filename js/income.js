@@ -1,8 +1,8 @@
 $(document).ready(function($) {
-
-  
-	// 表格
-	 var H = $('#s_table').height();
+   
+    
+  // 表格
+   var H = $('#s_table').height();
     $('#table1').bootstrapTable({
           height: H-50,
          columns: [
@@ -18,40 +18,49 @@ $(document).ready(function($) {
     $('#s_table thead tr th:nth-child(2)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
     $('#s_table thead tr th:nth-child(3)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>');
     $('#s_table thead tr th:nth-child(4)').append('<span style="float: right;" class="screen"><i class="iconfont icon-htmal5icon30"></i></span>')
+    var selectIndex ;
+    var selectIndexFlag = false ;
+    var select_value,type_value,pro_value;
+    // 添加自定义项目
+    $('#select_o').change(function(event) {
+       var val = $('#select_o option:selected').val();
+       selectIndex = val;
+      if(selectIndex == 0){
+        $('#select_type1').show();
+        $('#select_type2').hide();
+      }
+      if(selectIndex == 1){
+         $('#select_type2').show();
+        $('#select_type1').hide();
+      }
+    });
       // 添加完成的确认按钮
     $('#creat').click(function(){
         $('#custom_modal').fadeOut(200);
         $('#custom_modal .custom_modal_con').animate({top:'40%'},400);
         $('body').css({overflowY:'visible'})
-        var str = $('#select_o option:selected').html();
-        var str2 = $('#select_t option:selected').html();
-        var val = $('.custom_from input').val();  
+        select_value = $('#select_o option:selected').val();
+        if(selectIndex == 0){
+           type_value =  $('#select_type1 select option:selected').val();
+        }
+        if(selectIndex == 1){
+           type_value = $('#select_type2 select option:selected').val();
+        }
+        pro_value = $('#pro_value').val();
         $('.con_list_tab div').each(function(index, el) {
-          if(str == $(this).html()){
-            selectIndex = $(this).index();
+          if(select_value == index){
+            selectIndex = index;
             selectIndexFlag = true ;
+            $('.con_list_con_list .con_list_con_list_item1').eq(selectIndex).children('div').each(function(index, el) {
+                if(type_value == $(this).index()){
+                  $('<li>'+pro_value+'</li>').appendTo($(this).children('ul'));
+                }
+              });
           }
         });
-
-        if(str == "固定支出"){
-
-          $('.con_list_con_list_item1 span').each(function(index, el) {
-            if(str2 == $(this).html()){
-              $('<li>'+val+'</li>').appendTo($(this).next());
-            }
-          });
-        }else{
-
-          $('.con_list_tab div').each(function(index, el) {
-            if(str == $(this).html()){
-              $('<li>'+val+'</li>').appendTo($(".con_list_con_list_item").eq($(this).index()).find('ul'));
-              return false;
-            }
-          })
-        }
         $('.con_list_>li').eq(0).fadeOut(300);
         $('.con_list_>li').eq(1).fadeIn(300);
-        $('#con_list_add_con_project').val(val);
+        $('#con_list_add_con_project').val(pro_value);
         $('.con_list_con_list_item li').click(function(){
           $('.con_list_>li').eq(0).fadeOut(300);
           $('.con_list_>li').eq(1).fadeIn(300);
@@ -59,8 +68,20 @@ $(document).ready(function($) {
           selectIndex = $(this).parents(".con_list_con_list_item").index();
         })
     })
-    var selectIndex ;
-    var selectIndexFlag = false ;
+// 删除自定义项目
+    $('#del_select_o').change(function(event) {
+         var val = $('#del_select_o option:selected').val();
+         selectIndex = val;
+        if(selectIndex == 0){
+          $('#del_select_type1').show();
+          $('#del_select_type2').hide();
+        }
+        if(selectIndex == 1){
+           $('#del_select_type2').show();
+           $('#del_select_type1').hide();
+        }
+    });
+    
     // 点击三级类目切换
     $('.con_list_con_list_item li').click(function(){
         $('.con_list_>li').eq(0).fadeOut(300);
@@ -78,25 +99,4 @@ $(document).ready(function($) {
           $('.con_list_con_list .con_list_con_list_item').eq(selectIndex).show();
         }
     })
-     // 添加自定义项目
-    $('#select_o').change(function(event) {
-       var str = $('#select_o option:selected').html();
-       if(str == "固定支出"){
-         $('#custom_modal .custom_modal_body p').eq(1).show();
-        
-       }else{
-          $('#custom_modal .custom_modal_body p').eq(1).hide();
-       }
-    });
-    // 删除自定义项目
-    $('#del_select_o').change(function(event) {
-        var str = $('#del_select_o option:selected').html();
-        if(str == "固定支出"){
-          $('#custom_modal2 .custom_modal2_body p').eq(1).show();
-        }else{
-          $('#custom_modal2 .custom_modal2_body p').eq(1).hide();
-        }
-    });
-    $("#custom_modal .custom_modal_body p").eq(1).hide();
-    $("#custom_modal2 .custom_modal2_body p").eq(1).hide();
 })

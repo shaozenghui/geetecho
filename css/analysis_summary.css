@@ -68,28 +68,32 @@ table {
 .cont_f_list li .cont_f_list_text{
 
 	height: 632px;
-	width: 281px;
+	width: 310px;
 	overflow-y: scroll;
 	float: left;
-	padding:0 14px;
+
 	
 }
 .cont_f_list li:nth-child(2) .cont_f_list_text{
 	padding-top: 0;
 }
 /*人身保障*/
-.cont_f_list li:nth-child(1) .cont_f_list_text{
-	width: 213px;
-	padding:0 49px;
-}
+
 .cont_f_list li .cont_f_list_text p{
 	width: 100%;
 	overflow: hidden;
 	line-height: 25px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #303030;
 	margin-top: 20px;
 	margin-bottom: 10px;
+}
+
+.cont_f_list li:nth-child(2) .cont_f_list_text p{
+	margin: 0 !important;
+}
+.cont_f_list li:nth-child(2) .cont_f_list_text{
+	padding-top: 10px;
 }
 .cont_f_list li .cont_f_list_text .fb{
 	font-size: 18px;
@@ -104,7 +108,9 @@ table {
 
 }
 
-
+.cont_f_list li:nth-child(2) .cont_f_list_text .p_b{
+	margin: 10px 0 !important;
+}
 /* 销售完成提示信息模态框 */
 #plan_modal1{
 	width: 100%;

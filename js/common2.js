@@ -1,4 +1,20 @@
 $(document).ready(function($) {
+	// 回到顶部
+	function many(){
+		var scroll_top = $('html,body').scrollTop();
+		if(scroll_top >= 300){
+			$('.back_top').show();
+		}else{
+			$('.back_top').hide();
+		}
+	}
+	many();
+	$(document).scroll(function(event) {
+		many();
+	});
+		$('.back_top').click(function(){
+			$('html,body').animate({scrollTop:0})
+		})
 	// 保单点击箭头
 	$('#contnet .content .policy .table .item .tit_td >li .zx>span').click(function(){
 		$(this).parents('.zx').next().toggle();
@@ -237,5 +253,7 @@ $(document).ready(function($) {
       		$('body').css({overflowY:'hidden'})
       	})
 
-      	
+      	// 虚线
+      	var dashedH = $("#contnet .content  .recommend .recommend-container>div").height();
+      	$("#contnet .content  .dashed").height(dashedH);
 });

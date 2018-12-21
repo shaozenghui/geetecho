@@ -11,6 +11,29 @@
 	<link rel="stylesheet" href="css/iconfont.css">
 	<link rel="stylesheet" href="css/just-tip.css">
 </head>
+<style>
+	.con_list_>li .con_list_con_list_item>div ul{
+		width: 1063px;
+		float: left;
+		padding-left: 74px;
+	}
+	#select_type div {
+		width: 258px;
+		overflow: hidden;
+	}
+	#select_type1{
+		display: block;
+	}
+	#select_type2 {
+		display: none;
+	}
+	#del_select_type1{
+		display: block;
+	}
+	#del_select_type2 {
+		display: none;
+	}
+</style>
 <body>
 	<div class="header">
 		<div class="fl" >
@@ -99,8 +122,8 @@
 					<li>
 						<div class="con_list_tit">
 							<div class="con_list_tab">
-								<div class="con_list_tab_active">工资收入</div>
-								<div>资产收入</div>
+								<div class="con_list_tab_active">劳动报酬</div>
+								<div>投资收益</div>
 							</div>
 							<div class="con_list_jd">
 								<span  class="demoUp" tit="删除自定义项目"><i class="iconfont icon-shanchu" ></i></span>
@@ -109,25 +132,48 @@
 						</div>
 						<div class="con_list_con">
 							<div class="con_list_con_list">
-								<div class="con_list_con_list_item">
+								<div class="con_list_con_list_item con_list_con_list_item1">
 									<div>
+										<span>工资收入</span>
 										<ul>
-											<li>工资收入</li>
-											<li>工资收入</li>
-											<li>工资收入</li>
-											<li>工资收入</li>
+											<li>工资</li>
 										</ul>
 									</div>
-									
-								</div>
-								<div class="con_list_con_list_item">
 									<div>
+										<span>奖金收入</span>
 										<ul>
-											<li>资产收入</li>
-											<li>资产收入</li>
-											<li>资产收入</li>
-											<li>资产收入</li>
-										
+											<li>年度奖金</li>
+											
+										</ul>
+									</div>
+									<div>
+										<span>其他收入</span>
+										<ul>
+											<li>额外收入</li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="con_list_con_list_item con_list_con_list_item1">
+									<div>
+										<span>投资收入</span>
+										<ul>
+											<li>投资</li>
+											
+										</ul>
+									</div>
+									<div>
+										<span>租金收入</span>
+										<ul>
+											<li>租金</li>
+											
+										</ul>
+									</div>
+									<div>
+										<span>分红收入</span>
+										<ul>
+											<li>分红</li>
+											
 										</ul>
 									</div>
 									
@@ -194,7 +240,26 @@
 	                </tr>
 	                </thead>
 	             
-	                <tbody id="data-info"></tbody>
+	                <tbody id="data-info">
+	                	<tr>
+	                	    <td data-checkbox="true"></td>
+	                	    <td title="1">伙食费</td>
+	                	    <td>年</td>
+	                	    <td>A</td>
+	                	    <td class="editableClass">1000</td>
+	                	    <td class="commentClass">备注一</td>
+	                	    <td>1</td>
+	                	</tr>
+	                	 <tr>
+	                	    <td data-checkbox="true"></td>
+	                	    <td title="1">伙食费</td>
+	                	    <td>年</td>
+	                	    <td>B</td>
+	                	    <td class="editableClass">10001</td>
+	                	    <td class="commentClass">备注一</td>
+	                	    <td>1</td>
+	                	</tr>
+	                </tbody>
 	            </table>
 	            <div id="screen">
 	            	<div>
@@ -305,13 +370,33 @@
 						<label for="">选择分类</label>
 						<select name="" id="select_o" >
 							<option value="">请选择</option>
-							<option value="">工资收入</option>
-							<option value="">资产收入</option>
+							<option value="0">劳动报酬</option>
+							<option value="1">投资收益</option>
 						</select>
 					</p>
+					<p  id="select_type1" >
+						<label for="">分类</label>
+						<select name="" >
+							<option value="">请选择</option>
+							<option value="0">工资收入</option>
+							<option value="1">奖金收入</option>
+							<option value="2">其他收入</option>
+						</select>
+					</p>
+					<p  id="select_type2" >
+						<label for="">分类</label>
+							
+						<select name="">
+							<option value="">请选择</option>
+							<option value="0">投资收入</option>
+							<option value="1">租金收入</option>
+							<option value="2">分红收入</option>
+						</select>
+					</p>
+					
 					<p>
 						<label for="">项目名称</label>
-						<input type="text">
+						<input type="text" id="pro_value">
 					</p>
 				</div>
 				<p class="error_prompt">*项目名称只能是汉字   </p>
@@ -333,16 +418,34 @@
 						<label for="">选择分类</label>
 						<select name=""  id="del_select_o">
 							<option value="">请选择</option>
-							<option value="">工资收入</option>
-							<option value="">资产收入</option>
+							<option value="0">劳动报酬</option>
+							<option value="1">投资收益</option>
 						</select>
 					</p>
-					<p>
-						<label for="">项目名称</label>
-						<select name=""  id="del_select_t">
+					<p  id="del_select_type1" >
+						<label for="">分类</label>
+						<select name="" >
 							<option value="">请选择</option>
-							<option value="">项目一</option>
-							<option value="">项目二</option>
+							<option value="0">工资收入</option>
+							<option value="1">奖金收入</option>
+							<option value="2">其他收入</option>
+						</select>
+					</p>
+					<p  id="del_select_type2" >
+						<label for="">分类</label>
+							
+						<select name="">
+							<option value="">请选择</option>
+							<option value="0">投资收入</option>
+							<option value="1">租金收入</option>
+							<option value="2">分红收入</option>
+						</select>
+					</p>
+					<p   >
+						<label for="">项目名称</label>				
+						<select name="">
+							<option value="">请选择</option>
+							<option value="0">工资</option>
 						</select>
 					</p>
 				</div>
@@ -387,8 +490,9 @@
 <script src="js/bootstrap-table-zh-CN.js"></script>
 <script src="js/bootstrap-editable.min.js"></script>
 <script src="js/bootstrap-table-editable.min.js"></script>
+<script src="js/income.js"></script>
 <script src="js/data_collection_common.js"></script>
 <script src="js/header_common.js"></script>
 <script src="js/checkbox.js"></script>
-<script src="js/expenditure.js"></script>
+
 <script src="js/justTools.js"></script>

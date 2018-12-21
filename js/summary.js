@@ -227,4 +227,20 @@ window.onload = function(){
 		$('#assets_modal').hide();
 		$('#assets_liabilities .detail').css({color: "#909090"});
 	});
+	// 回到顶部
+	function many(){
+		var scroll_top = $('html,body').scrollTop();
+		if(scroll_top >= 300){
+			$('.back_top').show();
+		}else{
+			$('.back_top').hide();
+		}
+	}
+	many();
+	$(document).scroll(function(event) {
+		many();
+	});
+	$('.back_top').click(function(){
+		$('html,body').animate({scrollTop:0})
+	})
 }

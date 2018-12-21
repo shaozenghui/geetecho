@@ -1,12 +1,12 @@
 #screen>div:nth-child(1){
     position: absolute;
     top: 10px;
-    left: 164px !important;
+    left: 151px !important;
 }
 #screen>div:nth-child(2){
     position: absolute;
     top: 10px;
-    left: 374px !important;
+    left: 361px !important;
 }
 
 #s_table tr td:nth-child(2){
