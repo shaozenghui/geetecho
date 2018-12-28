@@ -63,56 +63,20 @@
 	margin-bottom: 100px;
 }
 #contnet .con_title{
-	margin: 20px 0px;
-	margin-top: 0px;
+	margin-bottom: 20px;
 	height: 35px;
 	line-height: 35px;
 	width: 100%;
 
 }
-#contnet .con_title>span:first-child{
+#contnet .con_title p span:first-child {
 	font-size: 20px;
 	color: #202020;
-	margin-right: 30px;
-	float: left;
-}
-#contnet .con_title ul{
-	width: 228px;
-	height: 35px;
-	line-height: 35px;	
+	margin-right: 10px;
 	float: left;
 }
 
-#contnet .con_title ul li{
-	width: 94px;
-	height: 35px;
-	line-height: 35px;
-	text-align: center;
-	
-	font-size: 14px;
-	background: #fff;	
-	margin-right: 20px;
-	float: left;
-		border-radius: 18px;
-	cursor: pointer;
-}
-#contnet .con_title ul li a{
-	width: 100%;
-	height: 100%;
-	color: #101010;
-		border-radius: 18px;
-}
- .active a{
-	background: #3da8f5 !important;
-	color: #fff !important;
-}
-#contnet .con_title>span:last-child{
-	height: 35px;
-	line-height: 35px;
-	font-size: 14px;
-	color: #909090;
-	float: left;
-}
+
 #contnet .contnet{
 	width: 100%;
 	overflow: hidden;
@@ -291,12 +255,10 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	padding-left: 0px;
 	text-align: right;
 }
-
 /*推荐方案*/
 #contnet .content .recommend{
-	width:100%;
-	min-height: 356px;
-
+	width:612px;
+	min-height: 450px;
 	padding: 20px;
 	border-radius: 6px;
 	border: 1px solid #dbdbdb;
@@ -306,6 +268,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	position: relative;
 	padding-top: 0;
 }
+
 
 #contnet .content  .recommend>p {
     width: 100%;
@@ -321,6 +284,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	cursor: pointer;
 	position: relative;
 	left: 11px;
+	height: 100%;
 }
 #contnet .content  .recommend>p span:nth-child(2) i{
    	font-size: 24px !important;
@@ -338,6 +302,11 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	border-radius: 4px;
 	box-shadow: 0 0 30px  rgba(0,0,0,0.15);
 	display: none;
+}
+#contnet .content .recommend-container p {
+    line-height: 28px;
+    font-size: 16px;
+    color: #303030;
 }
 #contnet .content .recommend .selet:before{ 
 	content: ''; 
@@ -382,114 +351,30 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	color: #fff;
 }
 #contnet .content  .recommend .con{
-	width: 560px;
+	width: 570px;
 	float: left; 
 	overflow: hidden;
 
 }
-#contnet .content  .recommend .dashed{
-	float: left;
-	height: 100%;
-	width: 1px;
-	border: 1px dashed #dedede;
-	margin-right: 30px
-}
-#contnet .content  .recommend .con div{
+
+#contnet .content  .recommend .con>div{
 	margin-bottom: 15px;
 }
-#contnet .content  .recommend .con p{
-	width: 100%;
-	line-height: 25px;
-	color: #303030;
-	font-size: 16px;
-}
-#contnet   .p_b{
 
-	line-height: 16px !important;
-	border-left: 2px solid #3da8f5;
-	padding-left: 10px;
-	margin-bottom: 10px;
-	margin-top: 15px;
-	font-weight: bold;
-}
-
-#contnet .content  .recommend .con .jl{
-	color: #3da8f5;
-	font-size: 16px;
-	margin-bottom: 10px;
-	height: 16px;
-	line-height: 16px;
-	font-weight: bold;
-}
-#contnet .content  .recommend .con .jl span{
-	margin-right: 10px;
-}
-#contnet .content  .recommend .con .jy{
-	color: #4AD883;
-	font-size: 16px;
-	margin-bottom: 16px;
-	height: 16px;
-	line-height: 16px;
-	font-weight: bold;
-}
-#contnet .content  .recommend .recommend-container{
+#contnet .content  .recommend  .recommend-container{
 	width: 100%;
-	height: 300px;
-overflow: hidden;
-	padding: 20px 0;
+	height: 378px;
 	overflow-y: scroll;
-}
-#contnet .content  .recommend .recommend-container>div{
-	width: 100%;
-	overflow: hidden;
-}
-#contnet .content  .recommend .con .jy span{
-	margin-right: 10px;
-}
-#contnet .content  .recommend .remark{
-	width: 50%;
-
-	overflow: hidden;
-}
-#contnet .content  .recommend .remark>p{
-	width: 100%;
-	height: 16px;
-	line-height: 16px; 	
-}
-#contnet .content  .recommend .remark>p span:nth-child(1){
-	font-size: 16px;
-	color: #303030;
-	font-weight: bold;
-}
-#contnet .content  .recommend .remark>p span:nth-child(2){
-	cursor: pointer;
-	padding: 0 5px;
-}
-#contnet .content  .recommend .remark>p span:nth-child(2) i{
-	font-size: 14px;
-	color: #909090;
-}
-#contnet .content  .recommend .remark .remark_con{
-	width: 100%;
-	overflow: hidden;
-	padding-bottom: 20px;
-	/*display: none;*/
-}
-#contnet .content .recommend .remark .remark_con p{
-	font-size: 16px;
-}
-#contnet .content  .recommend .remark .remark_con div{
-	margin-bottom: 20px;
-}
-#contnet .content .recommend-zixuan{
-	margin-right: 0;
-	margin-top: 20px;
-}
-#contnet .content .recommend-zixuan .con{
-	width: 100%;
-	border-right: none !important;
+	overflow-x: hidden;
+	
 }
 
+#contnet .content  .recommend  .recommend-container .con{
+	padding-top: 20px;
+	width:570px;
+	overflow: hidden;
+	float: left; 
+}
 
 
 
@@ -750,8 +635,16 @@ overflow: hidden;
 	padding-left: 0px;
 	padding-right: 10px;
 }
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7) span:nth-child(1){
+	float: left;
+	margin-left: 20px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7) span:nth-child(2){
+	float: right;
+	margin-right: 20px;
+}
 .select_pro_modal_table li:nth-child(1) table thead th:nth-child(8){
-	width: 200px;
+	width: 150px;
 	text-align: right;
 	padding-left: 0px;
 	padding-right: 10px;
@@ -760,6 +653,14 @@ overflow: hidden;
 	text-align: right;
 	padding-left: 0px;
 	padding-right: 10px;
+}
+.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7) span:nth-child(1){
+	float: left;
+	margin-left: 20px;
+}
+.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7) span:nth-child(2){
+	float: right;
+	margin-right: 20px;
 }
 .select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(8){
 	text-align: right;
@@ -828,9 +729,7 @@ overflow: hidden;
 	border-radius: 2px;
 	float: right;
 }
-.select_pro_modal_yiwai .select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(8) input{
-	width: 220px !important;
-}
+
 .select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(8) span{
 	width:20px;
 	height: 35px;

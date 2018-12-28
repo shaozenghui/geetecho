@@ -1,4 +1,13 @@
 $(document).ready(function($) {
+
+	$('#contnet .con_title  p span:last-child i').hover(function(){
+		$('#contnet .con_title .content').show();
+	},function(){
+		$('#contnet .con_title .content').hide();
+	})
+
+	$("#contnet .content .finance .situation .con>div>ul li div:nth-child(2) p").height();
+
 	 // 缺口调整计算模态框
 	 	$('#contnet .content .finance .gap>p span:nth-child(2)').click(function(){
 	 		$('#q_adjustment_modal').fadeIn(200);
@@ -28,6 +37,11 @@ $(document).ready(function($) {
 	 		var index = $(this).parent().index() - 1 ;
 	 		$('#q_adjustment_modal  .box>div:nth-child(3) div').hide().eq(index).show();
 
+	 	})
+	 	$('#contnet .content .recommend .con .quk').hover(function(){
+	 		$(this).parent().next().show();
+	 	},function(){
+			$(this).parent().next().hide();
 	 	})
 	// 缺口
 	var myChart = echarts.init(document.getElementById('expenditure_echarst'));

@@ -68,7 +68,8 @@
 .con_list{
 	width: 1246px;
 	overflow: hidden;	
-	
+	font-size: 16px;
+	letter-spacing: 0.5px;
 }
 .con_list .lg{
 	width: 1204px;
@@ -81,7 +82,8 @@
 	margin-bottom: 30px;
 }
 .con_list .sm{
-	width: 1204px;
+	width: 570px;
+	height: 414px;
 	overflow: hidden;
 	background: #fff;
 	border: 1px solid #dbdbdb;
@@ -90,9 +92,7 @@
 	padding: 18px 20px;
 	margin-right: 20px;
 }
-.con_list .sm_no{
-	margin-right: 0px !important;
-}
+
 .con_list .lg>p{
 	width: 100%;
 	height: 18px;
@@ -121,20 +121,18 @@
 }
 
 .con_list .sm_no p{
-	line-height: 25px;
+	line-height: 28px;
 	font-size:16px;
 	color: #303030; 
 }
-.con_list .sm_no .sm_no_container{
+.con_list .sm .sm_no_container{
 	width: 100%;
-	height: 496px;
+	height: 378px;
 	overflow-y: scroll;
+	overflow-x: hidden;
+	
+}
 
-}
-.con_list .sm_no .sm_no_container >div{
-	width: 100%;
-	overflow: hidden;
-}
 .con_list .sm_no>p{
 	font-size: 18px;
 	color: #303030;
@@ -142,89 +140,102 @@
 }
 .con_list .sm_no .con_list_con{
 	padding-top: 20px;
-	width: 560px;
+	width: 570px;
 	overflow: hidden;
-	float: left;
-	padding-right: 40px; 
+	float: left; 
 }
-.con_list .sm_no .con_list_con .jl{
-	color: #3da8f5;
+.con_list .sm_no .con_list_con>div{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.con_list .sm_no .con_list_con>div .tit{
+	
     font-size: 16px;
     margin-bottom: 10px;
     height: 16px;
     line-height: 16px;
     font-weight: bold;
 }
-.con_list .sm_no .con_list_con div {
-    margin-bottom: 15px;
+.con_list .sm_no .con_list_con .jl .tit {
+	color: #3da8f5;
 }
-.con_list .sm_no .con_list_con .jl span {
-    margin-right: 10px;
-}
-.con_list .sm_no .con_list_con .jy span {
-    margin-right: 10px;
-}
-.con_list .sm_no .con_list_con p {
-    width: 100%;
-    line-height: 25px;
-    color: #303030;
-    font-size: 16px;
-}
-.con_list .sm_no .con_list_con .jy {
+.con_list .sm_no .con_list_con .jy .tit  {
     color: #4AD883;
-    font-size: 16px;
-    margin-bottom: 18px;
-    height: 16px;
-    line-height: 16px;
-    font-weight: bold;
 }
-.con_list .sm_no .remark{
-	width: 560px;
-overflow: hidden;
-	float: left;
-	padding-top: 20px;
+
+.con_list .sm_no .con_list_con>div .tit span {
+    margin-right: 10px;
 }
-.con_list .sm_no .remark>p{
+.con_list .sm_no .con_list_con>div .tit span {
+    margin-right: 10px;
+}
+.con_list .sm_no .con_list_con>div .conent{
 	width: 100%;
-	height: 16px;
-	float: left;
-	line-height: 16px;
-	font-size: 16px;
-	color: #303030;
-	
+	overflow: hidden;
 }
-.con_list .sm_no .dashed {
-    float: left;
-    height: 100%;
-    width: 1px;
-    border-left: 1px dashed #dedede;
-    margin-right: 30px;
-    margin-top: 20px;
+.con_list .sm_no .con_list_con .conent {
+    width: 100%;
+    line-height: 28px;
+    color: #303030;
+
 }
-.con_list .sm_no .remark>p span:nth-child(1){
-	float: left;
+.con_list .sm_no .con_list_con .jy .conent div{
+	margin-bottom: 10px;
+
+}
+.con_list .sm_no .con_list_con .jy .conent div>p  {
    font-weight: bold;
 }
-.con_list .sm_no .remark>p span:nth-child(2){
-	float: right;
-	padding: 0 5px;
-	cursor: pointer;
+.con_list .sm_no .con_list_con .conent .text{
+	color: #646464;
+	font-weight: 400 !important;
 }
-.con_list .sm_no .remark>p span:nth-child(2) i{
-	font-size: 14px;
+/*注释*/
+.con_list  .remark {
+	margin-right: 0px;
 }
-.con_list .sm_no .remark .remark_con{
-	width: 550px;
+
+
+.con_list .remark .con_list_con{
+	padding-top: 20px;
+	width: 570px;
 	overflow: hidden;
-	padding-bottom: 10px;
-	float: left;
+	float: left; 
 }
-.con_list .sm_no .remark .remark_con  .p_b{
-	line-height: 16px;
-	border-left: 2px solid #3da8f5;
-	padding-left: 10px;
+.con_list .remark .con_list_con>div{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+
+.con_list .remark .con_list_con>div .conent{
+	width: 100%;
+	overflow: hidden;
+}
+.con_list .remark .con_list_con .conent {
+    width: 100%;
+    line-height: 28px;
+    color: #303030;
+
+}
+.con_list .remark .con_list_con >div{
 	margin-bottom: 10px;
-	margin-top: 10px;
+
+}
+.con_list .remark .con_list_con  .conent>p  {
+   font-weight: bold;
+}
+.con_list .remark .con_list_con .conent .text{
+	color: #646464;
+	font-weight: 400 !important;
+}
+.con_list  .remark .con_list_con  .p_b{
+	line-height: 16px;
+	border-left: 3px solid #3da8f5;
+	padding-left: 10px;
+	margin-bottom: 15px;
 	font-weight: bold;
 }
 /*全年收支*/

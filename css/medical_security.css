@@ -152,6 +152,59 @@ table {
 	position: relative;
 	top: 1px;
 }
+/*结论与建议*/
+
+
+#contnet .content .recommend .con{
+	padding-top: 20px;
+	width: 570px;
+	overflow: hidden;
+	float: left; 
+}
+#contnet .content .recommend .con>div{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+
+#contnet .content .recommend .con>div .conent{
+	width: 100%;
+	overflow: hidden;
+}
+#contnet .content .recommend .con .conent {
+    width: 100%;
+    line-height: 28px;
+    color: #303030;
+
+}
+#contnet .content .recommend .con >div{
+	margin-bottom: 10px;
+
+}
+#contnet .content .recommend .con  .conent>p  {
+   font-weight: bold;
+}
+#contnet .content .recommend .con .conent .text{
+	color: #646464;
+	font-weight: 400 !important;
+}
+#contnet .content  .recommend .con  .p_b{
+	line-height: 16px;
+	border-left: 3px solid #3da8f5;
+	padding-left: 10px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+/*自选*/
+#contnet .content .recommend-zixuan {
+	width: 1246px !important;
+    margin-right: 0;
+    margin-top: 20px;
+}
+
+
 /* 结论与建议模态框 */
 #jy_adjustment_modal{
 	width: 100%;
