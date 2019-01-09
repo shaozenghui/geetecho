@@ -225,6 +225,13 @@ $(document).ready(function($) {
 			$('#prompt_modal').fadeOut(200);
 			$('#prompt_modal .prompt_modal_con').stop(true,true).animate({top:'40%'},400);
 			$('body').css({overflowY:'visible'});
+			// 项目删除成功提示信息
+	    	$('#push span').html('项目删除成功')
+			$('#push').fadeIn(1000,function(){
+			 	setTimeout(function(){
+			 	 	 $('#push').fadeOut(5000);
+			 	 },5000)
+			});
 		})	
 		//提示信息函数
 		function prompt(str){
@@ -240,6 +247,7 @@ $(document).ready(function($) {
        	    $("."+obj+" input[name='select']").each(function(index, el) {
 				if($(this).prop('checked')){
 					$(this).parents('tr').remove();
+			    	
 				}
 			});
        })

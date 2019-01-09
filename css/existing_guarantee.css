@@ -1,6 +1,9 @@
 .user_list a {
     width: 130px !important;
 }
+table{
+	table-layout: auto !important;
+}
 /* 主题内容开始 */
 .container{
 	background: #f6f6f6;
@@ -130,18 +133,21 @@ table{
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 0px;
-	width: 141px !important;
+	width: 131px !important;
 
 }
 .con_list li .con_list_from_item .table tr td:nth-child(2){
 
-	width: 141px !important;
+	width: 131px !important;
 
 }
 .con_list li .con_list_from_item .table tr td:nth-child(3){
 
-	width: 141px !important;
+	width: 131px !important;
 
+}
+.con_list li .con_list_from_item .table tr td:nth-child(4) {
+	width: 151px !important;
 }
 .con_list li .con_list_from_item .table tr td:nth-child(4) .editable-container.popover{
 	left: 363px !important

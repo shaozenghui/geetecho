@@ -25,6 +25,7 @@
     position: relative;
     clear: both;
     border: 1px solid #dddddd;
+    border-bottom: none;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -106,6 +107,7 @@
 
 .fixed-table-container tbody td {
     border-left: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
 }
 
 .fixed-table-container tbody tr:first-child td {
@@ -259,6 +261,7 @@
 .bootstrap-table .table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 
 /* support bootstrap 3 */

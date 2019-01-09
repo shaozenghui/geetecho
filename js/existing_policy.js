@@ -102,17 +102,28 @@ $(document).ready(function($) {
 	    	$('#prompt_modal .prompt_modal_con').animate({top:'40%'},400);
 	    	$('body').css({overflowY:'visible'})
 	    })
-	    // 点击选择按钮
-	    $('#prompt_modal .prompt_modal_body button').click(function(){
+	    // 点击JPG格式选择按钮
+	     $('#prompt_modal .prompt_modal_body .jpg').click(function(){
 	    	$('#prompt_modal').fadeOut(200);
 	    	$('#prompt_modal .next_modal3_con').animate({top:'40%'},400);
 	    	$('body').css({overflowY:'visible'});
-	    	if($(this).html() != "word格式"){
-	    		$('#select_pro_modal .select_pro_modal').show();
-	    		$('#select_pro_modal').fadeIn(200);
-		    	$('#select_pro_modal .select_pro_modal').animate({top:'40%'},400);
-		    	$('body').css({overflowY:'hidden'})
-	    	}
+    		$('#select_pro_modal .select_pro_modal').show();
+    		$('#select_pro_modal').fadeIn(200);
+	    	$('#select_pro_modal .select_pro_modal').animate({top:'40%'},400);
+	    	$('body').css({overflowY:'hidden'})
+	    })
+	    // 点击Excel格式格式选择按钮
+	     $('#prompt_modal .prompt_modal_body .excel').click(function(){
+	    	$('#prompt_modal').fadeOut(200);
+	    	$('#prompt_modal .next_modal3_con').animate({top:'40%'},400);
+	    	$('body').css({overflowY:'visible'});
+	    })
+	     // 点击JPG格式选择按钮
+	     $('#prompt_modal .prompt_modal_body .word').click(function(){
+	    	$('#prompt_modal').fadeOut(200);
+	    	$('#prompt_modal .next_modal3_con').animate({top:'40%'},400);
+	    	$('body').css({overflowY:'visible'});
+
 	    })
 	   // 点击叉号
 	    $('#select_pro_modal .img').click(function(){

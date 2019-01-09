@@ -1,6 +1,10 @@
 body{
 	background: #f6f6f6 !important;
 }
+table{
+	table-layout: auto !important;
+}
+
 .header{
 	height: 50px;
 	width: 100%;
@@ -90,7 +94,6 @@ body{
 	width:111px;
 	height:14px;
 	font-size:14px;
-	font-family:NotoSansCJKsc-Regular;
 	font-weight:400;
 	color:rgba(48,48,48,1);
 	line-height:22px;
@@ -176,7 +179,6 @@ body{
 	height:14px;
 	line-height: 14px;
 	font-size:14px;
-	font-family:NotoSansCJKsc-Regular;
 	font-weight:400;
 	color:rgba(144,144,144,1);
 	margin-top: 11px;
@@ -211,7 +213,6 @@ body{
 	line-height: 40px;
 	padding-left: 20px !important;
 	font-size:18px;
-	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(48,48,48,1);
 }
@@ -229,7 +230,6 @@ body{
 	background: #fff;
 	padding-left:20px; 
 	font-size:14px;
-	font-family:Roboto-Medium;
 	font-weight:500;
 	color:rgba(16,16,16,1);
 }

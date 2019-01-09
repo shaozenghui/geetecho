@@ -411,7 +411,7 @@ input:focus{
 	position: fixed;
 	bottom: 80px;
 	right: 0;
-	z-index: 100;
+	z-index: 1000;
 }
 #push span{
 	width: 100%;
@@ -440,3 +440,4 @@ table{
 	top:1px;
 	margin-right: 6px;
 }
+

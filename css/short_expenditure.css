@@ -1,13 +1,15 @@
-
+table{
+  table-layout: auto !important;
+}
 #screen>div:nth-child(1){
     position: absolute;
     top: 10px;
-    left: 151px !important;
+    left: 92px !important;
 }
 #screen>div:nth-child(2){
     position: absolute;
     top: 10px;
-    left: 360px !important;
+    left: 373px !important;
 }
 
 #s_table tr td:nth-child(2){

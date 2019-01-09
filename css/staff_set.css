@@ -83,7 +83,11 @@ select::-ms-expand { display: none; }
 	overflow-y: scroll;
 	overflow-x: hidden;
 	/* padding-right: 4px; */
+	scrollbar-arrow-color: #fff; /**//*三角箭头的颜色*/ 
+	scrollbar-face-color: #cacaca; /**//*立体滚动条的颜色*/ 
+	scrollbar-track-color: #fff; /**//*立体滚动条背景颜色*/ 
 }
+
 .content div::-webkit-scrollbar{
   background:#fff;
   width: 6px;
@@ -106,6 +110,11 @@ select::-ms-expand { display: none; }
   background:#fff;
   width: 6px;
 }
+.content div::-ms-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 3px;
+}
+
 .search input {
     width: 130px;
 }
@@ -115,10 +124,7 @@ body {
 #status{
     width: 130px;
 }
-.content div::-ms-scrollbar-thumb { 
-	background:#cacaca;
-	border-radius: 3px;
-}
+
 .content table thead{
 	position: fixed;
 	top: 190px;
