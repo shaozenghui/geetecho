@@ -42,7 +42,6 @@ $(document).ready(function($){
 			if($(this).is('.con_select')){
 				var con = $(this).css('background').indexOf(')')+1;
 				var color = $(this).css('background').slice(0,con);
-				console.log($(this))
 				$(this).parents('._item').find('._list').css('borderLeft','5px solid '+color);
 			}
 		})

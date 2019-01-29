@@ -1,9 +1,11 @@
 $(document).ready(function($) {
 
-	$('#contnet .con_title  p span:last-child i').hover(function(){
-		$('#contnet .con_title .content').show();
+	
+
+	$('#contnet .con_title  .title span:nth-child(2) i').hover(function(){
+		$('#contnet .con_title .title .content').show();
 	},function(){
-		$('#contnet .con_title .content').hide();
+		$('#contnet .con_title .title .content').hide();
 	})
 
 	$("#contnet .content .finance .situation .con>div>ul li div:nth-child(2) p").height();

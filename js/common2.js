@@ -1,4 +1,15 @@
 $(document).ready(function($) {
+	// 成员信息的显示
+	$('#contnet .con_title .membe_infor span:nth-child(1)').hover(function(){
+		$('#contnet .con_title .membe_infor .content').show();
+		$(this).children("i").toggleClass('icon-xiangshang');
+		$(this).children("i").toggleClass('icon-zhcc_xiangxiajiantou');
+	},function(){
+		$('#contnet .con_title .membe_infor .content').hide();
+		$(this).children("i").toggleClass('icon-xiangshang');
+		$(this).children("i").toggleClass('icon-zhcc_xiangxiajiantou');
+	})
+
 	// 回到顶部
 	function many(){
 		var scroll_top = $('html,body').scrollTop();

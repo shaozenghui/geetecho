@@ -80,7 +80,7 @@ select::-ms-expand { display: none; }
 .content div{
 	width: 100%;
 	height: 100%;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	/* padding-right: 4px; */
 	scrollbar-arrow-color: #fff; /**//*三角箭头的颜色*/ 

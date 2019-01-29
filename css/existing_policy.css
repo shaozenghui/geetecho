@@ -118,7 +118,7 @@ select::-ms-expand { display: none; }
 .cont_f_list>li ul{
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x:hidden;
     padding-top: 4px;
 }
@@ -132,7 +132,7 @@ select::-ms-expand { display: none; }
 }
 
 .cont_f_list>li ul li{
-    width: 330px;
+    width: 336px;
     min-height: 74px;
     float: left;
     margin-bottom: 14px;
@@ -520,7 +520,7 @@ select::-ms-expand { display: none; }
 .select_pro_modal_con .cont2{
     width: 1240px;
     height: 100%;
-    overflow-y: scroll !important;
+    overflow-y: auto !important;
     overflow-x: hidden;
 }
 .select_pro_modal_con .cont2::-webkit-scrollbar{
@@ -829,7 +829,7 @@ tbody tr td span:nth-child(2){
 }
 .five_list>li .cont .bar  ul{
     float: right;
-    width: 151px;
+    width: 160px;
     height: 100%;
 }
 .five_list>li .cont .bar .title ul li {
@@ -840,24 +840,24 @@ tbody tr td span:nth-child(2){
     font-size: 18px;
     text-align: right
 }
-.five_list>li .cont .title ul li span:nth-child(1){
+.five_list>li .cont .title ul li span:nth-child(2){
     height: 30px;
     line-height: 30px;
     font-size: 18px !important;
-    float: right;
+    float: left;
     color: #424242;
     margin: 0;
 }
-.five_list>li .cont .title ul li span:nth-child(2) {
+.five_list>li .cont .title ul li span:nth-child(1) {
     width: 18px;
     height: 18px;
     margin-right: 10px;
     float: left;
     position: relative;
-    top: 8px;
+    top: 6px;
     background: #3fe993 !important;
 }
-.five_list>li .cont .title ul li:nth-child(2) span:nth-child(2) {
+.five_list>li .cont .title ul li:nth-child(2) span:nth-child(1) {
     font-size: 18px;
     background: #3da8f5 !important;
 }

@@ -191,7 +191,7 @@ table {
 	font-weight: 400 !important;
 }
 #contnet .content  .recommend .con  .p_b{
-	line-height: 16px;
+	line-height: 18px;
 	border-left: 3px solid #3da8f5;
 	padding-left: 10px;
 	margin-bottom: 15px;
@@ -204,7 +204,9 @@ table {
     margin-right: 0;
     margin-top: 20px;
 }
-
+#contnet .content .recommend-zixuan .con{
+	width: 100% !important;
+}
 
 /* 结论与建议模态框 */
 #jy_adjustment_modal{
@@ -519,4 +521,7 @@ table {
 }
 #contnet .content .recommend .con .p_b:nth-child(1){
 	margin-top: 0px !important;
+}
+#contnet .content .recommend-zixuan>p{
+	width: 1204px !important;
 }

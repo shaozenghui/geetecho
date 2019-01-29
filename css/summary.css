@@ -366,7 +366,7 @@
 }
 .tab_content ul{
 		height: 406px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	width: 100%;
 	position: relative;
@@ -514,7 +514,7 @@
 }
 
 #assets_liabilities .list_tit_th{
-  width: 731px;
+  width: 736px;
   height: 40px;
   line-height: 40px;
   border: 1px solid #cacaca;
@@ -645,7 +645,8 @@
     width: 246px;
 }
 #income .list_tit_th{
-  width: 1179px;
+  min-width: 1184px;
+  max-width: 1184px;
   height: 40px;
   line-height: 40px;
   border: 1px solid #cacaca;

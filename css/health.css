@@ -71,13 +71,13 @@ select::-ms-expand { display: none; }
     width: 363px;
     height: 483px;
     float: left;
-    overflow-y:scroll;
+    overflow-y:auto;
     overflow-x:hidden;
     padding: 2px;
 }
 
 .cont_f_list>li .cont_f_list_con ._item ._list{
-    width: 301px;
+    width: 306px;
     position: relative;
     border-radius: 4px;
     margin-bottom: 14px;
