@@ -288,9 +288,23 @@ table {
 .jy_adjustment_modal_body .box:last-child{
 	border-bottom: none !important;
 }
-.jy_adjustment_modal_body .box div{
+.jy_adjustment_modal_body .box>div{
 	margin-bottom: 15px;
     height: 40px;
+    z-index: 210;
+}
+.dropdown-main ul {
+    max-height: 70px !important;
+
+}
+.dropdown-display {
+
+    padding: 9px 20px 9px 12px !important;
+}
+.dropdown-display .placeholder:first-child {
+    color: #000;
+    line-height: 40px !important;
+    padding-left: 5px;
 }
  .jy_adjustment_modal_body label {
     float: left;

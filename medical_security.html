@@ -5,13 +5,14 @@
 	<title>医疗保障</title>
 	<link rel="stylesheet" href="css/s_bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-table.css">
-	<link rel="stylesheet" href="css/bootstrap-editable.css">
+    <link rel="stylesheet" href="css/bootstrap-editable.css">
+    <link rel="stylesheet" href="css/jquery.dropdown.css">
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/medical_security.css">
 	<link rel="stylesheet" href="css/common2.css">
 	<link rel="stylesheet" href="css/iconfont.css">
 	<link rel="stylesheet" href="css/just-tip.css">
-
+ 
 </head>
 <body>
 	<div class="header">
@@ -278,7 +279,7 @@
 									<p>建议：</p>
 									<p class="text"> 1. 补充住院+意外医疗险（储蓄型），预算：当前无符合产品，请手动选择。<br>
                                     2. 重疾险现有36,000元，还需投保：164,000-464,000元，<br>
-                                    建议选择重疾险（定期型），预算：164,000-464,000元。</p>
+                                    &nbsp;&nbsp; &nbsp;建议选择重疾险（定期型），预算：164,000-464,000元。</p>
 								</div>
 							</div>
 							<div>
@@ -288,7 +289,7 @@
 									<p>建议：</p>
 									<p class="text"> 1. 补充住院+意外医疗险（储蓄型），预算：当前无符合产品，请手动选择。<br>
                                     2. 重疾险现有36,000元，还需投保：164,000-464,000元，<br>
-                                    建议选择重疾险（定期型），预算：164,000-464,000元。</p>
+                                    &nbsp;&nbsp; &nbsp;建议选择重疾险（定期型），预算：164,000-464,000元。</p>
 								</div>
 							</div>
 							<p style="font-weight: bold;">上述定期型产品均不返还；住院险部分保费会随年龄变化。</p>
@@ -333,7 +334,7 @@
 									<p>建议：</p>
 									<p class="text"> 1. 补充住院+意外医疗险（储蓄型），预算：当前无符合产品，请手动选择。<br>
                                     2. 重疾险现有36,000元，还需投保：164,000-464,000元，<br>
-                                    建议选择重疾险（定期型），预算：164,000-464,000元。</p>
+                                    &nbsp;&nbsp; &nbsp;建议选择重疾险（定期型），预算：164,000-464,000元。</p>
 								</div>
 							</div>
 							<div>
@@ -343,7 +344,7 @@
 									<p>建议：</p>
 									<p class="text"> 1. 补充住院+意外医疗险（储蓄型），预算：当前无符合产品，请手动选择。<br>
                                     2. 重疾险现有36,000元，还需投保：164,000-464,000元，<br>
-                                    建议选择重疾险（定期型），预算：164,000-464,000元。</p>
+                                    &nbsp;&nbsp; &nbsp;建议选择重疾险（定期型），预算：164,000-464,000元。</p>
 								</div>
 							</div>
 							<p style="font-weight: bold;">上述定期型产品均不返还；住院险部分保费会随年龄变化。</p>
@@ -353,7 +354,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- 选择产品 -->635794 QHAJVI
+	<!-- 选择产品 -->
 	<div id="select_pro_modal">
 		<div class="select_pro_modal">
 			<i class="img iconfont icon-guanbi"></i>
@@ -727,7 +728,8 @@
 			</div>
 			<div class="jy_adjustment_modal_body">
 				<div class="form_f box">
-					<p>成员1</p>
+                    <p>成员1</p>
+                   
 					<div>
 						<label for="">结论</label>
 						<select name=""  id="xian_l">
@@ -737,7 +739,33 @@
 							<option value="">100,000</option>
 							
 						</select>
-					</div>
+                    </div>
+                    <div>
+                        <label for="">医疗险险种</label>
+                        <div class="dropdown-mul-2" style="width:269px;float:right;" >
+                            <select style="display:none" name="" id="mul-2" multiple placeholder="请选择">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="1c">1c</option>
+                                    <option value="2c">2c</option>
+                                    <option value="3c">3c</option>
+                                    <option value="4c">4c</option>
+                                    <option value="5c">5c</option>
+                                    <option value="6c">6c</option>
+                                    <option value="7c">7c</option>
+                                    <option value="8c">8c</option>
+                                    <option value="9c">9c</option>
+                               
+                            </select>
+                        </div>
+                    </div>
 					<div>
 						<label for="">医疗险补充</label>
 						<select name=""  id="xian_l">
@@ -755,10 +783,12 @@
 							<option value="">消费型</option>
 							<option value="">储蓄型</option>
 						</select>
-					</div>
+                    </div>
+                    
 				</div>
 				<div class="form_f box">
-					<p>成员2</p>
+                    <p>成员2</p>
+                   
 					<div>
 						<label for="">结论</label>
 						<select name=""  id="xian_l">
@@ -767,7 +797,32 @@
 							<option value="">100,000</option>
 							<option value="">100,000</option>
 						</select>
-					</div>
+                    </div>
+                    <div>
+                        <label for="">医疗险险种</label>
+                        <div class="dropdown-mul-2" style="width:269px;float:right;" >
+                            <select style="display:none" name="" id="mul-2" multiple placeholder="请选择">
+                                    <option value="体检1">体检1</option>
+                                    <option value="体检2">体检2</option>
+                                    <option value="体检3">体检3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="1c">1c</option>
+                                    <option value="2c">2c</option>
+                                    <option value="3c">3c</option>
+                                    <option value="4c">4c</option>
+                                    <option value="5c">5c</option>
+                                    <option value="6c">6c</option>
+                                    <option value="7c">7c</option>
+                                    <option value="8c">8c</option>
+                                    <option value="9c">9c</option>
+                            </select>
+                        </div>
+                    </div>
 					<div>
 						<label for="">医疗险补充</label>
 						<select name=""  id="xian_l">
@@ -785,38 +840,10 @@
 							<option value="">消费型</option>
 							<option value="">储蓄型</option>
 						</select>
-					</div>
-				</div>
-				<div class="form_f box">
-					<p>成员2</p>
-					<div>
-						<label for="">结论</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">100,000</option>
-							<option value="">100,000</option>
-							<option value="">100,000</option>
-						</select>
-					</div>
-					<div>
-						<label for="">医疗险补充</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">终身型</option>
-							<option value="">定期性</option>
-							<option value="">终身型或定期性</option>
-							
-						</select>
-					</div>
-					<div>
-						<label for="">重疾险投保</label>
-						<select name=""  id="xian_l">
-							<option value="">请选择</option>
-							<option value="">消费型</option>
-							<option value="">储蓄型</option>
-						</select>
-					</div>
-				</div>
+                    </div>
+                   
+				</div> 
+			
 			</div>
 			<div class="jy_adjustment_modal_footer">
 				<button >保存</button>
@@ -869,3 +896,16 @@
 <script src="js/common2.js"></script>
 <script src="js/justTools.js"></script>
 <script src="js/header_common.js"></script>
+<script src="js/jquery.dropdown.js"></script>
+<script>
+// 多选
+    $('.dropdown-mul-2').dropdown({
+      searchable: true,
+      input: '<input type="text" maxLength="20" placeholder="搜索关键词或ID">',
+      choice:function(){
+        // console.log(arguments,this);
+      },
+      searchNoData:"<li >查无数据，换个词儿试试 /(ㄒoㄒ)/~~</li>"
+    //   data:[]
+    });
+  </script>

@@ -88,7 +88,7 @@
     top: -9px;
     left: 105px;
     z-index: 2;
-     /*display: none; */
+     display: none;
 }
 #contnet .con_title .title .content span{
 	content: ''; 

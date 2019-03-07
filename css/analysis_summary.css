@@ -886,7 +886,8 @@ tbody tr td span:nth-child(2){
 /* 缺口样式 */
 .gap{
 	margin-top: 10px;
-	overflow: hidden;
+    overflow: hidden;
+    position: relative;
 }
 .gap_title{
 	width: 100%;
@@ -904,6 +905,41 @@ tbody tr td span:nth-child(2){
 .gap table{
 	margin-top: 80px;
 	float: right;
+}
+.gap .pie_sum{
+    width: 200px;
+    position: absolute;
+    top: 94px;
+    left: 294px;
+
+}
+.gap .pie_sum li{
+    width: 100%;
+    font-size: 18px;
+    color: #424242;
+    float: left;
+    margin-bottom: 20px;
+}
+.gap .pie_sum li span{
+    line-height: 18px;
+}
+.gap .pie_sum li span:nth-child(1){
+    margin-right: 6px;
+    float: left;
+    width: 18px;
+    height: 18px;
+}
+.gap .pie_sum li:nth-child(1) span:nth-child(1){
+    background: #ffe157;
+}
+.gap .pie_sum li:nth-child(2) span:nth-child(1){
+    background: #3da8f5;
+}
+.gap .pie_sum li span:nth-child(2){
+    float: left;
+}
+.gap .pie_sum li span:nth-child(3){
+    float: right;
 }
 #pie{
 	float: left;
@@ -1105,7 +1141,8 @@ tbody tr td span:nth-child(2){
 	margin-bottom: 20px;
 }
 .Conclusion>div div{
-	float: left;
+    float: left;
+    width: 100%;
 }
 .Conclusion .subtitle{
 	height: 40px;
@@ -1114,7 +1151,7 @@ tbody tr td span:nth-child(2){
 	font-size: 26px;
 	float: left;
 	margin-right: 60px;
-
+    margin-top: 5px;
 }
 .Conclusion .subtext{
 	width: 972px;

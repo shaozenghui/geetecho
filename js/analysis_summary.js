@@ -131,34 +131,13 @@ $(document).ready(function($) {
     (function(){
     	// 基于准备好的dom，初始化echarts实例
     	var myChart = echarts.init(document.getElementById('pie'));
-    	var user1 ='张 '+ 22900;
-    	var user2 = '李 '+ 100000;
-
     	option = {
-    	    legend: {  
-                orient : 'vertical',  
-                top:54,
-                left:307,
-                itemWidth:18,
-                itemHeight:18,
-                selectedMode:false,
-                itemGap:20,
-                formatter: '{name}',
-                textStyle:{
-                    color: '#424242',
-                    fontSize:18
-                },
-                data:[
-                     {name:user1,icon:'rect'},
-                     {name:user2,icon:'rect'},
-                ]  
-            },
     	    series : [
     	        {
     	            hoverAnimation:false,
     	            type: 'pie',
     	            radius : '55%',
-    	            center: ['30%', '50%'],
+    	            center: ['50%', '50%'],
     	            label:{
     	            	normal:{
                             position:'inner', 
@@ -171,7 +150,6 @@ $(document).ready(function($) {
     	            data:[ 
     	                 {
     		               	value:22900,
-    		                name:user1,
     		                itemStyle:{
     		                	normal:{
     		                		color:'#ffe157'
@@ -180,7 +158,6 @@ $(document).ready(function($) {
     	                },
     	                {
     	                	value:10000,
-    	                	name:user2,
     	                	itemStyle:{
     		                	normal:{
     		                		color:'#3da8f5'
