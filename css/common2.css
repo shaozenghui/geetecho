@@ -302,9 +302,9 @@
 	font-size: 14px;
 	font-weight: bold;
 	color: #303030;
-white-space: nowrap;/*控制单行显示*/
-overflow: hidden;/*超出隐藏*/
-text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
+    white-space: nowrap;/*控制单行显示*/
+    overflow: hidden;/*超出隐藏*/
+    text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 
 }
 #contnet .content .policy .table .item thead tr th:nth-child(5){
@@ -312,11 +312,10 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	text-align: right;
 	padding-right: 20px;
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(5){
+#contnet .content .policy .table .item tbody tr .initpremium{
 	padding-left: 0;
 	text-align: right;
 	padding-right: 20px;
-
 }
 #contnet .content .policy .table .item thead tr th:nth-child(6){
 	padding-left: 0;
@@ -324,13 +323,13 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	padding-right: 20px;
 
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(6){
+#contnet .content .policy .table .item tbody tr .reduce_td{
 	padding-left: 0;
 	text-align: right;
 	padding-right: 20px;
 	padding-top:4px;
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(6) div{
+#contnet .content .policy .table .item tbody tr .reduce_td div{
 	right: 20px;
 	width: 120px;
 	border: 1px solid #dedede;
@@ -339,7 +338,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	line-height: 32px;
 	float: right;
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(6) div span{
+#contnet .content .policy .table .item tbody tr .reduce_td div span{
 	float: left;
 	width: 21px;
 	height: 30px;
@@ -348,7 +347,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	background: rgba(240,240,240,1);
 	cursor: pointer;
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(6) div input{
+#contnet .content .policy .table .item tbody tr .reduce_td div input{
 	float: left;
 	width: 76px;
 	height: 30px;
@@ -356,14 +355,14 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	text-align: center;
 	border: none;
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(7){
+#contnet .content .policy .table .item tbody tr .submit_id{
 	cursor: pointer;
 	color: #909090;
 	font-size: 14px;
 	font-weight: bold;
 
 }
-#contnet .content .policy .table .item tbody tr td:nth-child(7):hover{
+#contnet .content .policy .table .item tbody tr .submit_id:hover{
 	color: #3da8f5;
 
 }
@@ -378,7 +377,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	padding-left: 20px;
 	padding-right: 0px;
 }
-#contnet .content .policy .table .item2 tr td:nth-child(5){
+#contnet .content .policy .table .item2 tr .initpremium{
 	width: 152px;
 	padding-right: 20px;
 	padding-left: 0px;
@@ -386,7 +385,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 }
 /*推荐方案*/
 #contnet .content .recommend{
-	width:612px;
+	width:640px;
 	min-height: 450px;
 	padding: 20px;
 	border-radius: 6px;
@@ -406,7 +405,7 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
     line-height: 50px;
     border-bottom: 1px solid #dedede;
     margin-right: 20px;
-    width: 570px;
+    width: 600px;
 }
 #contnet .content  .recommend>p span:nth-child(1) {
     font-size: 18px;
@@ -471,6 +470,12 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	line-height: 40px;
 	
 }
+#contnet .content .recommend .selet li a{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+	color: #101010;
+}
 #contnet .content .recommend .selet li:first-child{
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
@@ -479,7 +484,11 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-#contnet .content .recommend .selet li:hover{
+#contnet .content .recommend .selet li:hover {
+	background: #3da8f5;
+	color: #fff;
+}
+#contnet .content .recommend .selet li:hover a {
 	background: #3da8f5;
 	color: #fff;
 }
@@ -509,494 +518,6 @@ text-overflow: ellipsis;/*隐藏的字符用省略号表示*/
 	float: left; 
 }
 
-
-
-
-/*选择产品模态框 */
-#select_pro_modal{
-	width: 100%;
-	height: 100%;
-	background: rgba(56,56,56,0.7);
-	position: fixed;
-	top:0;
-	left: 0;
-	display: none;
-	z-index: 200;
-}
-#select_pro_modal .select_pro_modal{
-	width: 1246px;
-	height: 660px;
-	position: absolute;
-	left:50%;
-	top: 50%;
-	background: #fff;
-	margin-left: -623px;
-	margin-top: -330px;
-	padding: 0px 20px;
-	border-radius: 4px;
-	box-shadow: 0px 5px 15px rgba(0,0,0,.5);
-}
-#select_pro_modal li{
-	float: left;
-}
-.select_pro_modal>img{
-	position: absolute;
-	top: 16px;
-	right: 10px;
-	cursor: pointer;
-}
-.select_pro_modal .img{
-	position: absolute;
-	top:5px;
-	right:28px;
-	cursor: pointer;
-	width: 16px;
-	height: 16px;
-	font-size: 28px;
-	color: #999;
-}
-.select_pro_modal .img:hover{
-	color: #3da8f5;
-}
- .select_pro_modal_titile{
-	width: 100%;
-	height: 48px;
-	line-height: 48px;
-	border-bottom: 1px solid #cacaca;
-	margin-bottom: 20px;
-}
- .select_pro_modal_titile li{
- 	padding:0px 12px;
- 	height: 48px;
- 	margin-right: 20px;
- 	line-height: 48px;
- 	font-size: 16px;
- 	color: #303030;
- 	text-align: center;
- 	border-bottom: 4px solid transparent;
- 	cursor: pointer;
-	 font-weight: bold;
- }
- .select_pro_modal_con {
- 	width: 1226px;
- 	height: 530px;
- 	overflow: hidden;
- }
-  .select_pro_modal_con>li{
-  	width: 1216px;
-	height: 530px;
-	overflow-y: auto;
-	overflow-x: hidden;
-	padding-right: 2px;
-	display: none;
-  }
-  .select_pro_modal_con>li:first-child{
-	display: block;
-  }
-.select_pro_modal_con>li::-webkit-scrollbar{
-	  background:#fff;
-	  width: 8px;
- }
-.select_pro_modal_con>li::-webkit-scrollbar-thumb { 
-	background:#cacaca;
-	border-radius: 4px;
-	opacity: 0.5;
-}
-.select_pro_modal_con>li>div{
-	width: 100%;
-	overflow: hidden;
-	border-radius: 4px;
-	float: left;
-	margin-bottom: 22px;
-	border-bottom: 1px dashed #cacaca;
-}
-.select_pro_modal_con>li>div:last-child{
-	border-bottom: none;
-}
-.select_pro_modal_con_tit{
-	width: 100%;
-	height: 30px;
-	line-height: 30px;	
-	margin-bottom: 15px;
-	color: #303030;
-	font-size: 16px;
-	position: relative;
-}
-.select_pro_modal_con_tit span{
-	float: left;
-	font-weight: bold;
-}
-.select_pro_modal_con_tit .add_1{
-	float: right;
-	width: 40px;
-  	height: 30px;
-  	line-height: 30px;
-  	text-align: right;
-  	cursor: pointer;
-  	color: #909090;
-  	font-size: 14px;
-	margin-top: 7px;
-	display: none;
-}
-.select_pro_modal_con_tit .add_1 i{
-	font-size: 20px;
-}
-.select_pro_modal_con_tit .add_1:hover{
-	color: #3da8f5;
-}
-.select_pro_modal_con_tit .del:hover{
-	color: #3da8f5;
-}
-.select_pro_modal_con_tit .del{
-	float: right;
-	width: 40px;
-  	height: 30px;
-  	line-height: 30px;
-  	text-align: right;
-  	cursor: pointer;
-  	color: #959595;
-  	font-size: 14px;
-	margin-top: 7px;
-	display: none;
-}
-.select_pro_modal_con_tit .del i{
-	font-size: 18px;
-}
-.select_pro_modal_con_tit .add_1 i{
-	margin-right: 8px;
-}
-.select_pro_modal_con_tit .del i{
-	margin-right: 8px;
-}
-
-.select_pro_modal_con_tit ul{
-	width: 200px;
-	height: 30px;
-	line-height: 30px;
-	position: absolute;
-	top: 0px;
-	left: 100px;
-}
-.select_pro_modal_con_tit ul li{
-	width: 80px;
- 	height:30px;
- 	border-radius: 15px;
- 	margin-right: 20px;
- 	line-height:30px;
- 	font-size: 14px;
- 	color: #909090;
- 	text-align: center;
- 	border-bottom: 4px solid transparent;
- 	cursor: pointer;
-	font-weight: bold;
-}
-
-.selct_con2{
-	color: #3da8f5 !important;
-	border-bottom: 3px solid #3da8f5 !important;
-}
-.selct_con{
-	color: #fff !important;
-	background: #438CEF !important;
-}
-.select_pro_modal_table{ 
-	width: 1202px;
-	margin-top: 10px;
-	margin-right: 10px;
-	margin-bottom: 0px;
-	overflow: hidden;
-	table-layout: fixed;
-}
-.select_pro_modal_table li{
-	width: 1202px;
-	overflow: hidden;
-	padding-bottom: 30px;
-
-	display: none;
-}
-.select_pro_modal_yiwai .select_pro_modal_table li{
-	border-bottom: none;
-}
-.select_pro_modal_table li table{
-	
-	width: 1197px;
-	/*overflow: hidden;*/
-	border: 1px solid #cacaca;
-	border-bottom: none;
-
-}
-.select_pro_modal_table li:nth-child(1){
-	display: block;
-}
-.select_pro_modal_table li table thead tr{
-	background: #f0f0f0;
-}
-.select_pro_modal_table li table thead th{
-	height: 50px;
-	line-height: 50px;
-	border-bottom: 1px solid #cacaca;
-	padding-left: 10px;
-}
-.select_pro_modal_table li table tbody td{
-	height: 50px;
-	border-bottom: 1px solid #cacaca;
-	padding-left: 10px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space:nowrap;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(1){
-	width: 260px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(2){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(3){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(4){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(5){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(6){
-	width: 100px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7){
-	width: 200px;
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7) span:nth-child(1){
-	float: left;
-	margin-left: 20px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7) span:nth-child(2){
-	float: right;
-	margin-right: 20px;
-}
-.select_pro_modal_table li:nth-child(1) table thead th:nth-child(8){
-	width: 150px;
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-}
-.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7){
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-}
-.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7) span:nth-child(1){
-	float: left;
-	margin-left: 20px;
-}
-.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7) span:nth-child(2){
-	float: right;
-	margin-right: 20px;
-}
-.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(8){
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(1){
-	width: 30px;
-	padding: 0px;
-
-}
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(1){
-	cursor: pointer;
-	
-}
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(1) i{
-	font-size: 20px;
-}
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(1) :hover{
-	color: #3da8f5;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(2){
-	width: 230px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(3){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(4){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(5){
-	width: 110px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(6){
-	width: 80px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(7){
-	width: 80px;
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(8){
-	width: 226px;
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-	padding-left: 10px;
-
-}
-.select_pro_modal_table li:nth-child(2) table thead th:nth-child(9){
-	width: 180px;
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-}
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(8){
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-	position: relative;
-}
-
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(8) input{
-	width: 100px;
-/*	padding-top: 10px;
-	padding-bottom: 10px;*/
-	border: 1px solid #cacaca;
-	border-radius: 2px;
-	float: right;
-}
-
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(8) span{
-	width:20px;
-	height: 35px;
-	line-height: 35px;
-	text-align: center;
-	float: right;
-}
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(9){
-	text-align: right;
-	padding-left: 0px;
-	padding-right: 10px;
-}
-.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(2) select{
-	    background-position: 206px center !important;
-}
-
-
-
-  .select_pro_modal_footer {
-  	width: 1206px;
-  	height: 60px;
-  	position: absolute;
-  	border-top: 1px solid #cacaca;
-  	bottom: 0;
-	left: 10px;
-  }
-  .select_pro_modal_footer button{
-  	position: absolute;
-  	top: 10px;
-  	left: 50%;
-  	margin-left: -50px;
-  	width: 100px;
-  	height: 40px;
-  	line-height: 40px;
-  	text-align: center;
-  	color: #fff;
-  	font-size: 14px;
-  	border: 0 none;
-	background: #3da8f5;
-	border-radius: 4px;
-  }
-#select_pro_modal select {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background: url(../img/pull-down-display.png);
-    background-repeat: no-repeat;
-    background-position: 176px center;
-    background-color: #fff;
-}
-.select_pro_modal_table li  tr select,
-.select_pro_modal_table li  tr input{
-	width: 100%;
-	height: 35px;
-	border: 0 none;
-	border: 1px solid #cacaca;
-	border-radius: 4px;
-	padding-left: 5px !important;
-	background-position: 73px center !important;
-	overflow: hidden;
-	text-overflow:ellipsis;
-	white-space: nowrap;
-	text-align: right;
-}
- .select_pro_modal_table  .s_select_1{
-	background-position: 159px center !important;
-}
-.s_select_2{
-	/* background-position: 232px center !important; */
-	/*background: #f0f0f0 !important;
-	cursor:not-allowed !important;;*/
-}
-
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr th:nth-child(1){
-	width: 30px !important;
-    height: 30px !important;
-    position: relative;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr th:nth-child(1) input{
-	position: relative;
-	left: 16px;
-}
-
-
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td select{
-	background-position: 83px center !important;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(2) select{
-	background-position: 208px center !important;
-	padding-right: 28px;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(6) select{
-	background-position: 53px center !important;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(7) select{
-	background-position: 53px center !important;
-}
- #select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(1){
-	width: 30px !important;
-    height: 30px !important;
-    position: relative;
-}
-.select_pro_modal_table li  tr input[type="checkbox"]{
-	width: 14px !important;
-	height: 14px !important;
-	 position: relative;
-	 top: 2px;
-	 left: 5px;
-
-}
-.select_pro_modal_table li  th input[type="checkbox"]{
-	width: 14px !important;
-	height: 14px !important;
-	 position: relative;
-	 top: 2px;
-	 left: -10px;
-
-
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr th:nth-child(7){
-   
-    text-align: left !important;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(1) tr td:nth-child(1) .s_select_1{
-
-    background-position: 237px center !important;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(1) tr td:nth-child(5) select{
-    background-position: 97px center !important;
-}
-#select_pro_modal  .select_pro_modal_table li:nth-child(1) tr td:nth-child(6) select{
-    background-position: 97px center !important;
-}
 
 .primary_policy_change_data{
 	display: none;

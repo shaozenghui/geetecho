@@ -764,7 +764,8 @@ table {
 }
 /*注释*/
 #contnet .content  .remark {
-	margin-right: 0px;
+    margin-right: 0px;
+    width: 582px !important;
 }
 
 

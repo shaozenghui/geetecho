@@ -859,7 +859,7 @@ tbody tr td span:nth-child(2){
 .balance_conclusion{
 	width: 100%;
 	overflow: hidden;
-	margin-bottom: 34px;
+	margin: 34px 0;
 }
 .balance_conclusion span:nth-child(1){
 	font-size: 24px;
@@ -1098,7 +1098,6 @@ tbody tr td span:nth-child(2){
 }
 .sociaSecurity img{
 	position: relative;
-	left: -40px;
 }
 /* 方案推荐 */
 .programme_item thead th{
@@ -1191,7 +1190,8 @@ tbody tr td span:nth-child(2){
 	float: left;
 }
 .sociaSecurity{
-	overflow: hidden;
+    overflow: hidden;
+    margin-top: 20px
 }
 .medicalSecurity table thead th:nth-child(1){
 	width: 429px;

@@ -1,0 +1,499 @@
+/* footer开始 */
+.s_footer{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #fff;
+	box-shadow: 0px -2px 2px rgba(0,0,0,0.2);
+}
+.s_footer .cont{
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -50px;
+	height: 40px;
+}
+.s_footer .cont a:nth-child(1){
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #3da8f5;
+	border: 0 none;
+	border-radius: 4px;
+	color: #fff;
+	float: left;
+	cursor: pointer;
+	font-size: 14px;
+}
+.s_footer .cont a:nth-child(1):hover{
+	background: #3d98f5;
+}
+.s_footer .cont a:nth-child(1):active{
+	background: #3d7ef5;
+}
+.s_footer .cont a:nth-child(2){
+	width:100px;
+    height:40px;
+    border:1px solid rgba(222,222,222,1);
+    border-radius:4px 4px 4px 4px;
+    line-height: 40px;
+    text-align: center;
+    color: #909090;
+	float: left;
+	cursor: pointer;
+    font-size: 14px;
+    margin-left: 40px;
+}
+.s_footer .cont a:nth-child(2):hover{
+    color: #fff;
+	background: #3d98f5;
+}
+.s_footer .cont a:nth-child(2):active{
+    color: #fff;
+    background: #3d7ef5;
+}
+/* 内容 */
+#contnet{
+	margin-bottom: 100px;
+}
+#contnet .con_title{
+	/* margin-bottom: 30px; */
+	height: 88px;
+	line-height: 88px;
+    width: 1246px;
+    background: #f6f6f6;
+    position: fixed;
+    top: 51px;
+    z-index: 100;
+}
+#contnet .con_title .title{
+	position: relative;
+}
+#contnet .con_title .title span:first-child {
+    font-size: 20px;
+    color: #202020;
+    margin-right: 10px;
+    float: left;
+}
+/*选择产品模态框 */
+#select_pro_modal{
+	width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+#select_pro_modal .select_pro_modal{
+	width: 1246px;
+    overflow: hidden;
+	
+	border-radius: 4px;
+}
+#select_pro_modal li{
+	float: left;
+}
+.select_pro_modal>img{
+	position: absolute;
+	top: 16px;
+	right: 10px;
+	cursor: pointer;
+}
+.select_pro_modal .img{
+	position: absolute;
+	top:5px;
+	right:28px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	font-size: 28px;
+	color: #999;
+}
+.select_pro_modal .img:hover{
+	color: #3da8f5;
+}
+ .select_pro_modal_titile{
+	width: calc(100% - 200px);
+	height: 35px;
+    line-height: 35px;
+    float: left;
+    margin-left: 70px;
+    margin-top: 25px;
+}
+ .select_pro_modal_titile li{
+    display: inline-block;
+ 	height: 35px;
+ 	margin-right: 70px;
+ 	line-height: 35px;
+ 	font-size: 14px;
+ 	color: #303030;
+ 	text-align: center;
+ 	border-bottom: 4px solid transparent;
+ 	cursor: pointer;
+	 font-weight: bold;
+ }
+ .select_pro_modal_con {
+ 	width: 1246px;
+ 	overflow: hidden;
+ }
+  .select_pro_modal_con>li{
+  	width: 1246px;
+	overflow: hidden;
+	/* overflow-y: auto;
+	overflow-x: hidden; */
+	padding-right: 2px;
+	display: none;
+  }
+  .select_pro_modal_con>li:first-child{
+	display: block;
+  }
+.select_pro_modal_con>li::-webkit-scrollbar{
+	  background:#fff;
+	  width: 8px;
+ }
+.select_pro_modal_con>li::-webkit-scrollbar-thumb { 
+	background:#cacaca;
+	border-radius: 4px;
+	opacity: 0.5;
+}
+.select_pro_modal_con>li>div{
+	width: 1246px;
+    overflow: hidden;
+	border-radius: 4px;
+	float: left;
+    margin-bottom: 22px;
+    background: #fff;
+    padding: 20px;
+}
+.select_pro_modal_con>li>div:last-child{
+	border-bottom: none;
+}
+.select_pro_modal_con_tit{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;	
+	margin-bottom: 15px;
+	color: #303030;
+	font-size: 16px;
+	position: relative;
+}
+.select_pro_modal_con_tit span{
+	float: left;
+	font-weight: bold;
+}
+.bar1{
+    position: absolute;
+    top:4px;
+    left:-20px;
+    width:3px;
+    height:20px;
+    background:rgba(61,168,245,1);
+    border-radius:0px 3px 3px 0px;
+}
+.bar2{
+    position: absolute;
+    top:4px;
+    left:-20px;
+    width:3px;
+    height:20px;
+    background:rgba(255,215,77,1);
+    border-radius:0px 3px 3px 0px;
+}
+.select_pro_modal_table li:nth-child(2) .add_1 {
+    width: 100%;
+    height: 30px;
+}
+.select_pro_modal_table li:nth-child(2) .add_1 span{
+	float: left;
+  	height: 30px;
+  	line-height: 30px;
+  	text-align: right;
+  	cursor: pointer;
+  	color: #909090;
+  	font-size: 14px;
+	margin-top: 7px;
+    font-weight: bold;
+}
+.select_pro_modal_table li:nth-child(2) .add_1 i{
+	font-size: 16px;
+}
+.select_pro_modal_table li:nth-child(2) .add_1 span:hover{
+	color: #3da8f5;
+}
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(9) .del:hover{
+	color: #3da8f5;
+}
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(9) .del{
+	float: right;
+	width: 40px;
+  	height: 30px;
+  	line-height: 30px;
+  	text-align: right;
+  	cursor: pointer;
+  	color: #959595;
+  	font-size: 14px;
+	text-align: center;
+}
+
+.select_pro_modal_con_tit .del i{
+	font-size: 18px;
+}
+
+.select_pro_modal_con_tit .add_1 i{
+	margin-right: 8px;
+}
+.select_pro_modal_con_tit .del i{
+	margin-right: 8px;
+}
+
+.select_pro_modal_con_tit ul{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+}
+.select_pro_modal_con_tit ul li{
+	width: 80px;
+ 	height:30px;
+ 	border-radius: 15px;
+ 	margin-right: 20px;
+ 	line-height:30px;
+ 	font-size: 14px;
+ 	color: #909090;
+ 	text-align: center;
+ 	border-bottom: 4px solid transparent;
+ 	cursor: pointer;
+	font-weight: bold;
+}
+
+.selct_con2{
+	color: #3da8f5 !important;
+	border-bottom: 3px solid #3da8f5 !important;
+}
+.selct_con{
+	color: #fff !important;
+	background: #438CEF !important;
+}
+.select_pro_modal_table{ 
+	width: 1202px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	overflow: hidden;
+	table-layout: fixed;
+}
+.select_pro_modal_table li{
+	width: 1202px;
+	overflow: hidden;
+	padding-bottom: 30px;
+
+	display: none;
+}
+.select_pro_modal_yiwai .select_pro_modal_table li{
+	border-bottom: none;
+}
+
+.select_pro_modal_table li table{
+	width: 1197px;
+	/* border: 1px solid #cacaca; */
+	border-bottom: none;
+}
+.select_pro_modal_table li:nth-child(1){
+	display: block;
+}
+.select_pro_modal_table li table thead tr{
+	/* background: #f0f0f0; */
+}
+.select_pro_modal_table li table thead th{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #cacaca;
+    padding-left: 10px;
+    color: #909090;
+}
+.select_pro_modal_table li table tbody td{
+	height: 50px;
+	border-bottom: 1px solid #cacaca;
+	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(1){
+	width: 260px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(2){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(3){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(4){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(5){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(6){
+	width: 100px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7){
+	width: 200px;
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7) span:nth-child(1){
+	float: left;
+	margin-left: 20px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(7) span:nth-child(2){
+	float: right;
+	margin-right: 20px;
+}
+.select_pro_modal_table li:nth-child(1) table thead th:nth-child(8){
+	width: 150px;
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7){
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7) span:nth-child(1){
+	float: left;
+	margin-left: 20px;
+}
+.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(7) span:nth-child(2){
+	float: right;
+	margin-right: 20px;
+}
+.select_pro_modal_table li:nth-child(1) table tbody tr td:nth-child(8){
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(1){
+	width: 270px;
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(2){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(3){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(4){
+	width: 110px;
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(5){
+	width: 80px;
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(6){
+	width: 80px;
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(7){
+	width: 226px;
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+}
+.select_pro_modal_table li:nth-child(2) table thead th:nth-child(8){
+	width: 180px;
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(7){
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+	position: relative;
+}
+
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(7) input{
+	width: 95px;
+/*	padding-top: 10px;
+	padding-bottom: 10px;*/
+	border: 1px solid #cacaca;
+	border-radius: 2px;
+	float: right;
+}
+
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(7) span{
+	width:20px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	float: right;
+}
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(8){
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.select_pro_modal_table li:nth-child(2) table tbody tr td:nth-child(2) select{
+	    background-position: 206px center !important;
+}
+#select_pro_modal select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(../img/pull-down-display.png);
+    background-repeat: no-repeat;
+    background-position: 176px center;
+    background-color: #fff;
+}
+.select_pro_modal_table li  tr select,
+.select_pro_modal_table li  tr input{
+	width: 100%;
+	height: 35px;
+	border: 0 none;
+	border: 1px solid #cacaca;
+	border-radius: 4px;
+	padding-left: 5px !important;
+	background-position: 73px center !important;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	text-align: right;
+}
+ .select_pro_modal_table  .s_select_1{
+	background-position: 159px center !important;
+}
+
+#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td select{
+	background-position: 83px center !important;
+}
+#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(1) select{
+	background-position: 240px center !important;
+	padding-right: 28px;
+}
+#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(5) select{
+	background-position: 53px center !important;
+}
+#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr td:nth-child(6) select{
+	background-position: 53px center !important;
+}
+
+
+#select_pro_modal  .select_pro_modal_table li:nth-child(2) tr th:nth-child(6){
+   
+    text-align: left !important;
+}
+#select_pro_modal  .select_pro_modal_table li:nth-child(1) tr td:nth-child(5) .s_select_1{
+
+    background-position: 237px center !important;
+}
+#select_pro_modal  .select_pro_modal_table li:nth-child(1) tr td:nth-child(4) select{
+    background-position: 97px center !important;
+}
+#select_pro_modal  .select_pro_modal_table li:nth-child(1) tr td:nth-child(5) select{
+    background-position: 97px center !important;
+}

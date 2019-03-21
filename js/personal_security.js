@@ -1,7 +1,4 @@
 $(document).ready(function($) {
-
-	
-
 	$('#contnet .con_title  .title span:nth-child(2) i').hover(function(){
 		$('#contnet .con_title .title .content').show();
 	},function(){

@@ -18,9 +18,6 @@ $(document).ready(function(){
   	 	$('#mdetail_adjustment_modal').fadeIn(200);
   	 	$('#mdetail_adjustment_modal .mdetail_adjustment_modal_con').animate({top:'50%'},400);
   	 	$('body').css({overflowY:'hidden'})
-  // 	 	$('#no_insurance_modal').fadeIn(200);
-		// $('#no_insurance_modal .no_insurance_modal_con').animate({top:'40%'},400);
-		// $('body').css({overflowY:'visible'})
   	 })
   	 // 暂无保险提示信息
 

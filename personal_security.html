@@ -287,21 +287,48 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>张三</td>
+										<td rowspan="3" style="border-right:1px solid #cacaca"> 张三</td>
 										<td title="医疗险">医疗险</td>
 										<td title="弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保">弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保弘康多信保</td>
 										<td>重疾</td>
-										<td>800,000</td>
-										<td>
+										<td class="initpremium">800,000</td>
+										<td class="reduce_td">
 											<div>
 												<span class="reduce">-</span>
 												<input type="text" value="1000">
 												<span class="add">+</span>
 											</div>
 										</td>
-										<td>保存调整</td>
+										<td class="submit_id">保存调整</td>
 									</tr>
-									
+									<tr>
+                                        <td>医疗险</td>
+                                        <td>弘康多信保</td>
+                                        <td>重疾</td>
+                                        <td class="initpremium">800,000</td>
+                                        <td class="reduce_td">
+                                            <div>
+                                                <span class="reduce">-</span>
+                                                <input type="text" value="1000">
+                                                <span class="add">+</span>
+                                            </div>
+                                        </td>
+                                        <td class="submit_id" >保存调整</td>
+                                    </tr>
+                                    <tr>
+                                        <td>医疗险</td>
+                                        <td>弘康多信保</td>
+                                        <td>重疾</td>
+                                        <td class="initpremium">800,000</td>
+                                        <td class="reduce_td">
+                                            <div>
+                                                <span class="reduce">-</span>
+                                                <input type="text" value="1000">
+                                                <span class="add">+</span>
+                                            </div>
+                                        </td>
+                                        <td class="submit_id">保存调整</td>
+                                    </tr>
 								</tbody>
 							</table>
 						</div>
@@ -318,11 +345,25 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>张三</td>
+										<td rowspan="3" style="border-right:1px solid #cacaca">张三</td>
 										<td>医疗险</td>
 										<td>弘康多信保</td>
 										<td>重疾</td>
-										<td>800,000</td>
+										<td class="initpremium">800,000</td>
+                                    </tr>
+                                    <tr>
+										
+										<td>医疗险</td>
+										<td>弘康多信保</td>
+										<td>重疾</td>
+										<td class="initpremium">800,000</td>
+                                    </tr>
+                                    <tr>
+										<td >张三</td>
+										<td>医疗险</td>
+										<td>弘康多信保</td>
+										<td>重疾</td>
+										<td class="initpremium">800,000</td>
 									</tr>
 								</tbody>
 							</table>
@@ -335,7 +376,7 @@
 						<span class="fr"><i class="iconfont icon-diandiandianshu" style="color: rgb(145, 145, 145);"></i></span>
 					</p>
 					<ul class="selet">
-						<li class="btn3">选择产品</li>
+						<li class="btn3"><a href="personal_select.html">选择产品</a></li>
 					</ul>
 					<div class="recommend-container">
 						<div class="con">
@@ -368,10 +409,10 @@
 										<p>在扣除已有保障的情况下,建议新增的保障金和预算如下: </p>
 										<div class="text">
 											<p>
-												孙晓燕：人寿险180万 - 100万,意外险190万 - 210万，
-												预算：1,088 - 1,125元<br>
-												孙晓燕：人寿险180万 - 100万,意外险190万 - 210万，
-												预算：1,088 - 1,125元<br>
+												孙晓燕：人寿险180万 - 100万，意外险190万 - 210万，
+												预算：100,088 - 100,125元<br>
+												孙晓燕：人寿险180万 - 100万，意外险190万 - 210万，
+												预算：100,088 - 100,125元<br>
 											</p>
 										</div>
 										<p>选择的保险方案和产品不同，费用会有较大的差异！ </p>
@@ -397,7 +438,8 @@
 								<div class="conent">
 									<p class="p_b">意外险</p>
 									<p style="font-weight: 400">
-									   由于意外导致身故或者伤残时给付受益人：是给自己和家人的保障（意外伤残时保险金受益人是被保险人本人）。
+                                       由于意外导致身故或者伤残时给付受益人：是给自己和家人的保障<br/>
+                                       （意外伤残时保险金受益人是被保险人本人）。
 							        </p>
 								</div>
 							</div>
@@ -420,7 +462,8 @@
 								<div class="conent">
 									<p class="p_b">意外险</p>
 									<p style="font-weight: 400">
-									   由于意外导致身故或者伤残时给付受益人：是给自己和家人的保障（意外伤残时保险金收益人是被保险人本人）。
+                                       由于意外导致身故或者伤残时给付受益人：是给自己和家人的保障 <br/>
+                                       （意外伤残时保险金收益人是被保险人本人）。
 							        </p>
 								</div>
 							</div>
@@ -441,24 +484,8 @@
 						<span class="fl">自选方案</span>
 					</p>
 					<div class="recommend-container">
-						<div class="con">
-							<!-- <div class="jl">
-								<p  class="tit"><span><i class="iconfont icon-shicizhijianjieguojichuli"></i></span>结论</p>
-								<p>家庭人身保障有缺口。<span class="quk" ><i class="iconfont icon-xiaoxi"></i></span></p>
-								<div>
-									<span></span>
-									<div class="text">
-										<p>若缺口<-200,000，无缺口;<br>
-											若-200,000<缺口 < 200,000，几乎没有缺口; <br>
-											若200,000<缺口 < 1,000,000，缺口较小; <br>
-											若100,000<缺口 < 2,000,000，有缺口; <br>
-											若2,000,000<缺口 < 5,000,000，缺口较大; <br>
-											若缺口>5,000,000，缺口很大。</p>
-									</div>
-								</div>
-							</div> -->
+						<div class="con">	
 							<div class="jy">
-								<!-- <p  class="tit"><span><i class="iconfont icon-dengpao"></i></span>建议</p> -->
 								<div class="conent">
 									<div>
 										<p>建议新增的保障金额和预算如下：</p>
@@ -580,731 +607,7 @@
 		</div>
 	</div>
 	
-	<!-- 选择产品 -->
-	<div id="select_pro_modal">
-		<div class="select_pro_modal">
-			<i class="img iconfont icon-guanbi"></i>
-			<ul class="select_pro_modal_titile">
-				<li>张三</li>
-				<li>李四</li>
-			</ul>
-			<ul class="select_pro_modal_con">
-				<li>
-					<div class="select_pro_modal_renshou">
-						<div class="select_pro_modal_con_tit">
-							<span>人寿险</span>
-							<ul>
-								<li class="selct_con">默认</li>
-								<li>自选</li>
-							</ul>
-							<span class="del demoUp" tit="删除产品"><i class="iconfont icon-lajixiang"></i></span>
-							<span class="add_1 demoUp" tit="添加产品"><i class="iconfont icon-icon02"></i></span>
-							
-						</div>
-						<ul class="select_pro_modal_table">
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr> 
-										
-											<th>产品名称1</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>
-												<span>最小保额</span>
-												<span>最大保额</span>
-											</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											
-											<td title='弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险'>弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险</td>
-											<td title='计划二（免赔额两千）'>计划二（免赔额两千）</td>
-											<td>/</td>
-											<td>/</td>
-											<td>20</td>
-											<td>20</td>
-											<td>
-												<span>222,600</span>
-												<span>233,600</span>
-											</td>
-											<td>222,600-233,600</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr>
-											<th><input type="checkbox" name="allSel"></th>
-											<th>产品名称2</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>保额</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
 
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>计划一</option>
-													<option value="" selected>计划二</option>
-													<option value="" selected>计划一</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-													<option value="" selected>非终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-					<div class="select_pro_modal_yiwai">
-						<div class="select_pro_modal_con_tit">
-							<span>意外险</span>
-							<ul>
-								<li  class="selct_con">默认</li>
-								<li>自选</li>	
-							</ul>
-							
-							<span class="del demoUp" tit="删除产品"><i class="iconfont icon-lajixiang"></i></span>
-							<span class="add_1 demoUp" tit="添加产品"><i class="iconfont icon-icon02"></i></span>
-						</div>
-						<ul class="select_pro_modal_table">
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr>
-											
-											<th>产品名称1</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>
-												<span>最小保额</span>
-												<span>最大保额</span>
-											</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											
-											<td title="弘康人寿-大白定期险">弘康人寿-大白定期险</td>
-											<td title="计划二（免赔额两千）">计划二（免赔额两千）</td>
-											<td>/</td>
-											<td>/</td>
-											<td>20</td>
-											<td>20</td>
-											<td>
-												<span>222,600</span>
-												<span>233,600</span>
-											</td>
-											<td>222,600-233,600</td>
-										</tr>
-										<tr>
-											
-											<td title="弘康人寿-大白定期险">弘康人寿-大白定期险</td>
-											<td title="计划二（免赔额两千）">计划二（免赔额两千）</td>
-											<td>/</td>
-											<td>/</td>
-											<td>20</td>
-											<td>20</td>
-											<td>
-												<span>222,600</span>
-												<span>233,600</span>
-											</td>
-											<td>222,600-233,600</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr>
-											<th><input type="checkbox" name="allSel"></th>
-											<th>产品名称2</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>保额</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>计划一</option>
-													<option value="" selected>计划二</option>
-													<option value="" selected>计划一</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-													<option value="" selected>非终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<div class="select_pro_modal_renshou">
-						<div class="select_pro_modal_con_tit">
-							<span>人寿险</span>
-							<ul>
-								<li class="selct_con">默认</li>
-								<li>自选</li>
-							</ul>
-							<span class="del demoUp" tit="删除产品"><i class="iconfont icon-lajixiang"></i></span>
-							<span class="add_1 demoUp" tit="添加产品"><i class="iconfont icon-icon02"></i></span>
-							
-						</div>
-						<ul class="select_pro_modal_table">
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr> 
-										
-											<th>产品名称1</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>
-												<span>最小保额</span>
-												<span>最大保额</span>
-											</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											
-											<td title='弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险'>弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险弘康人寿-大白定期险</td>
-											<td title='计划二（免赔额两千）'>计划二（免赔额两千）</td>
-											<td>/</td>
-											<td>/</td>
-											<td>20</td>
-											<td>20</td>
-											<td>
-												<span>222,600</span>
-												<span>233,600</span>
-											</td>
-											<td>222,600-233,600</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr>
-											<th><input type="checkbox" name="allSel"></th>
-											<th>产品名称2</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>保额</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>计划一</option>
-													<option value="" selected>计划二</option>
-													<option value="" selected>计划一</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-													<option value="" selected>非终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-					<div class="select_pro_modal_yiwai">
-						<div class="select_pro_modal_con_tit">
-							<span>意外险</span>
-							<ul>
-								<li  class="selct_con">默认</li>
-								<li>自选</li>	
-							</ul>
-							
-							<span class="del demoUp" tit="删除产品"><i class="iconfont icon-lajixiang"></i></span>
-							<span class="add_1 demoUp" tit="添加产品"><i class="iconfont icon-icon02"></i></span>
-						</div>
-						<ul class="select_pro_modal_table">
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr>
-											
-											<th>产品名称1</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>
-												<span>最小保额</span>
-												<span>最大保额</span>
-											</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											
-											<td title="弘康人寿-大白定期险">弘康人寿-大白定期险</td>
-											<td title="计划二（免赔额两千）">计划二（免赔额两千）</td>
-											<td>/</td>
-											<td>/</td>
-											<td>20</td>
-											<td>20</td>
-											<td>
-												<span>222,600</span>
-												<span>233,600</span>
-											</td>
-											<td>222,600-233,600</td>
-										</tr>
-										<tr>
-											
-											<td title="弘康人寿-大白定期险">弘康人寿-大白定期险</td>
-											<td title="计划二（免赔额两千）">计划二（免赔额两千）</td>
-											<td>/</td>
-											<td>/</td>
-											<td>20</td>
-											<td>20</td>
-											<td>
-												<span>222,600</span>
-												<span>233,600</span>
-											</td>
-											<td>222,600-233,600</td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-							<li>
-								<table  cellpadding="0" cellspacing="0" class="clearfix">
-									<thead>
-										<tr>
-											<th><input type="checkbox" name="allSel"></th>
-											<th>产品名称2</th>
-											<th>计划</th>
-											<th>社保</th>
-											<th>职业等级</th>
-											<th>保障年限</th>
-											<th>缴费年限</th>
-											<th>保额</th>
-											<th>保费</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>计划一</option>
-													<option value="" selected>计划二</option>
-													<option value="" selected>计划一</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-													<option value="" selected>非终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-										<tr>
-											<td><input type="checkbox" name="select"></td>
-											<td>
-												<select name="" id=""  class="s_select_1 form-control">
-													<option value="" selected>弘康人寿-大白定期寿险1 弘康人寿-大白定期寿险1</option>
-													<option value="">弘康人寿-大白定期寿险2</option>
-													<option value="">弘康人寿-大白定期寿险3</option>
-												</select>
-
-											</td>
-											<td>
-												<select name="" id=""    class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id=""   class="s_select_2 form-control">
-													<option value="" selected>/</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>终身</option>
-												</select>
-											</td>
-											<td>
-												<select name="" id="" class="form-control">
-													<option value="" selected>1</option>
-													<option value="">5</option>
-													<option value="">10</option>
-													<option value="">15</option>
-													<option value="">20</option>
-												</select>
-											</td>
-											<td  tit="保额上下限(100000,90000000)" class="demoUp">
-												<input type="text" class="form-control " value="" >
-												<span>—</span>
-												<input type="text" class="form-control " value="" >
-											</td>
-											<td>
-											<input type="text" value=""  class="s_select_2 form-control"></td>
-										</tr>
-									</tbody>
-								</table>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-			<div class="select_pro_modal_footer">
-				<button class="btn_com">保存</button>
-			</div>
-		</div>
-	</div>
-	<!-- 删除项目 -->
-	<div id="prompt_modal">
-		<div class="prompt_modal_con">
-			<div class="prompt_modal_title">
-				提示<i class="img iconfont icon-guanbi"></i>
-			</div>
-			<div class="prompt_modal_body">
-				您选择删除31项内容.删除的内容无法恢复,请谨慎操作
-			</div>
-			<div class="prompt_modal_footer">
-				<button>确认</button>
-			</div>
-		</div>
-	</div>
 
 	<!-- 推送信息 -->
 	<div id="push"><i class="img iconfont icon-guanbi"></i><span></span></div>
